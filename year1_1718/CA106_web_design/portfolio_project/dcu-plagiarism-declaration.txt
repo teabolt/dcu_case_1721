@@ -1,0 +1,15 @@
+I declare that I did not plagiarise any material presented here. External materials such as Internet tutorials, code samples, and other were used for educational purposes only.
+
+If resources used were copied exactly to-the-letter, then this is an acknowledgement and a list, which may not be exhaustive, of them:
+Images used came from 'https://imgur.com/' and 'https://unsplash.com/'.
+Some fonts came from 'https://fonts.google.com/'.
+
+For tutorial purposes, the following websites have been used extensively. Code was not necessarily copied exactly but rather was used as an inspiration for my own code:
+'https://developer.mozilla.org/'
+'https://stackoverflow.com/'
+'https://css-tricks.com/snippets/css/a-guide-to-flexbox/'
+'https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties'
+
+Where help was used more considerably, an indication of and a link to the resource in the relevant place is provided in the HTML or CSS comments of the 'index.html' or 'layout.css' files.
+
+In any case where copied material was used but was not acknowledged here, I declare that they were not used deliberately for plagiarism, but were rather simply forgotten.

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8"> <!-- encoding within first 1024 bytes of the HTML file. Do not reorder further down. -->
+	<meta name="description" content="Playing card and similar games website, homepage(student coursework - CA106 group project).">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <title>Homepage | Card Games</title> <!-- Title pattern: Capitalise like a title, separate with "|"(if needed)(specific on the left, general to the right) -->
+    <link rel="stylesheet" href="./CSS/layout.css">
+</head>
+
+<body>	
+    <main> <!-- Using W3C specification - <main> excludes header/navbar, footer, etc(that are *repeated across other pages* and are not the focus of the website's content). Main is only for unique page content. -->
+		
+		<nav class="page-nav"> <!-- Navigation bar to sections of the page. Unique to each page(the current page the user is on is excluded from the navbar links). -->
+			<ul class="logo-image"> <!-- Get to the homepage by clicking on the logo image(logo text is excluded due to style reasons). A tooltip informing about this is included. But in most cases a direct link to the homepage will also be included among other links down below. -->
+				<li title="Click me to get to the website's homepage">
+					<a href="./index.html"><img src="./images/homepage/logo1.png" alt="Logo image. A gray clubs symbol."></a>
+				</li>
+			</ul>
+			<ul class="nav-bar"> <!-- Unordered list. Access the content however you want. -->
+				<li class="c"><a href="./Casino/casino.html">Casino Card Games</a></li>
+				<li class="c"><a href="./Family-Games/family-games.html">Family Card Games</a></li>
+				<li class="c"><a href="./Single-player/single-player.html">Single Player Card Games</a></li>
+				<li class="c"><a href="./Board-Games/board-games.html">Board Games</a></li>
+				<!-- Using HTML files with descriptive names instead of named folders with "index.html" files in them -->
+				<!-- In links, using beginning "dot slash"("./") - current working directory of file - for clarity and for future because apparently JavaScript requires it. -->
+			</ul>
+			<ul class="nav-aid">
+				<li class="c"><a href="#bottom">To bottom</a></li>
+			</ul>		
+		</nav>
+		
+		<!-- A full logo included just for this homepage. In all other pages just incldue the logo in the navbar's link to the homepage. -->
+		<!-- Logo unique to the page. Acts as the homepage's header. -->
+		<header class="site-logo" id="logo">
+			<div>
+				<!-- Image of the logo. Very simple as high quality images have loading issues to users with slow broadband connectivity. -->
+				<img src="./images/homepage/logo1.png" class="logo-image" alt="Logo image. A gray clubs suit symbol.">
+				<!-- Small text element of the logo. -->
+				<h1 class="logo-text">Card Games</h1>
+			</div>
+		</header>
+		
+		<section class="site-intro">
+			<div class="heading">
+				<h2>Introduction</h2>
+			</div>
+			<div class="content">
+				<p>I know, I know, when you hear card games, you think gambling. But it doesn't have to be this way. Let's slow down a bit and let me tell you something about these "devil's cards". Card games is the topic or genre that <a href="#contact">us</a> the creators of this website will be giving information on in this website. Our range of topics will range from specific card games - their rules and characteristics - to some history and recommendations. And indeed, card games have their own rich history and almost infinite varieties of gameplay. <a href="https://en.wikipedia.org/wiki/Card_game">Wikipedia</a> says that the first deck of cards and a mention to card games occurred in 9th century China. That's old, but time tested and ripe. At this moment, there's about fifteen <strong>types</strong> of card games, with so many games in each type with so many variations. If you took from an index an alphabetical list of all the card games, you'd amount to around four thousand lines. And all these games diversely range from featuring lame luck to sturdy strategy. Just like chess, they can stretch your brain muscles. And, above all, you can have so much safe and sound fun(if done properly) with them. We have also included board games if that's to your liking(when we use the term "card games", we also include board games, because card games and board games are quite connected in that both involve props, have a set of rules for gameplay, and so on). Also, we are <strong>NOT</strong> promiting uncontrollable gambling addiction, just showing some card and board games. All of these games can be played without any real money involved. We hope that this exposition to various game rules and some history will prove educational to you.</p>
+				<p>The essential idea and purpose of this website is to describe some core card(and similar) games so that you could start on your own journey of card game playing or have a refresher.</p>
+				<p>Who is that "you" that we were talking about this whole time? "You" is you, dummy. We have set this website up in such a way that it would be relevant to everyone. Indeed, card games are for everyone and so we can't really exclude anyone from our user demographic. This is a hard task and of course since the creators of this website are students, we may be a bit biased and focus more on younger audiences. Nevertheless anyone of any age can enjoy card games.</p>
+				<p>If you are not so lucky to enjoy card games due to eye, movement, cognitive or any other such issues, there is no worry. Cards are not only visual but also textual. For one, there are the physical cards and their descriptions, "red Ace of hearts, black rank two spade...." Also if you have some trouble navigating this homepage, we have a navigational aid at the top for your use. We provide ample of visual and textual presentation and our text is written simply. But if you have any issues feel free to <a href="#contact">contact us</a>. Finally, see the <a href="#card-primer">primer</a> if you've never held a playing card in your hand. </p>
+				<!-- Accessibility features to-do(not in final production): Flesh out the navigational aid at the top and bottom of the page(a link that jumps you across the page to top/bottom) - include across all pages, button for changing fonts/contrast, etc. Both English and numeric number representations inlcuded like in legal documents, eg: "three(3)". Jargon terms have their definitions as tooltips, with "dfn" element and the "title" attribute. -->
+				<p>Precisely, we are presenting descriptions of games, including text with clear headers and some images. We'll muse over topics like gameplay, history, and so on. Hopefully we have created a "card-inviting" visual atmosphere on the website to really get you into the mood for some fun.</p>
+				<p>You may ask "why?". Why bother with yet another website among the sea of others that list and describe card games? I'll tell you why. On this website, we aim for a range of content, converged and synthesised information from many sources, and accessibility for everyone. Arguably, not many websites have these features, but we strive to do things better.</p>
+				<p>Also, let me ask you a few questions:</p>
+				<ul class="ulist">
+					<li>If you're old-school, do you ever feel like kids these days should get their eyes off their phones for once and lay their eyes on something else?</li>
+					<li>Do you wish to have fun in a non-materialistic way? Buy-once-use-everywhere? Forget about micro-transactions?</li>
+					<li>Do you want an entry into a whole new field of human pursuits, fueling your memories, imagination and conversations?</li>
+				</ul>
+				<p>Even if you've answered "no" to all of the above questions, you may <strong>still</strong> learn something new from visiting our card game sections.</p>
+				<p>I can assure you that in the future the website will be expanded even more. I'm talking about more games than just the ones we have now, possibly more sections, and much more. If you find any of our descriptions or images inappropriate or improvable do not hesitate to <a href="#contact">contact us</a> and we'll get right to the chase in changing them easily.</p>
+			</div>
+        </section>
+		
+        <section class="site-sections">
+			<div class="heading">
+				<h2>Our types of card games</h2>
+			</div>
+			<div class="content">
+				<p>We have structured the website into four sections, each representing a type or genre of card games. The four game sections are casino games, family games, individual games, and board games. In each section you can embrace four carefully selected game examples.</p>
+				<p>We have chosen these four game types because they cover all user grounds. Just see below for quick descriptions of each genre. Not only the sections themselves reflect various demographics, but also the games themselves do so in each section.</p>
+				<p>Quick summary of the games that will be covered:</p>
+				<dl> <!-- Definition list acting as a dictionary of key-value(name-description) pairs. Order does not necessarily matter but may be desirable. -->
+					<dt><a href="./Casino/casino.html">Casino card games</a></dt>
+					<dd>If you're advanced, this is the section for you.<img src="./images/homepage/casino_games_homepage_michal-parzuchowski-453960.jpg" alt="A person throwing a hand of two cards at a green/cyan casino table with other casino props."></dd>
+						
+					<dt><a href="Family-Games/family-games.html">Family card games</a></dt>
+					<dd>Have fun with your family of any age - from youngest children to the more elderly.<img src="./images/homepage/family_games_preview.jpg" alt="A group of people playing with cards, from the perspective of one person holding cards in his hand."></dd>
+					
+					<dt><a href="./Single-player/single-player.html">Single player card games</a></dt>
+					<dd>You don't necessarily need other people to enjoy card games. That's why we have individual player games!
+					<img src="./images/homepage/single_player_homepage_cards_list.png" alt="Four Ace cards listed in a row with nothing else, reminding of Solitaire or such games on the computer."></dd>
+					
+					<dt><a href="./Board-Games/board-games.html">Board games</a></dt>
+					<dd>These games are for everyone once again.<img src="./images/homepage/board_games_homepage.jpeg" alt="People playing a tile board game with cards and house props.">
+					<!-- Differentiate between "jpg" and "jpeg" image file extensions -->
+					</dd>
+				</dl>
+			</div>
+        </section>
+		
+		<section class="card-primer" id="card-primer">
+			<div class="heading">
+				<h2>A primer to card game equipment</h2>
+			</div>
+			
+			<div class="sub-heading">
+				<h3>Card equipment</h3>
+			</div>
+			<div class="content">
+				<p>About the equipment used for our described card games, first of all we will be using a standard deck of fifty-two French playing cards. If you are wondering what the hell are all of these words, read on.<p>
+			</div>
+			
+			<div class="sub-heading">
+				<h3>Playing card details</h3>
+			</div>
+			<div class="content">
+				<p>A <a href="https://en.wikipedia.org/wiki/Playing_card">playing card</a> is rougly a thin paper or plastic rectangle with a height about twice as big as the width. We will be using fifty-two of those playing cards, a <a href="https://en.wikipedia.org/wiki/Standard_52-card_deck">"standard deck"</a>(collection of cards). This deck must be specifically <a href="https://en.wikipedia.org/wiki/French_playing_cards">"French"</a>. This means that our playing cards will have colours and a bunch of symbols on them. Roughly, we have three "dimensions":
+				<ol> <!-- not using a definition list as a dictionary of key-value pairs because the list needs some order/sequence -->
+					<li>Colour<p>There will be twenty-six red cards and twenty-six black cards.</p></li>
+					<li>Suits<p>"Suits" divide the deck into four sections(like colour divides them into two) - thirteen black "clubs"(similar to how the Irish shamrock looks like) , thirteen red "diamonds"(a rhombus), thirteen red "hearts"(literally hearts), and thirteen black "spades"(almost like hearts but upside down).</p></li>
+					<li>Rank<p>In each suit there are thirteen cards, each with a "rank" out of the following: 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack(J), Queen(Q), King(K) and Ace(A). These ranks are identified by the "pips" on a card. For example the number it shows(two to ten) together with the number of suit symbols. For Jacks, Queens, and Kings we have "face cards". These show some picture as an identifier(of a prince, queen, king, etc)(if these names seem a bit odd, don't worry - they're just historic relics from 15th century German cards and perhaps even earlier times). For the Ace we have a massive symbol of the card's suit. These rank cards exist in each suit, so there are four same rank cards in one deck.</p></li>
+				</ol>
+				<p>Now these features will only be on one side of a card, meaning that if you flip it over you'll see something generic that all the cards share. That is, when a card is "face down", its colour, suit or rank can not be identified. This will be used for our games extensively.</p>
+				<img src="./images/homepage/piatnikcards_deck_list_example.jpg" alt="All the cards in the standard deck listed face up in four rows. In each row the cards are ranked from 2 to Ace. The rows go as follows: Spades, hearts, clubs, diamonds">
+			</div>
+			
+			<div class="sub-heading">
+				<h3>Advanced card characteristics</h3>
+			</div>
+			<div class="content">
+				<p>For our casual games any card types or dimensions will do("poker" or "bridge" sizes). It's best that you use a French standard deck but if you're advanced you can use any, eg: German, Spanish, etc. playing card type. Yet you'll have to translate our French card terms to your own card type's terms yourself! Some objects may also have multiple terms and we'll pick one to which we are referring to them, eg: a diamond suit is also called a "tile", a Jack(J) is also often called a "Knave". Also in most cases we'll be excluding the infamous "joker" in our explanations.</p>
+			</div>
+			
+			<div class="sub-heading">
+				<h3>Board game and other card game equipment</h3>
+			</div>
+			<div class="content">
+				<p>Besides playing cards we also will be using some extra board game equipment. You'll be able to quickly get a hang of the games and the equipment required for them from seeing their descriptions in their <a href="./Board-Games/board-games.html">relevant sections</a>.</p>
+				<img src="./images/homepage/battleships_components.jpg" alt="Some battleships board game components.">
+				<p>Some more advanced card games, such as <a href="./Casino/Faro/faro.html">"Faro" from Casino card games</a>, will also require some additional equipment.</p>
+			</div>
+			
+			<div class="sub-heading">
+				<h3>Card game accessibility</h3>
+			</div>
+			<div class="content">
+				<p>A note regarding cards is that they're quite visual, involving colour, pips, etc. But for those with low vision, braille playing cards do exist. They usually have special features on their surface letting the user sense what kind of a card are they holding. Many card games usually involve not seeing other players' cards, so players won't be put at too much of a disadvantage anyways. For board games accessible equiment may also exist.</p>
+				<img src="./images/homepage/braille_cards.jpg" alt="braille cards example"><!-- this image may be pointless to blind users! -->
+			</div>
+			
+		</section>
+		
+		<aside id="contact"> <!-- content not directly connected to the main content of this page -->
+			<div class="heading">
+				<h2>Contact Us</h2>
+			</div>
+			<div class="main1">
+				<h2> Casino Card Games </h2>
+			</div>
+				<div class="main1">
+					<p> Want to know more about casino based card games? <a href="./Contact/contact-bill.html" > Contact here. </a> </p>
+				</div>
+			<div class="main1">
+				<h2> Family Card Games </h2>
+			</div>
+				<div class="main1">
+					<p> Want to know more about family card games or have any queries? <a href="./Contact/contact-tomas.html" > Contact here. </a> </p>
+				</div>
+			<div class="main1">
+				<h2> Single Player Card Games </h2>
+			</div>
+				<div class="main1">
+					<p> Want to know more about single player card games or have any queries? <a href="./Contact/contact-killian.html" > Contact here. </a> </p>
+				</div>
+			<div class="main1">
+				<h2> Board Games </h2>
+			</div>
+				<div class="main1">
+					<p> Want to know more about board games or have any queries? <a href="./Contact/contact-ethan.html" > Contact here. </a> </p>
+				</div>
+		</aside>
+    </main>
+	
+	<nav class="nav-aid bottom" id="bottom"> <!-- Bottom navigational aid for users -->
+        <ul class="nav-aid">
+            <li><a href="#top">To top</a></li>
+        </ul>
+    </nav>
+	
+	<!-- Footer, repeated across all pages(with minor variation to the footer text with the page creator's name) -->
+	<footer class="footer">
+            <div class="footer-content">
+                <p> <span class="footer-text">&copy; <a href="https://www.dcu.ie/">DCU 2017</a></span> 
+					<span class="footer-separator">&middot;</span>
+					<!-- identifier of the main page creator/owner -->
+					<span class="footer-text">Tomas Baltrunas</span> 
+					<span class="footer-separator">&middot;</span> 
+					<span class="footer-text">This is student coursework</span> 
+					<span class="footer-separator">&middot;</span> 
+					<span class="footer-text"> Lecturer <a href="http://computing.dcu.ie/~dfitzpat"> Dr. D&oacute;nal Fitzpatrick </a></span> 
+					<span class="footer-separator">&middot;</span>
+					<a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service" >Valid HTML</a>
+					<span class="footer-separator">&middot;</span> 
+					<!-- Another link to the site homepage -->
+					<a href="./index.html" title="Go Home"> Go Home </a>
+				</p>
+            </div>
+        </footer>
+	<!-- HTML templates/server side includes/scripting languages could be used to avoid repeating content across all pages, eg: for navbar, footer, etc. -->
+	<!-- The site works on mobile. The navbar and footer could use improvement. -->
+	<!-- Try not to repeat same "one-off" comments across multiple pages. -->
+</body>
+</html>

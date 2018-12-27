@@ -1,0 +1,106 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Lora', serif;
+}
+html {
+	height:100%;
+	width:100%;
+}
+body{
+
+	height:100%;
+	width:100%;
+	background-image: url("../images/seigaiha.png");
+	color: black;
+	font-size: 100%;
+}
+main{
+	
+	height:100%
+}
+
+h1 {
+	font-size:2rem;
+}
+.header {
+	height:50px;
+	width: 150px;
+	background-color: #494949
+}
+
+h2 {
+	text-align:center;
+	line-height:50px;
+}
+
+.info-container{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	height:100%;
+	overflow:auto;
+}
+
+.container-content{
+	padding-left:10%;
+	height:70%;
+}
+
+.content p{
+	padding-bottom:2%;
+	padding-top: 2%;
+	flex-shrink: 3;
+	font-size:1.20rem;
+}
+
+.front {
+	display: flex;
+	flex-flow: row nowrap;
+	flex-grow: 1 1;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-right:5%;
+}
+
+div.front-text{
+	width: 55%;
+} 
+
+
+img {
+	width: 40%;
+	height: 40%;
+}
+
+.page-footer{
+	height:80px;
+	margin-top:5%;
+	background: black;
+	color:#ffffff;
+	opacity: .8;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.page-footer span{
+	font-size: 1.2rem;
+	padding-right:5%;
+}
+.page-footer a{
+	font-size: 1.2rem;
+	padding-right:3px;
+	display:inline-flex;
+	text-decoration:none;
+	color:#ffffff;
+}
+.page-footer a:hover{
+	color:#049CC1;
+}
+a{
+	color:white;
+	text-decoration:none;
+}
+#link1, #link2{
+	position:absolute;
+}

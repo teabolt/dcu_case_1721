@@ -1,0 +1,377 @@
+/* CSS for the portfolio site of Tomas Baltrunas */
+
+/* I started to add comments a bit late into the project, so some explanations and changes may be missed. */
+
+/* main changes: 
+1. Using flexbox.
+2. Removed much commented out code that cluttered the document. Tried to figure out actually what's going on. 
+3. For <length> unit values, replaced rem with % for layout(box model margin and padding)(mobile compatibility). This excludes 'border', which doesn't support % for values.
+4. Added some comments to code.
+*/
+
+/* main layout */
+
+html {
+	margin: 1.5%; /* some space between content and page edges */
+	}
+	
+main {
+	/* size and order(flexbox) the entire page's layout*/
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	
+	display: flex;
+	flex-flow: column nowrap; /* vertical, items one by one*/
+	/* for column direction, main(horizontal) and cross(vertical) axes are inverted */
+	justify-content: flex-start; /* make items come from the start of the page */
+	align-items: stretch; /* let items take as much horizontal space as they want. Not using 'center' as it's undesirable for the navbar and footer(get squished in the middle).*/
+	align-content: stretch; /* fill empty space */
+	
+	/* Flex items are: nav.page-nav, header.page-header, section.about-me, section.work-experience, section.image-gallery, section.contact-me and footer.page-footer. Their flex ordering goes from 1 to . */
+	
+}
+
+section.container {
+	border: 0.18rem solid rgba(153, 73, 227, 0.8); /*purple*/ /* this border will feature on all content of the site, as a style feature. */
+	margin: 2%; /* Space between individual content items. */
+	}
+/* The container margin  doesn't work on Firefox(on Chrome and IE the margins work). The content(all, including footer, except the navbar and heading) is vertically squeezed together. Left and right margins are there, but not top or bottom.  */
+/* Changing 'main''s flexbox didn't help(justify-content/align-items). Setting 'margin-top' explicitly does nothing likewise. Setting the margins explicitly on all the containers(targeting them as selectors) doesn't work. */
+/* Online help:  https://stackoverflow.com/questions/23958413/getting-percentages-to-work-in-css-calc-for-firefox-and-safari */
+/* Changing % to rem seems to do the trick, but that's not accessible for smaller resolution devices? */
+/* Update: Never mind. 'rem' doesn't work on Firefox once again. */
+/* The images in their 'an-image' containers also take the full height space(there's no top/bottom margin). The contact section forms are all squeezed together in the middle also. */
+/* This is the main problem with my page on Firefox. */
+
+div.content {
+	margin: 2%; /* some space between container edges and actual content. */
+	text-align: justify; /* turns lines of text into blocks aligned on both sides, but puts spaces between words(careful then) */
+}
+
+/* element styling (e.g. standard p, h1, h2, a, etc) */
+p {
+	color: rgba(0, 0, 0, 0.8); /*black. Not full alpha for style/looks purposes. */
+}
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+h3 {
+	text-align: center;
+	color: rgba(33, 33, 33, 0.8) /* gray */
+}
+abbr {
+	text-decoration: rgba(0, 0, 0, 0.5) dotted underline; /*black*/
+}
+/* LoVe Fears HAte mnemonic of order of style application to links/pseudo-classes */
+a, a:link {
+	color: rgba(28, 42, 196, 1); /*classic blue*/
+	text-decoration: solid underline rgba(76, 142, 208, 1); /* classic underline, lighter blue(different link/foreground and underline colour as a style feature - bring attention to the link. Alpha full because the lighter blue is harder to see. */
+}
+a:visited {
+	color: rgba(94, 6, 177, 1); /*dark purple*/
+	text-decoration: solid underline rgba(171, 20, 208, 0.8); /*light purple*/
+}
+a:hover, a:focus, a:active {
+	outline: 0.09rem dashed rgba(233, 143, 26, 0.8);
+} /*orange box around link. Works with both mouse and keyboard(tab) selection. */
+
+/* typography */
+
+/* dyslexia-friendly features *kind of* implemented:
+large space between lines,
+left-justified text,
+italics compensated for by wide letter spacing.
+...
+*/
+
+html {
+	font-family: 'Saira Semi Condensed' , Garamond, "Trebuchet MS",  Arial, sans-serif; /* first font tested. After zoom-in's(increases) and out's(decreases) it still seems to remain readable. */
+	font-size: 1rem;
+	color: black;
+	line-height: 1.5rem;
+	letter-spacing: 0;
+	word-spacing: 0.4rem;
+}
+p {
+	text-indent: 1rem;
+}
+h1 {
+	font-size: 2rem;
+	font-style: italic;
+	letter-spacing: 0.3rem;
+}
+h2 {
+	font-size: 1.6rem;
+	font-weight: 700; /*bold*/
+}
+h3 {
+	font-size: 1.2rem;
+	font-weight: 300; /*lighter than normal*/
+}
+
+/* background colours for sections */
+
+html {
+	background: border-box rgba(173, 209, 244, 0.4); /* light blue */
+}
+
+/* Regarding colours, the Paciello Group Colour Contrast Analyser, tested when the website was about 2/3 nearing finishing(afterwards there were no major colour changes), gave no errors for colour contrast or visual disabilities. The online colour checking tool 'http://www.checkmycolours.com/' gave errors on the colours of links('a' elements, including navbar)(colour difference coming short) and images(failed in all categories of contrast, brightness and colour difference)(perhaps due to the images having mixed errors and so the software failing?)
+Thus, the background's alpha was decreased to make the blue even lighter. Retesting with the online tool, there were less errors when the link colours were checked against colours similar to the background. With other background colours errors remained(as they would always do?). I left the images be as I myself judged them to have clear colours. */
+
+/* styling for the section content(all below): */
+
+/* navigation (using flexbox to put the list items into a horizontal box)*/
+
+nav.page-nav {
+	order: 1;
+}
+nav.page-nav ul {
+	/* remove inherent ul margin/padding from bullet points(or get a buggy sidebar). Remove bullet points. */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	
+	background: rgba(91, 91, 91, 0.8); /*gray*/
+	border: 0.2rem solid rgba(153, 73, 227, 0.8); /*purple. This border is also set on 'content' containers, but navbar is not a child of it, so setting this here. (other solutions could include a restructuring of the HTML classes or applying the general border to a different more general selector) */
+
+	display: flex;
+	flex-flow: row wrap; /* flexbox to get the links to be listed horizontally . */
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+}
+nav.page-nav ul li {	
+	flex: 1 1 auto; /* each item is equal in growth/shrinkage. Items start with as much space as they need. */
+	
+	border: 0.3rem solid rgba(44, 200, 127, 0.8); /*electric green around each link */
+	background: inherit; /*Need this inheritance explicitly to later be able to change the background upon hover of the links(make the nav boxes interactive).*/
+}
+/* style for the navbar links */
+nav.page-nav ul li a, nav.page-nav ul li a:link {
+	display: block; /* be able to center the links' text */
+	background: inherit;
+	
+	/* remove all link decoration*/
+	outline: none;
+	text-decoration: none;
+	
+	/* new link decoration */
+	text-transform: uppercase;
+	color: rgba(99, 194, 201, 1); /* light blue */
+	/* centering the text */
+	font-size: 1.5rem;
+	line-height: 3rem;
+	text-align: center;
+	vertical-align: middle;
+} 
+/* interactive nav boxes. Background gray by default. Then purple if visited before(since this is a portfolio, I don't imagine that there would be regular visitors. But visitors may come back for a few times, so they'll know what they've possibly seen before from this. Finally, orange background hover(like normal links were styled beforehand). */
+nav.page-nav ul li a:visited {
+	background-color: rgba(154, 85, 210, 0.2); /* purple, reminding of a visited link */
+}
+nav.page-nav ul li a:hover, nav.page-nav ul li a:focus, nav.page-nav ul li a:active {
+	background-color: rgba(233, 143, 26, 0.8); /* orange, like when hovering over a normal in-text link */
+}
+
+/* page header */
+
+header.page-header {
+	margin: 2%;
+	order: 2;
+}
+header.page-header div.header-content p {
+	text-align: center;
+}
+
+/* "2 words. 3 words." Highlighting the first two letters of the first two words in each sentence, making the slogna's alliteration/meaning stand out. */
+/* not using 'first-letter' pseudo-element because it doesn't seem to work with multiple 'span' elements. */
+header.page-header div.header-content h1 span.first-letter {
+	color: blue;
+}
+header.page-header div.header-content h1 {
+	text-shadow: 0.2rem 0.2rem 0.2rem red;
+	line-height: 3rem;/* for small resolutions the text overlaps, so this is a fix */
+}
+/* Highlight explanation of French for accessibility. Mimics style of 'abbr' element. */
+header.page-header div.header-content h1 span.translation {
+	/* not using 'text-decoration' due to a conflict in Chrome, in which the shadow gets decorated and not the span's text.*/
+	border-bottom: rgba(0, 0, 0, 0.5) dashed 0.1rem;
+} /*light black*/
+
+/* about me section */
+
+section.about-me {
+	order: 3;
+}
+
+/* work experience section */
+
+section.work-experience {
+	order: 4;
+}
+section.work-experience dl {
+	display: list-item;
+	list-style-type: none;
+}
+section.work-experience dl dt{
+	text-decoration: underline;
+	color: rgba(205, 3, 6, 0.95);
+}
+section.work-experience dl dd{
+	/* display definition list's definition like an unordered list item */
+	display: list-item;
+	list-style-type: circle;
+	margin-bottom: 1%;
+}
+section.work-experience ul {
+	list-style-type: disc;
+}
+section.work-experience ul li {
+	margin: 1%;
+}
+
+/* image gallery section */
+section.image-gallery {
+	order: 5;
+}
+section.image-gallery div.container-content div.content div.an-image {
+	/* Image and caption child items. Order - image first, then caption. */ 
+	display: flex;
+	flex-flow: row wrap; /* Try to display an image and a caption side-by-side, but wrap if there's not enough space. */
+	justify-content: flex-start; /* Aligning everything left, like with a standard paragraph of text*/
+	align-items: flex-start;
+	align-content: stretch;
+	
+	margin: 3%;
+	border: 0.1rem solid black; /* Each image-caption pair has a border around it. Separates images. */
+}
+/* selectors are specific because I'm not sure the same settings could be applied to any image. Here the images come with captions. */
+section.image-gallery div.container-content div.content div.an-image img {	
+	flex: 2 1 auto; /* image grows more than the caption, because image is the main focus in this section */
+	order: 1;
+	
+	/* sizing of images.*/
+	max-height: 100%;
+	max-width: 100%;
+	height: 40%;
+	width: 40%;
+
+	margin: 2%; /* Space for image against its image-caption container and caption. */
+	border: 0.1rem solid black; /* make the image stand out */
+}
+section.image-gallery div.container-content div.content div.an-image div.image-caption {
+	flex: 1 1 auto;
+	order: 2;
+	
+	/* sizing of captions */
+	height: 40%;
+	width: 40%;
+	overflow-wrap: break-word; /* In the past large amounts of text would've caused the paragraph of text to overflow and make a horizontal scroll bar. That doesn't happen now, but instead there is the text expanding downwards and not wrapping after the image problem(see below). */
+	/* On small resolutions(phone, landscape included, and when resizing the browser window) the caption becomes very thin and vertically long. The image remains the same size. No wrapping occurs for some reason(flexbox is set to wrap). */
+	margin: 2%;
+}
+
+/* The caption problem above: */
+/* media query attempted fix for mobile/small resolutions - display the image and the caption in a column */
+/* sample phone resolution: 412*732 */
+/* @media screen and ((max-width: 500px) or (max-height: 900px)){
+	section.image-gallery div.container-content div.content div.an-image {
+		display: flex;
+		flex-flow: column nowrap;
+	}} */ 
+/* unfortunately seems to have no effect. CSS validator gives errors about the media query. */
+/* Even for desktop changing the 'flex-flow' to 'column nowrap/wrap' leaves a big gap on the right. The image and the caption are squeezed on the left then. Using min/max width/height didn't help. Removing the div container and just styling the paragraph element didn't help. It just put the text right above the image, despite flex order of the caption being higher than the image's.
+/* seems like the caption grows, but the image doesn't. The problem is maybe located in the caption. */
+
+/* Another problem: on IE there is a massive gap between the last image/its caption and the next contact section. The purple content border indicates that the gap is coming from the image section. */
+
+/* There are no problems on desktop(monitor/large resolution) Chrome. */
+
+/* form styling/contact section */
+
+section.contact-me {
+	order: 6;
+}
+form {
+	display: flex;
+	flex-flow: column nowrap; /* Separate the forms - name and input.*/
+	justify-content: flex-start; /* left aligned forms like text paragraphs. */
+	align-items: flex-start;
+	align-content: stretch;	
+}
+form p {
+	flex: 1 1 auto;
+	
+	/* nested flex containers. */
+	display: flex;
+	flex-flow: row wrap; /* Name and input of a form on the same line preferably */
+	justify-content: flex-start; /* form content on the left horizontally*/
+	align-items: baseline; /* vertically, label and input on the same line preferably */
+	align-content: stretch;
+	
+	/* sizing of forms */
+	box-sizing: border-box; /* Forms don't exceed their borders */
+	max-width: 100%;
+	max-height: 100%;
+	/* width: 100%; */
+	padding: 1%;
+	margin: 2%;
+	border: 0.1rem black solid;
+	/* Can't get the widths of the forms to be all the same on large resolutions(phone landscape too), without setting the width of each form to some specific length. On mobile the forms are same length since all height and width is used(100%) by all forms due to the small resolution. */
+}
+form p label {
+	flex: 1 1 auto;
+	
+	margin-right: 1%;
+	
+	/* remove paragraph styles for label */
+	text-align: left;
+	text-indent: 0;
+}
+form p input {
+	flex: 3 1 auto; /* input with more weight than label */
+	margin-left: 1%;
+}
+
+/* footer section */
+
+footer.page-footer {
+	order: 7;
+}
+footer.page-footer div.footer-content {
+	border: 0.2rem solid rgba(153, 73, 227, 0.8); /* purple */
+	background: rgba(91, 91, 91, 0.8); /* gray. Keeping with the style of the navbar. */
+}
+footer.page-footer div.footer-content p {
+	text-indent: 0;
+
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	
+	display: flex; /* footer's layout is navbar like */
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+footer.page-footer div.footer-content span {
+	flex: 1 1 auto;
+
+	border: 0.2rem rgba(225, 9, 9, 0.8) solid; /*clear red, indicating the end, as opposed to navbar's green indicating start. */
+	text-align: center;
+}
+footer.page-footer div.footer-content span.footer-text {
+	font-size: 1rem;
+}
+footer.page-footer div.footer-content span.footer-separator {
+	display: none;
+}
+footer.page-footer div.footer-content span a {
+	/* Keeping links styles as in page content, since links and text are mixed together, so can't really make the links act like buttons(as in navbar) without major layout changes(separating links and text in footer could be possible)*/
+}
+
+/* That's it. Thank you for reading this CSS and I hope that it wasn't too horrific of an experience. Honestly this was an absolute mess at the start, but it got better. I still have plenty to learn, so that's it. */

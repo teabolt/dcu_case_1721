@@ -1,0 +1,42 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+nav{
+	padding: 0;
+	margin: 0;
+	opacity: .8; 
+}
+nav ul{
+	background-color:black;
+	list-style: none;
+	display: flex;
+	height:70px;
+}
+nav li{
+	flex:1;
+	text-align: center;
+}
+nav a{
+	font-family: 'Raleway', sans-serif;
+	color:white;
+	padding-top:20px;
+	padding-bottom:18px;
+	text-decoration:none;
+	display:block;
+
+
+}
+ul li a{
+	text-decoration: none;
+	font-size: 150%;
+}
+ul li:hover{
+	background-color: #049CC1;
+}
+ul li a:visited{
+	color:white;
+}
+.nav-contents img {
+	margin-top:10px;
+}

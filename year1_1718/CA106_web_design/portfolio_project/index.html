@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<!-- Folder structure outside this 'index.html' file: 'layout.css' - (same folder), images - '/assets/images', rest of the folders are empty('assets/css' and 'content') -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dublin City University CA106 portfolio assignment, student Tomas Baltrunas" />
+    <!-- meta tags for Internet Explorer and mobile devices -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>	Portofolio - Tomas Baltrunas</title>
+    <!-- add your stylesheet and any other styling code, e.g. google fonts -->
+    <link rel="stylesheet" href="layout.css" />
+	<!-- Embedding code received from Google Fonts(link) -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed">
+</head>
+
+<body>
+    <main>
+	    <!-- You could style Main here if you wish-->
+        <nav class="page-nav"> <!-- the navigation part of the page.  Note links just jump to different parts of the page.-->
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#work">Work Experience</a></li>
+                <li><a href="#images">Image Gallery</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+        <header class="page-header"> <!-- header element - the header of the body of the page. Contains introductory content, a group of elements like a logo, headings and the author's name. (Mozilla Developers definition, applied to this page).-->
+            <div class="header-content"> <!-- div element - a generic/abstract page divider, used mainly for styling a specific container on a page. Groups elements together. (Mozilla Developers definition, applied to this page).-->
+                <!-- Slogan. Highlight of slogan's alliteration and explanation of French for accessibility.-->
+				<h1><span class="first-letter">T</span>omas <span class="first-letter">B</span>altrunas? <span class="translation" title="Very good developer"> <span class="first-letter">T</span>rès <span class="first-letter">B</span>on développeur!</span>
+				</h1>
+                <p>Now that I've gotten your attention with my French and poetic abilities, let me tell you why I, Tomas Baltrunas, a university student, am indeed a very good developer, just a fit for your company. Only enter my <a href="#about">self-description</a>.</p>
+            </div>
+        </header>
+        <!--Note here the use of an ID.  the link above actually links to this.  It's a good example of where an ID can be used.  Note also that the section has a class attribute.  use this for styling. -->
+        <section id="about" class="about-me container"> <!-- section element that generically(without any other specific meaning) groups together related elements, splits the page's content into sub-contents, is self-contained and usually has a heading. (Mozilla Developers definition, applied to this page).-->
+            <div class="container-content">
+                <h2>About Me</h2>
+                <div class="content">
+                    <!-- add your 150 word maximum About Me content here.  Use HTML you know, marks for the HTML.  Marks deducted for poor grammar, spelling errors etc. -->
+					<!-- The links are not to accounts but to just the website homepages. -->
+					<p>Tomas Baltrunas - a young person with a passion for computing, with a living place in the "Sillicon Valley/Docks" of West Europe, Dublin, and with an ongoing education in the prestigious and well-regarded <a href="https://www101.dcu.ie/registry/module_contents_no_mod.php?function=4&programme=CA&yr=2018">Computer Applications</a> programme in <abbr title="Dublin City University">DCU</abbr>. I develop my <a href="https://github.com/">programming projects</a>, create <a href="https://www.youtube.com/">videos</a> and <a href="https://www.deviantart.com/">artwork</a>, advance my <a href="https://ie.linkedin.com/">career</a>, and much more. I have a wide and diverse range of direct and indirect <a href="#work">work experience</a> which could be useful for any potential company. All the while, I am open to any part-time job offers during my time in university, and any full-time offers after I graduate. And personality wise, see the <a href="#images">images section</a> to see what really is important to me, what are my values.</p>
+                </div>
+            </div>
+        </section>
+        <section id="work" class="work-experience container">
+            <div class="container-content">
+                <h2>Work Experience</h2>
+                <div class="content">
+                    <!-- add your 200 word maximum work experience content here.  You can use lists of things as well as paragraphs.  Show off the HTML you know.  marks for the HTML, and how well you use it. marks deducted for poor grammar or spelling errors-->
+					<!-- (This content is made up) -->
+					<h3>Direct work experience</h3>
+					<!-- Definition list for key-value pairs. -->
+					<dl>
+					<dt>2017 summer, wholesaler to retailer food product delivery driver's assistant</dt>
+					<dd>Goods' unloading, carriage. Invoice document confirmation, signing, organising. Exposure to the logistics aspect of business.
+					</dd>
+					<dt>2014-15, retail store manager and quick-food counter assistant</dt>
+					<dd>Handling customer payments including cash register and safe usage. Stacking and organising products. Preparing food. End-of-the-day store closure. Closer exposition to food retail businesses.</dd>
+					<dt>2013, hygiene/cosmetics manager's assistant</dt>
+					<dd>Barcode matching. Checkbook balancing. Spreadsheet data filling, analysis. Handling pharmaceuticals. Introduction to medical side of retail and drug store commerces. </dd>
+					<dt>2012 - Clotches store assistant</dt>
+					<dd>Computer delivery orders. Warehouse product management. Store layout planning for reconstruction. Familiarity with clothes and design business market.</dd>
+					<dt>For further work history...</dt>
+					<dd><a href="#contact">Contact</a></dd>
+					</dl>
+					<h3>Indirect work experience</h3>
+					<ul>
+					<li><abbr title="Dublin City University">DCU</abbr> third level self-directed study and learning.</li>
+					<li>Irish <abbr title="Leaving Certificate Established">LCE</abbr> History 1500 word research paper project.</li>
+					<li>Fluent English and Lithuanian languages. Introductory French and Russian.</li>
+					<li>"Beneavin de la Salle College" Irish secondary school, numerous certificates of punctuality and attendance</li>
+					<li>"Kazio Griniaus" Lithuanian primary and lower secondary school, team projects, PowerPoint and on-paper presentations.</li>
+					<li>Other soft skills(<a href="#contact">inquire</a>).</li>
+					</ul>
+					<h3>Currently looking for part-time employment, preferably in the field of computing.</h3>
+                </div>
+            </div>
+        </section>
+        <section id="images" class="image-gallery container">
+            <div class="container-content">
+                <h2>Image Gallery</h2>
+                <div class="content">
+                    <div class="an-image">
+                        <!-- add image one here with 150 word maximum caption.  You may remove the caption if you wish.  Don't forget to use alt tags. -->
+						<img src="assets/images/nature_landscape.jpg" alt="Natural landscape of Dolomites, Monte Piana, Italy. Rocky grassland at the bottom. Above, rocky but not high hill/mountain chain with some sand or white stone at the bottom. Blue clear sky and huge clouds above. Overall, a large image of nature.">
+                        <div class="image-caption"> 
+							<p>Our natural world is amazing and I hope that this image shows that to you. So many views, and such grandeur to see in this world. Admittedly, I haven't travelled much. But still, seeing the power, complexity and size of the natural world, the earth, other planets, stars, objects and the whole universe, even in images, is worthy of my time. There is nothing else to say. </p><p>Photographer:  Michael Kmet', 'Magic landscape :)'. Uploaded to <a href="https://unsplash.com">Unsplash</a> as a royalty free image. Link to <a href="https://unsplash.com/photos/M9O6GRrEEDY">original</a></p></div>
+                    </div>
+                    <div class="an-image">
+                        <!-- add image two here with 150 word maximum caption -->
+						<img src="assets/images/love.jpg" alt="Sunset. Image of two lover's hands touching together as to form a heart, like with a bent fistbump but fingers spread apart. Inside of the heart is the setting down sun. Orange and brown is around it. The edges are shadowy. We can't see the people clearly, only a girl's hair on the left and on the right a man's hand with a watch. Overall, this signifies love.">
+                        <div class="image-caption">
+                        <p>I'm sure many would agree that one of the most important things in life is love and friendship. And I agree to that too. Maybe love really is or creates the "meaning of life". They can make you happy, give you warm memories, and make your life more than just a cycle of waking and working each day only to go to bed and repeat the same the next day. Making friends, meeting your "special one"(which this image I suppose displays), building a family, and perhaps sadly leaving some people behind are all noteworthy steps in a person's life. As a closure, to paraphrase some quotes, "To love is to vulnerable" and "It is better to have loved and failed than to have never loved at all" </p><p>Picture author: Mayur Gala, 'Love under setting sun photo'. Uploaded to <a href="https://unsplash.com">Unsplash</a> as  a royalty free image. Link to <a href="https://unsplash.com/photos/2PODhmrvLik">original</a>.</p>
+						</div>
+                    </div>
+                    <div class="an-image">
+                        <!-- add image three here with 150 word maximum caption -->
+						<img src="assets/images/screw_gravity_comic.jpg" alt="A humorous web comic about technology/science, with a fat stick figure blaming a box. Five frames from start to end: User hates the program and blames the software developers.  Developer hates the language and blames the language designers. Designer hates the environment and blames the engineers. Engineer hates the circuitry building and blames the physicists for the laws. Finally, the physicist, having no one left to blame, just remarks, 'man, fuck gravity'. End of joke.">
+                        <div class="image-caption"> 
+                        <p>I wanted to illustrate that knowledge acquisition and life-long learning are important to me, hopefully not only because I'm currently in university, but also as things that help a person develop throughout life. "Knowledge is power" and all after all. Perhaps this comic does the job. The tree of knowledge has many branches as to say. Innumerably many disciplines are interconnected. And one could make the argument that physics is indeed the very root of all this knowledge, and so is the very root of all our problems.
+						</p><p>Original comic author: unknown/taken down. Please <a href="#contact">contact</a> me if you are the author and would like credit or for me to take the image down. Link to <a href="https://i.imgur.com/8kNBzlH.jpg">original</a>.</p>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-me container">
+            <div class="container-content">
+                <h2>Contact Me</h2>
+                <div class="content">
+                    <form action="https://formspree.io/tomas.baltrunas2@mail.dcu.ie" method="post">
+	                    <!-- Style this nicely.  Don't worry if the form doesn't work, marks here for how well you style it. -->
+                        <p>
+                            <label for="contact-name">Your Name</label>
+                            <input id="contact-name" type="text" name="contact-name" />
+                        </p>
+                        <p>
+                            <label for="contact-email">Your email address</label>
+                            <input id="contact-email" type="email" name="contact-email" /> </p>
+                        <p>
+                            <label for="contact-phone">Your phone number</label>
+                            <input id="contact-phone" type="tel" name="contact-phone" /> </p>
+                        <p>
+                            <label for="contact-message">Your message</label>
+                            <textarea id="contact-message" name="contact-message" rows="5"> </textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="send my message" /> </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="page-footer">
+            <div class="footer-content">
+                <p><span class="footer-text">&copy; <a href="http://dcu.ie/">DCU 2017</a></span> 
+				<!-- Footer separators will be ignored/hidden with applied style. -->
+				<span class="footer-separator">&middot;</span> 
+				<span class="footer-text">Tomas Baltrunas</span> 
+				<span class="footer-separator">&middot;</span> 
+				<span class="footer-text">This is student coursework</span> <span class="footer-separator">&middot;</span> 
+				<span class="footer-text">Lecturer <a href="http://computing.dcu.ie/~dfitzpat">Dr. D&oacute;nal Fitzpatrick</a></span>
+				<span class="footer-separator">&middot;</span> 
+				<span class="footer-text">
+				<a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service" >Valid HTML</a></span>
+				<span class="footer-separator">&middot;</span>
+				<span class="footer-text"><a href="http://jigsaw.w3.org/css-validator/check?uri=referer" title="W3C CSS Validation Service">Valid CSS</a></span>
+				<!-- I got the CSS validator by following a link on the W3C HTML validator and then adding "/check?uri=referer" to the end of the CSS validator link, just like the HTML validator has. -->
+				</p>
+        <!--- Note that the link to the validator above will only produce results when your page is uploaded to the server, and you click on the link from the browser.-->
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

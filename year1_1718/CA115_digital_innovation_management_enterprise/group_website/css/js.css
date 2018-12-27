@@ -1,0 +1,22 @@
+/* Sticky navbar*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky {
+  padding-bottom: 2%;
+}
+
+/* Fade in title */
+
+.faded-out {
+	opacity: 0;
+}
+
+.fade-in {
+	opacity: 1;
+	transition: opacity 5s linear 0.5s;
+}
