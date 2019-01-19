@@ -1,0 +1,36 @@
+Six-digit Exam number:  17350793
+Seat Number (if available)	17
+
+q5(a)
+Answer goes here
+Pass parameters to procedures via:
+1. Registers
+Advantages: 
+Simple, 
+fast,
+create a "scope" within the procedure. // all registers can be backed up, no destruction
+Disadvantages: 
+Need backups or pre-call register values get destroyed, 
+limited number of registers, 
+data amount limited to register size.	// limited to the data bus? RAM / stack would be equivalently limited?
+
+2. RAM / memory locations
+Advantages:
+Plenty of RAM,
+can pass more data.
+Disadvantages:
+Slower, // move data to register, move data to memory, move data out of memory to register ...
+need to keep track of "allocated" memory locations for procedure parameters,
+act as "global" variables that can be modified from anywhere - might not be a good idea.
+
+3. The Stack
+Advantages:
+Fast, // (1 instruction)
+large. // a lot of data can be passed
+// architecture supports the stack by default
+// optimal for recursion
+// real life scenario
+Disadvantages:
+Some mad tricks required to bypass the IP saved at the top from making the call in order to actually get to the parameters (or is it just me???), // no - just pop the address to a register (will be destroyed) and push at the end (this is required - drawback?)
+Stack may grow a lot, putting in danger other code. // stack-threatened code area
+// need to keep the stack balanced to return to the right place

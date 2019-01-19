@@ -1,0 +1,32 @@
+Six-digit Exam number:  17350793
+Seat Number (if available)	17
+
+
+Question 3(b)
+Answer goes here
+
+The stack refers both to the Stack Abstract Data Type, 
+and to the actual implementation and data of the stack as used in assembly programs.
+It is a data storage mechanism where data added most recently is the data that gets removed first (like a stack of plates).
+
+The stack is used via the 'PUSH' operation to add values on top of the stack and a 'POP' operation to remove values from top of the stack.
+Optional operations may be 'IS_EMPTY' and so on.
+
+It is used because of its LIFO (last in first out) data storage order which can help solve some problems,
+because it is a simple data storage mechanism,
+and because most programming environments have built in support for it.
+// sms docs:
+// make register backups and restores
+// pass parameters, return results
+// save addresses to return to for procedures and interrupts
+// postfix arithmetic / calculator
+// allow recursion
+
+// me:
+// stack frames / call stack // the stack for local variables / function calls?
+
+In the SMS simulator one can use the "PUSH <register>" instruction to add a value to the stack from the register operand,
+a "POP <register>" instruction to remove the top value off the stack and store it in the register operand,
+a "PUSHF" instruction to add the current state of the flags, 
+and the "POPF" instruction to remove a value from the stack and save it in the flags register.
+The simulator uses the built in Stack Pointer to make this possible. The stack begins at BF in RAM and goes downwards. // SP

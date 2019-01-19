@@ -1,0 +1,15 @@
+;	Multiplication
+MOV AL, ff
+MOV BL, ff
+MUL AL, BL
+
+;	DIVISION
+;MOV AL, 1
+;MOV BL, 9
+;DIV AL, BL
+
+;	SUBTRACTION
+;MOV AL, 4
+;MOV BL, 6
+;SUB AL, BL
+END

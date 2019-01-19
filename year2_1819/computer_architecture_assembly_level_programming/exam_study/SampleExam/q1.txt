@@ -1,0 +1,100 @@
+Six-digit Exam number:  17350793
+Seat Number (if available) 17
+
+Question1
+
+Please answer your questions in the spaces provided below.
+
+q1(a)
+Anser goes here
+MNZ stands for Move Not Zero. 
+It moves data from the second operand to the first operand if the flags register has flag zero NOT set, eg: when using DEC or CMP, when this instruction is executed.
+This could be useful as an "inline if" statement.
+The dual instruction is MZ (Move Zero - move if the zero flag IS set).
+
+// some assembly https://www.cs.auckland.ac.nz/~patrice/210LN/L11.pdf has 'cmovne' instruction, a conditional move if the first operand is not zero
+
+// likely
+OR (assuming there is a typo and the instruction should be JNZ)
+JNZ stands for Jump Not Zero.
+It increments or decrements the IP using the operand's value (passed as a label in source code, but calculated as a hex number at assembly-time), 
+if the flags register has the zero flag NOT set. (given that the jump is not too far)
+// no need for mentioning jump mechanics? just say what it does
+This is useful for "branching out" the program.	// also in loops, etc - like an if statement / decision point
+// keywords: control flow, control transfer
+
+
+q1(b)
+Anser goes here
+With a 10-bit address bus and 8-bit data bus, // data bus = what data to carry, address bus = what RAM/IO address to use
+the processor can access 2**10 = 1024 memory locations in RAM / IO ports. // (max amount)
+The data bus is only for how much data can be written/read from memory. It is independent of the address bus.
+// https://gacomp.files.wordpress.com/2013/09/answers-computer-structure-memory-and-addressability.pdf max addressable memory = 2**address_bus * data_bus ???
+// other sources: addressable (accessable?) memory == 2**address_bus (ca103 confirms)
+
+q1(c)
+Anser goes here
+Code placement may be controlled with the "ORG <address>" assembler directive. // stands for 'Code Origin' - generate code from a starting address. Directive - no machine code.
+For example, to jump over the Interrupt Vector Table to the main code, the programmer may say	// just say, don't give the code?
+"JMP main
+; ... some IVT stuff here
+ORG 20
+main:
+; ... main program
+"
+This places the main program entrance code starting from location 20.
+// more: procedures, interrupts, data tables
+
+q1(d)
+Anser goes here
+An interrupt is a signal to the CPU to stop it what it is doing currently, make it do something else, and potentially make it return to what it was working on previously.
+An example is the keyboard. When a user hits a key, an interrupt is sent so that the CPU stops what it's doing and handles the key press, eg: displays the character on the screen. Then the CPU comes back to what it was doing before.
+// signal events: key press, disk ready, out of paper
+// other examples: timer, keypad
+// activates the ISR, found from the IVT
+// accepted when the I flag is set (CLI/STI)
+
+q1(e)
+Anser goes here
+SHR stands for Shift Right. 
+It takes the register (operand) and moves all its bits to the right (performs a bitwise operation).
+The least significant bit "falls off the end". // the *rightmost bit is *discarded
+This has the effect of dividing the number by 2.
+
+q1(f)
+Anser goes here
+Zero flag - calculation resulted in zero (left operand = right operand). // cmp ...
+Sign flag - calculation resulted in a negative number (left operand < right operand).  // OR sign changes (cmp ...)
+Overflow flag - calculation could not fit in the container // answer does not fit in 8-bits register, as in during arithmetic operations
+Interrupt flag - interrupts are enabled / disabled // STI / CLI
+Fifth flag??? - interrupt happens?
+// Intel x86 FLAGS register has more flags - carry, parity, etc
+
+
+q1(g)
+Anser goes here
+RET pops off a value off the stack and jumps to that address. // sets IP to that adddress
+Equivalent to a 'return' statement in a high level language - comes back to the place where the program was before the call.
+// returns from the procedure
+
+q1(h)
+Anser goes here
+// logic operators
+AND - masking bits
+OR - setting bits to 1 // or leaving bits as they are
+XOR - detect differences between number bits // sequence control
+NOT - invert a number's bits	// turn the number negative-1 / positive+1
+
+
+q1(i)
+Anser goes here
+IP makes sure the program's instructions are executed in a sequence, not randomly.
+// special purpose register, instruction pointer
+// points to next instruction after fetching current
+// indicates where the program is in the sequence
+
+q1(j)
+Anser goes here
+Machine Code is the actual hexadecimal values that represent instructions to the CPU.
+Machine Code can be used over Assembly if a new machine code instruction has been released that does not have an equivalent in the assembly yet. // bypass the assembler
+// assembly is human readable instructions - language, close map to machine code
