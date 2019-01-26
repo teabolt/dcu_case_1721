@@ -1,0 +1,37 @@
+Title: Tag on to the end
+Description: Add an append() method to the LinkedList class which has one parameter which gets added to the end of the list.
+Your method should be added to the LinkedList class and should be the last method in the class. The rest of the code should be unchanged.
+Your method will be tested by the following program:
+import sys
+from LinkedList import LinkedList
+
+def main():
+    # Read data from input
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    
+    ll = LinkedList()
+    ll.append("o")
+    if str(ll) != "o ":
+        print("Doesn't work for one element")
+    ll = LinkedList()
+
+    for item in items:
+        ll.add(item)
+        
+    print(str(ll))
+    ll.append("xxx")
+    print(str(ll))
+
+    ll = LinkedList()
+
+    # create the list using append 
+    for item in items:
+        ll.append(item)
+    print(str(ll))
+    
+if __name__ == "__main__":
+    main()
+Note that the code is tested by printing the LinkedList using the str() method. This returns the items in the reverse order. Be sure to note this or you will be very confused.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

@@ -1,0 +1,14 @@
+Title: Matching Brackets
+Description: A common application of stacks is to check for matching brackets. Write a function which takes a string parameter and returns a boolean value which indicates whether the brackets in the string match. Your function should be called check_brackets(). The following function calls should produce the values shown:
+check_brackets("()") is true
+check_brackets(")(") is false
+check_brackets("hello(goo(d)bye)") is true
+check_brackets("hello(goo(d)bye))") is true
+
+Here are some more checks:
+check_brackets("d(h((e(l))))o)d") is true
+check_brackets("(d(h((e(l)l))o)d") is false
+
+Hint: Design this algorithm before you write any code. Note that characters other than brackets do not affect the outcome. Remember to distinguish between opening and closing brackets. How should they match? How can you use the stack effectively?
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

@@ -1,0 +1,3 @@
+
+def sol():
+    return "ABEFCD"

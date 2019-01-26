@@ -1,0 +1,9 @@
+Title: Colonated command line args
+Description: Write a python program which reads all the command line arguments and prints them out separated by colons.
+The program might be used as follows:
+$ python3 colons.py sample command line arguments
+:sample:command:line:arguments:
+
+Note that colons surround the entire expression and also separate each argument.
+Tests: No tests available
+Grade: No grade available

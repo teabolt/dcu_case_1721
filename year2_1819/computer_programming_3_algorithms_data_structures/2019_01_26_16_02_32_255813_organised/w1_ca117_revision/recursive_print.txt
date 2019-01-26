@@ -1,0 +1,33 @@
+Title: Recursive Print
+Description: Write a recursive function called rprint to print a range of integers from a to b.
+This function could easily and sensibly be implemented using the following:
+def rprint(a, b):
+   for x in range(a, b):
+      print(x)
+
+Assuming that 
+a
+ had the value 4 and 
+b
+ had the value 10 then the function would print
+4
+5
+6
+7
+8
+9
+
+However, you won't be using a loop. You'll use recursion to accomplish this. Your function might be used by the following program:
+from recursive_print import rprint
+
+def main():
+    # Read two integers from stdin
+    a = int(input())
+    b = int(input())
+    # Call rprint which should recursively print a..b-1
+    rprint(a, b)
+
+if __name__ == "__main__":
+    main()
+Tests: No tests available
+Grade: No grade available

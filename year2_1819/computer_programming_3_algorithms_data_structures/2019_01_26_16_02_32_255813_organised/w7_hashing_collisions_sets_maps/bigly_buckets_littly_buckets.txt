@@ -1,0 +1,45 @@
+Title: Bigly Buckets, Littly Buckets
+Description: Add a method to the HashSet class which will return the max and min lengths of the buckets. Ignore any hash table entries which have no linked lists. Your method should be called max_min_bucket_length() and it should return a tuple (min, max).
+Your code will be called by the following program:
+import sys
+from HashSet import HashSet
+
+def main():
+    # Read each test case
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    nums = [int(item) for item in items]
+    
+    # First number is the capacity
+    numset = HashSet(nums[0])
+
+    for x in nums[1:]:
+        numset.add(x)
+
+    print(numset.min_max_bucket_length())
+
+if __name__ == "__main__":
+    main()
+
+You will be provided with a HashSet implementation:
+from LinkedList import LinkedList
+
+class HashSet:
+    def __init__(self, capacity=10):
+        # Create a list to use as the hash table
+        self.table = [None] * capacity
+
+    def add(self, item):
+        # Find the hash code
+        h = hash(item)
+        index = h % len(self.table)
+
+        # Check is it empty
+        if self.table[index] == None:
+            self.table[index] = LinkedList() # Need a new linked list for this entry
+
+        if item not in self.table[index]:
+            # Only add it if not already there (this is a set)
+            self.table[index].add(item)
+Tests: 8 tests run/ 8 tests passed
+Grade: 100

@@ -1,0 +1,42 @@
+Title: Selection Sort Repeats
+Description: [20, 16, 8, 11, 5, 14]
+Then the algorithm would find the smallest element and swap it with the first position to give
+[5, 16, 8, 11, 20, 14]
+Then it swaps the the next smallest, 8 with the second position:
+[5, 8, 16, 11, 20, 14]
+and the next smallest,11
+[5, 8, 11, 16, 20, 14]
+Then the 14
+[5, 8, 11, 14, 20, 16]
+and finally the 16
+[5, 8, 11, 14, 16, 20]
+And you have your selection sorted list of numbers. But what we want to know is which element moved the most number of times and how many times did it move. If there is a tie, choose the smallest number.
+This is easier to see if we lay out all the numbers:
+[20, 16, 8, 11, 5, 14]
+[5, 16, 8, 11, 20, 14] # 5, 20 swapped
+[5, 8, 16, 11, 20, 14] # 8, 16
+[5, 8, 11, 16, 20, 14] # 11, 16
+[5, 8, 11, 14, 20, 16] # 14, 16
+[5, 8, 11, 14, 16, 20] # 16, 20
+
+You can see that the number which moved most was 16 and it moved 4 times.
+
+
+
+Your task is to take a list of numbers and find out which number moves most and how many times it moves.
+There will be 6 numbers and you need to return a tuple of two integers, the element that moved most and the number of times it moved.
+ So, if you were given the numbers
+[20, 16, 8, 11, 5, 14]
+Then your solution should be:
+def solution():
+    return 16, 4
+What is your number? Submit a solution that returns None and you will get your list of 6 numbers. In other words, submit
+def solution():
+    return None
+and you will get a message similar to
+Your list is:
+[20, 16, 8, 11, 5, 14]
+Note however, your list will be different to the above. Then work out the solution and submit the solution and get full marks.
+Remember also that in the event of a tie, the lowest number is to be selected.
+Tests: 1  test run/ 1  test passed
+Grade: 100

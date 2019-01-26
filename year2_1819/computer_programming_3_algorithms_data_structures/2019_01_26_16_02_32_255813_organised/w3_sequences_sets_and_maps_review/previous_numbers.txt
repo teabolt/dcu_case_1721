@@ -1,0 +1,32 @@
+Title: Previous Numbers
+Description: Write a program which reads numbers until a -1 is encountered and only print out numbers which have previously occurred in the input. 
+Your program will work as follows:
+python3 has_previous.py
+Enter some numbers (-1 to end): 
+45 8 20 7 16 45 0 22 20 6 20 9 -1
+
+Previous: 45 20 20
+
+Note1 that only 45 and 20 (two previous occurances) have occurred before in the input.
+Note2 that the numbers in bold are the numbers that the user entered - your program does not print these.
+Hints:
+print("Enter numbers (-1 to end): ", end="")
+
+num = int(input())
+
+print(str(num) + " ", end="")
+
+print()
+
+Still got output problems ... the previous hints should fix it. However, the output format should match if you have the following code:
+    # Do your stuff here
+    print("Enter numbers (-1 to end): ", end="")
+
+    # Do your stuff here
+    for num in solution:   # assuming solution is a list with the correct results
+        print(str(num) + " ", end="")
+
+    print()  # a final print statement to ensure that your output has a newline.
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

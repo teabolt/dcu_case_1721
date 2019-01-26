@@ -1,0 +1,31 @@
+Title: Above Average
+Description: Define a function called above_average(). The function should have one parameter which is a list of integers and should return a new list which is all the elements of the original list which are larger than the average.
+Your program only has to define the function. An example usage is as follows:
+l = above_average([1, 1, 1, 1, 1, 2])
+
+When executed, the list 
+l
+ will contain only one element, 2, since only 2 is larger than the average.
+Your function will be tested using the following program:
+import sys
+from average import above_average
+
+#
+#   Read a list from stdin
+#
+line = sys.stdin.readline()
+
+tokens = line.split()
+
+list = []
+
+for tok in tokens:
+    list.append(int(tok))
+
+#
+#   Call the function + print result
+#
+print(above_average(list))
+
+Tests: No tests available
+Grade: No grade available

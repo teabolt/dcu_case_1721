@@ -1,0 +1,27 @@
+Title: Evil Count List
+Description: Write an even_count function which takes a linked list of integers as an argument and counts the number of even elements in the list
+Note that this exercise does not require you to add a method to a linked list. Instead, write a function that takes a linked list as a parameter. You only need to supply the even_count method.
+Your method will be tested by the following program:
+import sys
+from LinkedList import LinkedList
+from even_count_list import even_count
+
+def main():
+    # Read each set
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    nums = [int(item) for item in items]
+    
+    ll = LinkedList()
+    
+    for num in nums:
+        ll.add(num)
+    
+    print(
+even_count(ll)
+)
+
+if __name__ == "__main__":
+    main()
+Tests: 9 tests run/ 9 tests passed
+Grade: 100

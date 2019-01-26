@@ -1,0 +1,31 @@
+Title: Phone numbers
+Description: Write a program to manage phone numbers. A user enters commands a line at a time. There are three commands:
+1. 
+!!
+ (two exclamation marks) exits the program
+2. 
+name number
+ associates a number to a name. Note that the name cannot have spaces and if a second number is added to a name, it overwrites the first.
+3. 
+name ?
+ gives the number for that name
+A program run might look like (note that lines in bold are commands that have been entered by the user):
+$ python3 phone_numbers.py
+Enter a name and number, or a name and ? to query (!! to exit)
+
+James 1234
+John 5678
+John ?
+
+John has number 5678
+
+Bobby ?
+
+Sorry, there is no Bobby
+
+!!
+
+Bye
+
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

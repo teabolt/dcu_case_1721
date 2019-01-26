@@ -1,0 +1,32 @@
+Title: SumTo
+Description: Write a recursive function called sumto() which will compute the sum of a range of integers from a to b (including a but not including b).
+This function could easily and sensibly be implemented using the following:
+def sumto(a, b):
+    sum = 0
+    for x in range(a, b):
+        sum += x
+    return sum
+
+Assuming that 
+a
+ had the value 4 and 
+b
+ had the value 7 then the function would return 15, the sum of the integers 4, 5 and 6.
+An implementation could also use the sum function as follows:
+def sumto(a, b):
+    return sum(list(range(a, b)))
+
+However, your implementation should not use a loop or the sum function. Instead, you should use recursion. Your program might be tested by the following program:
+from recursive_sum import sumto
+
+def main():
+    # Read two integers from stdin
+    a = int(input())
+    b = int(input())
+    # Call sumto which should recursively sum the integers from a to b-1
+    print(sumto(a, b))
+
+if __name__ == "__main__":
+    main()
+Tests: No tests available
+Grade: No grade available

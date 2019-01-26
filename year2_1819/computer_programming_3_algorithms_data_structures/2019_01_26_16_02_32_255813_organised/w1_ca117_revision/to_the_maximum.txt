@@ -1,0 +1,43 @@
+Title: To the maximum
+Description: Write a recursive function called maximum() which will find the maximum value in a list of integers. You may assume that the list contains at least one element.
+This function could easily and sensibly be implemented using the following:
+def maximum(lst):
+    return max(lst)
+
+However, you should not use the built-in max function or any loop construct. You should implement a recursive solution
+Your program will be tested by the following program:
+#
+#   Program to check a student's maximum function.
+#
+import sys
+from recursive_max import maximum
+
+# Read in a list from a string of numbers
+def get_list(line):
+   tokens = line.split()
+   # convert the tokens to integers (using a list comprehension)
+   return [int(tok) for tok in tokens]
+
+def main():
+   line = sys.stdin.readline()
+   # remove end of line
+   line = line.strip()
+   # Convert to a list
+   nums = get_list(line)
+
+   # call recursive function to get max of the list.
+   print(maximum(nums))
+
+if __name__ == "__main__":
+   main()
+
+Note: you may use the following function to get the larger of two numbers:
+def maxi(a, b):
+   if a >= b:
+      return a
+   else:
+      return b
+
+Remember that you can't use the built-in max() function for this.
+Tests: No tests available
+Grade: No grade available

@@ -1,0 +1,12 @@
+Title: Splitting a String
+Description: Write a python program which reads a string on the command line and prints all consecutive pairs of characters of the string.
+The program might be used as follows:
+$ python3 pairstring.py james
+ja
+am
+me
+es
+
+Note that first pair of consecutive letters is ja. Each subsequent pair starts one letter on.
+Tests: No tests available
+Grade: No grade available

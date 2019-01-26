@@ -1,0 +1,9 @@
+Title: Even more Recursive
+Description: Write a recursive method which counts the number of even elements in a list. It should leave the list unchanged. Your method should be called count_even and should be added to the end of the LinkedList class.
+Although, this problem does not provide a main method to show how your program will be tested, you can use the same testing program from last week's exercise, 
+evil count list
+.
+
+In future, however, you will have to start writing your own testing code for these problems. Writing the testing code can also help you understand the problem better. In fact, most professional programmers write the testing code before they start working on the problem.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

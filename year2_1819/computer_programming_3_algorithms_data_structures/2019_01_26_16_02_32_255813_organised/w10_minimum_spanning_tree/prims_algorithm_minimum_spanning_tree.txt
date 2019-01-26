@@ -1,0 +1,5 @@
+Title: Prim's Algorithm: Minimum Spanning Tree
+Description: You should perform Prim's MST algorithm on the graph below starting at node 'A' and work out the order in which the MST grows.
+Submit your solution as a string of 6 characters, where each character represents the corresponding node ('A' to 'F') in the order that the MST grows.
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,138 @@
+Title: Queue Based Mergesort - Split
+Description: Merge sort can be implemented with queues. Here is how the recursive part would work:
+from Queue import Queue
+
+def mergesort(q):
+    if len(s) < 2:
+        return # Base case. No work to do for one element.
+
+    # Split q into two smaller queues
+    q1, q2 = split(q) # You will supply the split function
+
+    # recursively sort these as well
+    mergesort(q1)
+    mergesort(q2)
+
+    # Now, merge these together back into q
+    merge(q1, q2, q)
+Your task today is to write the split function. This will take a queue parameter, and it will split the queue into two smaller queues and return these two queues as a tuple. The two queues should be of approximately equal size.
+The Queue code uses a linked list and is as follows:
+import LinkedList
+
+class Queue:
+    """ A linked list based queue """
+    def __init__(self):
+        self.length = 0
+        self.linkedlist = LinkedList.LinkedList()
+
+    def enqueue(self, item):
+        self.linkedlist.addlast(item)
+        self.length += 1
+
+    def dequeue(self):
+        if self.linkedlist.isempty():
+            return None
+        else:
+            self.length -= 1
+            return self.linkedlist.remove()
+
+    # Examine the front of the queue without removing anything.
+    def first(self):
+        return self.linkedlist.peek()
+
+    def isempty(self):
+        return self.linkedlist.isempty()
+
+    def __len__(self):
+        return self.length
+In addition to the normal enqueue, dequeue and isempty operations, there is a first() method so that you can see the element at the front of the queue and a len method.
+Your code will be tested with with code similar to the following
+from Queue import Queue
+from student import split
+#
+#   Make a queue from a lst
+#
+def make_q(lst):
+    q = Queue()
+    for x in lst:
+        q.enqueue(x)
+    return q
+
+def main():
+    lst = [10 * x for x in range(10)]
+    q = make_q(lst)
+    # Call the student's split function
+    q1, q2 = 
+split(q)
+
+    if abs(len(q1) - len(q2)) > 1:
+        print("The lengths of your two queues should not differ by more than 1.")
+    elif len(q1) + len(q2) > len(lst):
+        print("There are too many elements in your queues")
+    elif len(q1) + len(q2) < len(lst):
+        #print(len(q1), len(q2), len(lst))
+        print("There are too few elements in your queues")
+    else:
+        # There are the right number of elements, check if the elements themselves are correct
+        qlist = []
+        # First add everything from q1
+        while not q1.isempty():
+            qlist.append(q1.dequeue())
+        # Now add everything from q2
+        while not q2.isempty():
+            qlist.append(q2.dequeue())
+
+        # Check the elements match
+        if sorted(qlist) == sorted(lst): # Easiest way to compare two lists for contents is to sort them both.
+            print("All tests passed")
+        else:
+            print("Your queues do not contain the right elements")
+
+if __name__ == "__main__":
+    main()
+Although, you probably don't need it, for completeness, here is the LinkedList code:
+class Node:
+    def __init__(self, item, next):
+        self.item = item
+        self.next = next
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def peek(self):
+        return self.head.item
+
+    def add(self, item):
+        self.head = Node(item, self.head)
+        if self.tail == None:
+            self.tail = self.head
+
+    def addlast(self, item):
+        # Add onto the tail
+        if self.isempty():
+            # If the queue is empty ...
+            # Create a new node. Both head and tail will point to it.
+            self.tail = Node(item, None)
+            self.head = self.tail
+        else:
+            # Create a new node at the tail
+            self.tail.next = Node(item, None)
+            # But the tail should be moved on to the end of the list.
+            self.tail = self.tail.next
+
+    def remove(self):
+        if self.isempty():
+            return None
+        else:
+            item = self.head.item
+            self.head = self.head.next    # remove the item by moving the head pointer
+            if self.head == None:
+                self.tail = None
+            return item
+
+    def isempty(self):
+        return self.head == None
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

@@ -1,0 +1,110 @@
+==========
+Title: w1: Intro
+Summary: No summary available :-(
+
+
+==========
+Title: w1: Programming Problems
+Summary: This is a very practical module. You will learn by writing code. Almost every week you will have programming problems to complete.
+
+
+==========
+Title: w1: CA117 Revision
+Summary: Some straightforward questions to resuscitate your CA117 skills. You should work in groups for these problems.
+
+
+==========
+Title: w2: Complexity
+Summary: How to compare algorithms based on performance. In particular, we are interested in how performance varies with the size of the problem. Complexity is the name given to the evaluation of algorithms.
+
+
+==========
+Title: w3: Sequences, Sets and Maps: Review
+Summary: Sequences, Sets and Maps
+
+
+==========
+Title: w3: Stacks
+Summary: No summary available :-(
+
+
+==========
+Title: w3: Queues
+Summary: No summary available :-(
+
+
+==========
+Title: w4: Linked Lists
+Summary: No summary available :-(
+
+
+==========
+Title: w5: Recursion
+Summary: Lists tend to use a lot of recursion and so we have some more exercises.
+
+
+==========
+Title: w5: Trees (intro)
+Summary: binary search trees, nodes, leaves, balance, height and stuff
+
+
+==========
+Title: w6: Trees Traversals, AVL trees
+Summary: Tree traversal; comparison of time complexities.  Set Implementation using BSTs. Map Implementation using BSTs. AVL trees.
+
+
+==========
+Title: w7: Hashing, collisions, Sets + Maps
+Summary: Hash tables.  Hash tables, implementation in arrays, collision resolution (e.g. chaining), extensible hash tables. Directory structures. Set Implementation using Hashing. Map Implementation using Hashing.
+
+
+==========
+Title: w8: Quadratic Sorting Algorithms
+Summary: insertion sort, selection sort
+
+
+==========
+Title: w8: Quicksort
+Summary: No summary available :-(
+
+
+==========
+Title: w8: Merge Sort
+Summary: An O(NlogN) sort. Best features: The Worst Case is O(NlogN) and it is stable Worst Feature: Not in place.
+
+
+==========
+Title: w8: Radix Sort
+Summary: No summary available :-(
+
+
+==========
+Title: w9: Sorting Detective
+Summary: No summary available :-(
+
+
+==========
+Title: w10: Graph + Algorithms
+Summary: Representation (adjacency matrix vs adjacency list). Searching strategies (DFS vs BFS),
+
+
+==========
+Title: w10: Graphs: Shortest Path
+Summary: No summary available :-(
+
+
+==========
+Title: w10: Minimum Spanning Tree
+Summary: No summary available :-(
+
+
+==========
+Title: w12: Lab Exam
+Summary: The Lab exam takes place at 9am on Dec 11th. There is a seating list and a sample exam. Best of luck.
+
+
+==========
+Title: CA Marks
+Summary: No summary available :-(
+
+

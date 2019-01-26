@@ -1,0 +1,34 @@
+Title: Twirling Lists
+Description: Add a rotate() method to the LinkedList class which rotates the list so that the first element of the list becomes the last and all the other elements move one place up.
+Your method should be added to the LinkedList class and should be the last method in the class. The rest of the code should be unchanged.
+Your method will be tested by the following program:
+import sys
+from LinkedList import LinkedList
+
+def main():
+    # Read data from input
+    line = sys.stdin.readline()
+    items = line.strip().split()
+
+    # Create the linked list
+    ll = LinkedList()
+
+    # add the items to the linked list
+    for item in items:
+        ll.add(item)
+
+    # print the linked list
+    print(str(ll))
+    ll.rotate() # rotate it
+    print(str(ll)) # print it again
+
+    # create the list using append 
+    for i in range(len(items)-1):
+        ll.rotate() # Rotate enough times should get back to the original
+    print(str(ll))
+
+if __name__ == "__main__":
+    main()
+Note that the test output could be confusing because the str method will show the items on the string in the reverse order to the way they were placed on the linked list.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

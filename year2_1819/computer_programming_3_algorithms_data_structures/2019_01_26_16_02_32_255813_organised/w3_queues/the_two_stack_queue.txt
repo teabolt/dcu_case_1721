@@ -1,0 +1,53 @@
+Title: The Two Stack Queue
+Description: Create a Queue ADT with three methods: isempty(), enqueue() and dequeue(). The ADT should use two stacks and no other data type. The Stack class will be provided with the three methods, push(), pop() and isempty()
+Your queue will be tested by the following program
+from Queue import Queue
+
+#
+#  Test a queue
+#
+def main():
+   q = Queue()
+
+   command = input()
+   while len(command) > 0:
+      print(command + ":", end="")
+      if command[0] == 'a': # add
+         item = command.split()[1]
+         q.enqueue(int(item));
+      elif command[0] == 'r': # remove
+         print(q.dequeue(), end="");
+      else:
+         print("Unknown command!")
+      print(" _" if q.isempty() else " *")
+      command = input()
+   print()
+
+if __name__ == "__main__":
+   main()
+The Stack implementation which you are provided with is shown below.
+class Node:
+    def __init__(self):
+        self.item = None
+        self.next = None
+
+class Stack:
+    def __init__(self):
+        self.top = None
+
+    def isempty(self):
+        return self.top == None
+
+    def push(self, item):
+        oldtop = self.top
+        self.top = Node()
+        self.top.item = item
+        self.top.next = oldtop
+
+    def pop(self):
+        item = self.top.item
+        self.top = self.top.next
+        return item
+
+Tests: 7 tests run/ 7 tests passed
+Grade: 100

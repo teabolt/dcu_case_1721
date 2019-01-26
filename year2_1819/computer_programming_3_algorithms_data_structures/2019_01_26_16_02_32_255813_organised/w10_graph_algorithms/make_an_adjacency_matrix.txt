@@ -1,0 +1,12 @@
+Title: Make an Adjacency Matrix
+Description: An adjacency matrix is a matrix of values representing connections between nodes on a graph. You are to examine the graph below and produce the corresponding adjacency matrix for the graph.
+For example, if you had a different graph of three nodes where A is connected to B and C is connected B, then the adjacency matrix would be:
+[
+[0, 1, 0],
+[1, 0, 1],
+[0, 1, 0],
+]
+Notice that the matrix is a list of lists and that every edge in the graph has two entries in the adjacency matrix. There is a 1 where A is connected to B and a corresponding 1 where B is connected to A. An adjacency matrix will therefore be symmetrical. A graph with three nodes will have a 3x3 adjacency matrix.
+The first row represents all connections between A and the other nodes. A is only connected to B and therefore only the B'entry is 1. B is connected to A and C and therefore its entry is [1, 0, 1]. A four node in a graph would have a 4x4 matrix of values. In Python, a 4x4 matrix is represented using 4 lists where each of those lists would contain 4 elements.
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,26 @@
+Title: Sorting Detective Setup
+Description: You will submit your solution by returning a list of four strings. Each string will have two letters representing a sorting algorithm. The strings will be:
+
+"ss" Selection Sort
+"is" Insertion Sort
+"qs" Quick Sort
+"ms" Merge Sort
+
+So, if you thought that the order was: Quick Sort, Insertion Sort, Merge Sort and Selection Sort, then you would return the list ["qs", "is", "ms", "ss"]
+You will need to download the Sort Detective jar file and then get a seed (actually just a number). Each student will have their own seed which will enable Sort Detective to generate a unique order for that student. To get the seed, you need to submit a program which returns an empty list. You will then be shown your seed.
+Once you have the seed, run the program with the seed as a parameter.
+The command line will be
+
+ java -jar sd.jar 
+seed
+
+
+where seed will be a number specific to you.
+You then use Sort Detective and work out which buttons correspond to insertion sort, selection sort, quick sort and merge sort and return an appropriate list.
+Note that the Sort Detective program is a little quirky. After you select the type of data you want to use, you must remember to press the Create List button. Then press A, B, C or D to find out how the corresponding algorithm fairs with that data.
+Note that you must get all four algorithms correct in order to get any marks.
+Sort Detective was developed by David Levine of St. Bonaventure University, New York.
+[If you don't like the idea of running an untrusted jar file on your computer (and you shouldn't), you can run it with a security manager which stops it doing most things: java -jar -Djava.security.manager sd.jar seed
+]
+Tests: 1  test run/ 1  test passed
+Grade: 100

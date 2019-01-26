@@ -1,0 +1,28 @@
+Title: Sum of two elements
+Description: Write a python function which takes two parameters, a list of integers and a number, k, and which prints every pair of numbers in the list which add up to k.
+The function would work as follows:
+   lst = [60, 6, 10, 8, 5]
+   k = 15
+   
+sum_to_k(lst, k)
+
+
+This will print
+10 5
+as these are the only two numbers which add up to 15. Here is another example:
+lst = [1, 6, 7, 8, 9, 10, 2, 3, 4, 5]
+k = 13
+sum_to_k(lst, k)
+
+will print
+6 7
+8 5
+9 4
+10 3
+
+In the event that no such pair of elements sum to k, then your program should print nothing.
+You should use an O(n
+2
+) algorithm in your solution. Your function should be called sum_to_k(), should take two parameters.
+Tests: No tests available
+Grade: No grade available

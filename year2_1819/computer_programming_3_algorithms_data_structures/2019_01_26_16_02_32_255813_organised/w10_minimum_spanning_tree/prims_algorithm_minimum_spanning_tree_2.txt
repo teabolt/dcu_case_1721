@@ -1,0 +1,5 @@
+Title: Prim's Algorithm: Minimum Spanning Tree 2
+Description: You should perform Prim's MST algorithm on the graph below starting at node 'A' and work out the total weight of the minimum spanning tree, that is, the sum of the weights of the edges of the MST.
+Submit your solution as an integer.
+Tests: 1  test run/ 1  test passed
+Grade: 100

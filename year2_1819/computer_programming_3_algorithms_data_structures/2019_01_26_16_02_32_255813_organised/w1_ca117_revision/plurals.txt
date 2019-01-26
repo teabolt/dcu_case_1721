@@ -1,0 +1,24 @@
+Title: Plurals
+Description: NB Problem taken from Darragh O'Brien
+Define a function called get_plural(). The function should have one parameter which is a word (a noun) and the function should return the plural of the word based on the following rules:
+Your program only has to define the function. An example usage is as follows:
+plural = get_plural("beach")
+
+When executed, plural will have the value "beaches".
+Your function will be tested using a program similar to the following:
+import sys
+from word import get_plural
+
+def check(word, plural):
+    return 1 # if the plural is correct or 0 otherwise.
+
+words = ["beach", "fish", "fox", "bus", "fez", "potato", "fairy", "lady", "boy", "elf", "knife", "fog", "tissue"]
+
+num_correct = 0
+for word in words:
+    num_correct += check(word, get_plural(word))
+
+print("All Good" if num_correct == len(words) else str(len(words) - num_correct) + " incorrect.")
+
+Tests: No tests available
+Grade: No grade available

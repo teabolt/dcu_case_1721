@@ -1,0 +1,23 @@
+Title: Quick Sort Stats 2
+Description: The previous problem used a partition function which always decided that the first element of the list should be the partitioning element. Rewrite the partition function so that the middle element is chose to be partitioned. Report the same stats as before, that is, the number of compares and the number of moves.
+Your code will be tested by the following program:
+import sys
+from qsort import qsort
+
+def main():
+    # Read each test case
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    
+    orig = list(items)
+
+    result = qsort(items)
+    if items != sorted(orig):
+        print("The list is not sorted.")
+    else:
+        print(result)
+
+if __name__ == "__main__":
+    main()
+Tests: 12 tests run/12 tests passed
+Grade: 100

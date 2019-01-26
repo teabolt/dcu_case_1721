@@ -1,0 +1,12 @@
+Title: Who was partitioned?
+Description: def solution():
+    return []
+and you will get a message similar to
+Your list is:
+[7, 6, 8, 20, 11, 14]
+Note however, your list will be different to the above. Work out the solution and submit the solution and get full marks. You must submit a list even if there is only one element. In the above example, where the solution was 8, you should submit
+def solution():
+    return [8]
+Easy!
+Tests: 1  test run/ 1  test passed
+Grade: 100

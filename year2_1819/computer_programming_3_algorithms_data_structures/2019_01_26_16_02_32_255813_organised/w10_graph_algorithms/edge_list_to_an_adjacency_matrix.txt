@@ -1,0 +1,4 @@
+Title: Edge List to an Adjacency Matrix
+Description: Write a function which takes an Edge List and generates the corresponding Adjacency Matrix.
+Tests: 1  test run/ 1  test passed
+Grade: 100

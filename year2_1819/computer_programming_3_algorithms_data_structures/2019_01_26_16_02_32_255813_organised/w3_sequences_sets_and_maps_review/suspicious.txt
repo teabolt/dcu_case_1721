@@ -1,0 +1,26 @@
+Title: Suspicious
+Description: A headmaster of a school is contacted by the police and provided with a file of names of juvenile delinquents. He has another file containing the name of his students and wants a program to check if any of the names are the same. Each line of each file contains one name only. Write a program to detect if any name appears on both files. (Example files are shown below) The filenames will be passed to your program on the command line.
+Here is what such a program might look like
+python3 suspicious.py students.txt delinquents.txt
+1. Bob Dylan
+2. Boney Vox
+3. Shakira
+
+Note that the output is sorted alphabetically. Your program may assume that the files exist.
+Here is the students.txt file for this example:
+Johnny be good
+Boney Vox
+The Edge
+John Lennon
+Shakira
+Bob Dylan
+James Brown
+and here is the delinquents.txt file for that example:
+Baddie ThreeShoes
+Attila the Hun
+Boney Vox
+Agolf Hitler
+Bob Dylan
+Shakira
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

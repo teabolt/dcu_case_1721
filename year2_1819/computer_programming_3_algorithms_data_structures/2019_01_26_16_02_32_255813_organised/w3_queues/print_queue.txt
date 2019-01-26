@@ -1,0 +1,58 @@
+Title: Print Queue
+Description: Write a function which will take some queue parameters and return a list of the elements of the queue. Your function will be called print_queue and will be in a file called print_queue.py. It will take three parameters, a list representing the circular buffer and two integers, representing the front and back of the queue.
+Your function will be tested using the following program which reads a set of queue commands from its input and executes them on the queue and then passes the queue parameters to your method. You should be then work out what the queue contains and return the contents as a list.
+from Queue import Queue
+from print_queue import print_queue
+
+def main():
+   size = int(input())
+   q = Queue(size)
+
+   command = input()
+   while len(command) > 0:
+      if command[0] == 'a': # add
+         item = command.split()[1]
+         q.enqueue(int(item));
+      elif command[0] == 'r': # remove
+         q.dequeue();
+      else:
+         print("Unknown command!")
+      command = input()
+
+   print_queue(q.data, q.front, q.back)
+
+if __name__ == "__main__":
+   main()
+Hint: look at the diagram of the circular buffer in the notes. You should be able to work out how to print out the elements of the queue.
+The queue class that Main.py uses is the following:
+class Queue:
+    def __init__(self, capacity = 4):
+        self.data = [0] * capacity
+        self.front = 0
+        self.back = 0
+
+    def count(self):
+        if self.back >= self.front:
+            return self.back - self.front
+        else:
+            return self.back - self.front + len(self.data)
+
+    def isempty(self):
+        return self.front == self.back
+
+    def enqueue(self, item):
+        if self.count() < len(self.data) - 1:
+            self.data[self.back] = item
+            self.back = (self.back + 1) % len(self.data)
+        else:
+            print("Queue Full")
+
+    def dequeue(self):
+        if self.count() > 0:
+           item = self.data[self.front]
+           self.front = (self.front + 1) % len(self.data)
+           return item
+        else:
+            return None
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

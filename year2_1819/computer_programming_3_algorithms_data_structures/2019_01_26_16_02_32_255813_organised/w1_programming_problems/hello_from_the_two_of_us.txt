@@ -1,0 +1,8 @@
+Title: Hello from the two of us
+Description: Write a python program to print "Hello from the two of us!"
+Your program need only contain 1 line and might look like the following:
+print("Hello from the two of us")
+
+Just submit that file. Go to the edit tab, enter your code. Then click evaluate. Remember that you need to be a member of a group. A weird error message will pop up should you not be a member of a group.
+Tests: No tests available
+Grade: No grade available

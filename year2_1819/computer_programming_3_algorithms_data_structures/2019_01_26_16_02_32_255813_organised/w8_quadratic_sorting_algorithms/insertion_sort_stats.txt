@@ -1,0 +1,40 @@
+Title: Insertion Sort Stats
+Description: Consider the following implementation of insertion sort
+def insertion_sort(lst):
+    # At each pass ensure that that section is sorted.
+    for todo in range(1, len(lst)):
+        # Find correct position for lst[todo].
+        i = todo
+        while i > 0 and lst[i] < lst[i-1]:
+            lst[i], lst[i-1] = lst[i-1], lst[i] # Swap it down towards the correct position
+            i -= 1
+
+Note that there are more efficient implementations.
+Now, your job is to count how many comparisons will be made for various types of input. So, modify the code so that you count the number of times two elements are compared and the number of times two elements are swapped.
+That's not so difficult. Every time the inner while loop is executed, then two elements are being compared 
+lst[i] < lst[i-1]
+ and within the loop, two elements are being swapped. You should return the number of comparisons and the number of swaps as a tuple.
+Your code will be tested by the following program:
+import sys
+from insertion_sort import insertion_sort
+
+def main():
+    # Read each test case
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    
+    orig = list(items)
+
+    result = insertion_sort(items)
+    if items != sorted(orig):
+        print("The list is not sorted.")
+    else:
+        print(result)
+
+if __name__ == "__main__":
+    main()
+
+Note that when there are 26 sorted letters, then no letters have to be swapped and 25 letters have to be compared. The second has to be compared to the first and the third to the second and so on til the last letter is compared to the second last. You should study the inner while loop and make sure that you understand it. It should be straightforward to modify the code so that it returns the number of compares and the number of moves.
+
+Tests: 8 tests run/ 8 tests passed
+Grade: 100

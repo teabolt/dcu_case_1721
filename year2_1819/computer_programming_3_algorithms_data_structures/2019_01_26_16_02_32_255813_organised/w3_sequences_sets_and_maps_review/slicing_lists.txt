@@ -1,0 +1,25 @@
+Title: Slicing lists
+Description: Write a function called get_sliced_lists which will take a list parameter and return the following  lists which should be created using slices:
+Your function should put the three lists into their own list and return that. Put your function in a file called numbers.py.
+Your program will be tested by the following:
+from numbers import get_sliced_lists
+
+def main():
+    # read the list from stdin
+    nums = []
+    num = int(input())
+    while num != -1:
+        nums.append(num)
+        num = int(input())
+        
+    # call the student's function with the list of numbers and ...
+    lists = get_sliced_lists(nums)
+    # ... print the result
+    for lst in lists:
+        print(lst)
+
+if __name__ == "__main__":
+    main()
+
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

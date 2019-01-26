@@ -1,0 +1,10 @@
+Title: Sorted Sum of two elements
+Description: An earlier problem had the specification:
+"Write a python function which takes two parameters, a list of integers and a number, k, and which prints every pair of numbers in the list which add up to k."
+This time, you are to write a function which takes a sorted list and an integer k and return True if any pair of numbers add up to k and False otherwise. However, your solution should be O(n).
+Note that the previous solution required time proportional to the input size squared, that is, it was O(n
+2
+) also known as quadratic. You need a solution which requires time proportional to the input. That is, O(n), also known as linear time.
+A linear solution can only pass through the input once. It cannot consider each pair of elements in the list.
+Tests: 1  test run/ 1  test passed
+Grade: 100

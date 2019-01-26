@@ -1,0 +1,10 @@
+Title: Hello From me
+Description: Write a python program to print "Hello From Me!"
+Your program need only contain 1 line and might look like the following:
+print("Hello From Me")
+
+Just submit a file containing that line. Or, go to the edit tab and enter your code. Then click evaluate. You will receive your mark in a few seconds. You may need to append an exclamation mark to get full marks.
+It may happen that you make a typo and get zero marks. No problem, just fix it and resubmit it.
+Remember that process. That's how you will receive marks throughout the module.
+Tests: No tests available
+Grade: No grade available

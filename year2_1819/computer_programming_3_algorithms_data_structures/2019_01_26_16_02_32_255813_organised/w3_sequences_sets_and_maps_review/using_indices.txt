@@ -1,0 +1,26 @@
+Title: Using indices
+Description: Write a function called get_counts which will take as a parameter a list of words and return a list of integers which will be a count of the lengths of those words. No word will have more than 9 letters.
+For example, if the list of words was ["cat", "dog", "pig", "ability", "babysit", "pat", "bun"] you can see that 5 of the words have 3 letters and 2 of the words have 7 letters, so counts should contain 10 entries with all entries zero except entry 3 which will have a value of 5 and entry 7 which will have a value of 2.
+The counts list will be [0, 0, 0, 5, 0, 0, 0, 2, 0, 0].
+On the other hand, if the list of words is ["dog", "pest", "horse", "donkey", "a", "dolphin", "elephant",  "fisherman"], then counts would be [0, 1, 0, 1, 1, 1, 1, 1, 1, 1] as, In this case, there is a single word of every length except 0 and 2.
+Place your function in a file called numbers.py. Your function will be tested by the following program:
+import sys
+from numbers import get_counts
+
+def main():
+    # read the list of words from stdin
+    line = sys.stdin.readline()
+    line = line.strip()
+    words = line.split()
+
+    # call the student's function and ...
+    counts = get_counts(words)
+    # ... print the result
+    for length in range(10):
+        print(str(length) + ": " + str(counts[length]))
+
+if __name__ == "__main__":
+    main()
+Remember that the length's list will always have 10 elements regardless of how many words are in the list.
+Tests: 5 tests run/ 5 tests passed
+Grade: 100

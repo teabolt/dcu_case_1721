@@ -1,0 +1,10 @@
+Title: Command line arg
+Description: Write a python program which reads a command line argument and prints it out.
+Your program should import sys and use the argv list.
+A sample run might look like this:
+$ python3 arg.py samplecommandlineargument
+samplecommandlineargument
+
+Note it simply prints whatever is the command line argument.
+Tests: No tests available
+Grade: No grade available

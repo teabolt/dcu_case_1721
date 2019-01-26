@@ -1,0 +1,27 @@
+Title: Consecutive Duplicates
+Description: Write a recursive method called duplicates() which returns true if two consecutive elements of the linked list are equal. Add the method to the LinkedList class from the previous question:
+Your method will be tested by the following program:
+
+
+import sys
+from LinkedList import LinkedList
+
+def main():
+    # Read each set
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    
+    ll = LinkedList()
+    bool = str(ll.duplicates())[0]
+    print(bool, end="")  # Only print the first letter of the result (F for false, T for true)
+    for item in items:
+        ll.add(item)
+        bool = str(ll.duplicates())[0] # Only print the first letter of the result
+        print(bool, end="")
+        
+    print()
+
+if __name__ == "__main__":
+    main()
+Tests: 4 tests run/ 4 tests passed
+Grade: No grade available

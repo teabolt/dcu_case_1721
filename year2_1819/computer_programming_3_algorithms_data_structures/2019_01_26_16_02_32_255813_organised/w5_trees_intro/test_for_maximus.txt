@@ -1,0 +1,19 @@
+Title: Test for Maximus
+Description: We will define a Maximal Tree as one which for a given height as as many nodes as possible - that is, every row is full. You are to create a function which will have a BST as argument and will determine if the tree is maximal. Your function should be called is_maximal().
+The input will be generated programatically. Your function will be tested by code similar to the following:
+from student import is_maximal
+
+def test(lst):
+    bst = BST()
+
+    # Add each element in the lst to the tree
+    for n in lst:
+        bst.add(n)
+
+    # Print the list and whether or not the resulting tree is maximal
+    print("bst.is_maximal(" + str(lst) + ") is " + str(
+is_maximal(bst)
+))
+
+Tests: 1  test run/ 1  test passed
+Grade: No grade available

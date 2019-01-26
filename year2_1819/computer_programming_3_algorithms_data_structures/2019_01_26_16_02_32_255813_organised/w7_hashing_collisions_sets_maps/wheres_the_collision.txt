@@ -1,0 +1,106 @@
+Title: Where's the collision?
+Description: Given the code for a hash table, you are required to modify the add method so that it returns the information about any collision that may occur. The method should return None if there is no collision and otherwise it should return a tuple containing the index and the item that is being added. Your method should still properly update the Hash Table. (This means that the add method should still add the item to the hash table. Just that, instead of returning nothing, return information about the collision.)
+Your code will be called by the following program
+import sys
+from HashSet import HashSet
+
+def main():
+    # Read each test case
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    nums = [int(item) for item in items]
+    
+    # First number is the capacity
+    numset = HashSet(nums[0])
+
+    for x in nums[1:]:
+        print(str(numset.add(x)) + " ", end="")
+
+    print()
+
+if __name__ == "__main__":
+    main()
+
+You will be provided with the following HashSet implementation:
+from LinkedList import LinkedList
+
+class HashSet:
+    def __init__(self, capacity=10):
+        # Create a list to use as the hash table
+        self.table = [None] * capacity
+
+    def add(self, item):
+        # Find the hash code
+        h = hash(item)
+        index = h % len(self.table)
+
+        # Check is it empty
+        if self.table[index] == None:
+            self.table[index] = LinkedList() # Need a new linked list for this entry
+
+        if item not in self.table[index]:
+            # Only add it if not already there (this is a set)
+            self.table[index].add(item)
+and the LinkedList code is:
+#
+#  This linked list use built-ins: str(), iter(), len(), in()
+#
+#   These functions are implemented using recursion (except iter)
+#
+class Node:
+    def __init__(self, item, next):
+        self.item = item
+        self.next = next
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def add(self, item):
+        self.head = Node(item, self.head)
+
+    def remove(self):
+        if self.is_empty():
+            return None
+        else:
+            item = self.head.item
+            self.head = self.head.next    # remove the item by moving the head pointer
+            return item
+
+    def is_empty(self):
+        return self.head == None
+
+    def __iter__(self):
+        cursor = self.head
+        while cursor is not None:
+            yield cursor.item
+            cursor = cursor.next
+
+    def recursive_len(self, ptr):
+        if ptr == None:
+            return 0
+        else:
+            return 1 + self.recursive_len(ptr.next)
+
+    def __len__(self):
+        return self.recursive_len(self.head)
+
+    def recursive_contains(self, ptr, item):
+        if ptr == None:
+            return False
+        else:
+            return item == ptr.item or self.recursive_contains(ptr.next)
+
+    def __in__(self, item):
+        return recursive_contains(self.head, item)
+
+    def recursive_str(self, ptr):
+        if ptr == None:
+            return ""
+        else:
+            return str(ptr.item) + "->" + self.recursive_str(ptr.next)
+
+    def __str__(self):
+        return self.recursive_str(self.head)
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

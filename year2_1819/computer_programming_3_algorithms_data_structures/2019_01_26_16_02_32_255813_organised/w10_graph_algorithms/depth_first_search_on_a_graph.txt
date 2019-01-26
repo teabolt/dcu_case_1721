@@ -1,0 +1,5 @@
+Title: Depth First Search on a graph
+Description: Perform a depth first search on the graph below.
+Your string should have the same number of nodes as in the graph. Each node will be represented by a single uppercase letter.
+Tests: 1  test run/ 1  test passed
+Grade: 100

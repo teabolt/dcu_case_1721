@@ -1,0 +1,40 @@
+Title: Merging - which lists?
+Description: def merge(lst1, lst2):
+    """ This merges two sorted lists into one larger sorted list. """
+    merged_list = []
+    index1 = 0
+    index2 = 0
+    while index1 < len(lst1) and index2 < len(lst2):
+        if lst1[index1] < lst2[index2]:
+            # The element of lst1 is smaller
+            merged_list.append(lst1[index1]) # Add that element of lst1 to the merged list
+            index1 += 1
+            if index1 == len(lst1):
+                break       # Reached the end of lst1, so exit the loop
+        else: # Else, add the element from lst2 to the merged list
+            merged_list.append(lst2[index2])
+            index2 += 1
+            if index2 == len(lst2):
+                break
+
+    # One of the lists is empty, need to copy remaining items from the other into our merged
+    # list
+    while index1 < len(lst1):
+         lst.append(lst1[index1])
+         index1 += 1
+
+    while index2 < len(lst2):
+         lst.append(lst1[index2])
+         index2 += 1
+
+    return merged_list
+
+As the merge progresses, each of the smaller lists is examined to see which will supply the next element to the main list. You job is to say which list supplied each element.
+For example, let's say the two lists are [2, 3, 7] and [4, 5, 6]. So, let's call the first list L1 and the second list L2. The front element of each list is compared, that is 2 is compared with 4. The 2 is smaller and goes to the beginning of the new merged list. The process is repeated, and the next element chosen is also from L1, the 3. Next element chosen will be the 4 from L2, as is the 5 and the 6 and the final element 7 is from L1.
+You should return the names of the lists that supply the corresponding elements. For this example, this would be:
+['L1', 'L1', 'L2', 'L2', 'L2', 'L1']
+Which sorted lists? Submit the following program to see your two lists.
+def solution():
+    return []
+Tests: 1  test run/ 1  test passed
+Grade: 100

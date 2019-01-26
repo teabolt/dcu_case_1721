@@ -1,0 +1,31 @@
+Title: Average a list
+Description: Define a function called calc_average() in a python program. The function should have one parameter which is a list of integers and should return a single value which is the average of the integers in the list.
+Your program only has to define the function and might look like
+def calc_average(numbers):
+   sum = sum(numbers)
+   return sum
+
+Note that this code is not correct. It will have to be adapted if you wish to receive marks.
+Your function will be tested using the following code:
+import sys
+from average import calc_average # student's function
+
+#
+#   Read a list from stdin
+#
+line = sys.stdin.readline()
+
+tokens = line.split()
+
+list = []
+
+for token in tokens:
+    list.append(int(token))
+
+#
+#   Call the function + print result
+#
+print(calc_average(list))
+
+Tests: No tests available
+Grade: No grade available

@@ -1,0 +1,15 @@
+Title: The Odd Numbers Problem
+Description: Write a function called get_odd_list which returns a list of odd numbers. The function should read numbers from standard input until one of the numbers is -1. The function should only add odd numbers to the list. Put your function in a file called numbers.py.
+Your program will be tested by the following:
+from numbers import get_odd_list
+
+def main():
+    # call the get_odd_list function and print the result
+    odds = get_odd_list()
+    print(odds)
+
+if __name__ == "__main__":
+    main()
+
+Tests: 3 tests run/ 3 tests passed
+Grade: No grade available

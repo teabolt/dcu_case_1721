@@ -1,0 +1,20 @@
+Title: palindromes
+Description: Write a recursive method called is_palindrome to determine whether a string is a palindrome or not. The method will have one parameter, the string to be tested and will return a boolean value indicating whether the string is a palindrome. Put your function in a file called recursive.py.
+Your program will be tested by the following:
+import sys
+from recursive import is_palindrome
+
+def main():
+   for line in sys.stdin:
+      # remove end of line
+      word = line.strip()
+      if len(word) > 0:
+         # call recursive function to check if a palindrome
+         no = "" if is_palindrome(word) else "not "
+         print(word + " is " + no + "a palindrome.")
+
+if __name__ == "__main__":
+   main()
+
+Tests: No tests available
+Grade: No grade available

@@ -1,0 +1,15 @@
+Title: RadixSort program
+Description: This problem requires you to write a radix sort function which takes two parameters: a list and a pass number. You are to sort the list using the least significant bit radix sort up to that pass number. That is, if the pass number is 1, just sort on the least significant bit. If the pass number is 2, then sort on the two least significant bits.
+The standard radix sort code looks like:
+def radix_sort(lst):
+   # for each power of two (starting at lowest) sort based on that power
+   for p in range(6):  # Assume 6 bits
+      # Split list in two
+      lo = [x for x in lst if x & (1 << p) == 0] # lo where the bit is zero
+      hi = [x for x in lst if x & (1 << p) != 0] # hi where the bit is one
+      lst = lo + hi # combine the two into one list.
+
+   return lst
+Your task is to stop after the appropriate number of passes.
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,37 @@
+Title: Hashing Functions: sum and position them
+Description: This problem is a variation on the previous problem. You need to make a small modification to the str_hash() function. The programming language Java has a String hash function as discussed here: http://stackoverflow.com/questions/299304/why-does-javas-hashcode-in-string-use-31-as-a-multiplier
+You should use the same formula. You may also examine the Java source code. You are encouraged to search the web for the Java source code and use that to help develop a solution.
+The formula for the hash code of a string s of length n is:
+s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]
+For example, the hash code of the string "abcd" would be
+ord("a") * 31
+3
+ + ord("b") * 31
+2
+ + ord("c") * 31
+1
+ + ord("d") = 2987074
+Your code will be called by the following program:
+import sys
+from HashSet import HashSet
+
+def main():
+    # Read each test case
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    
+    # First number is the capacity
+    strset = HashSet(int(items[0]))
+
+    for word in items[1:]:
+        strset.add(word)
+
+    # Print the hash table (the layout will vary with the hashing function)
+    print(strset)
+
+if __name__ == "__main__":
+    main()
+
+You will be provided with a HashSet implementation and a str_hash function which you should modify.
+Tests: 5 tests run/ 5 tests passed
+Grade: 100

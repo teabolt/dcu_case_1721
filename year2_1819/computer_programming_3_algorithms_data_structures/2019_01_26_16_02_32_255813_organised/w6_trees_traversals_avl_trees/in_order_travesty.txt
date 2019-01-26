@@ -1,0 +1,67 @@
+Title: In Order Travesty
+Description: Consider the implementation of the Binary Tree class below:
+class Node:
+    def __init__(self, item, left = None, right = None):
+        self.item = item
+        self.left = left
+        self.right = right
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def recurse_add(self, ptr, item):
+        if ptr == None:
+            return Node(item)
+        elif item < ptr.item:
+            ptr.left = self.recurse_add(ptr.left, item)
+        elif item > ptr.item:
+            ptr.right = self.recurse_add(ptr.right, item)
+        return ptr
+        
+    def add(self, item):
+        """ Add this item to its correct position on the tree """
+        self.root = self.recurse_add(self.root, item)
+
+    def r_count(self, ptr):
+        if ptr == None:
+            return 0
+        else:
+            return 1 + self.r_count(ptr.left) + self.r_count(ptr.right)
+            
+    def count(self): return self.r_count(self.root)
+
+    def r_height(self, ptr):
+        if ptr == None:
+            return 0
+        else:
+            return 1 + max(self.r_height(ptr.left), self.r_height(ptr.right))
+
+    def height(self): return self.r_height(self.root)
+
+Add a method called in_order() which prints out the elements of a tree in order. That is, it would be an in_order traversal of the tree. Each element should be printed using a print statement such as
+print(ptr.item + " ", end="")
+print(ptr.item, end=" ")
+and there should be a final print statement just to print a new line.
+Your method will be tested by the following:
+import sys
+from BST import BST
+
+def main():
+    # Read each test case
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    nums = [int(item) for item in items]
+
+    tree = BST()
+    for num in nums:
+        tree.add(num)
+
+    print("Print the elements of the tree in order:")
+    tree.in_order()
+
+if __name__ == "__main__":
+    main()
+
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

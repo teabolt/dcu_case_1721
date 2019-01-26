@@ -1,0 +1,17 @@
+Title: The All Numbers Problem
+Description: Write a function which will read the input until terminated by -1 and create two lists, one to hold the odd numbers and one to hold the even numbers. The function should return both these lists as a tuple, the odd list followed by the even list.
+Put your function in a file called numbers.py.
+Your program will be tested by the following:
+from numbers import get_evenodd_list
+
+def main():
+    # call the get_odd_list function and print the result
+    odds, evens = get_evenodd_list()
+    print(odds)
+    print(evens)
+
+if __name__ == "__main__":
+    main()
+
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

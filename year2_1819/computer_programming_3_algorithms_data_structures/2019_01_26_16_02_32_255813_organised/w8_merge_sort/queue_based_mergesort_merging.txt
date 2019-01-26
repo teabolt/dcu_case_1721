@@ -1,0 +1,103 @@
+Title: Queue Based Mergesort - Merging
+Description: Mergesort involves two phases: the first is to split up the queue and the second is to merge two sorted queues into a combined sorted queue. All the hard work happens in the merging. You are to write a function called merge, which takes three parameters, the first two are sorted queues and the last parameter is a queue where the combined sorted elements will be stored. The merge function will be used along with your split function from the previous exercise, this will complete the mergesort using queues.
+from Queue import Queue
+
+def mergesort(q):
+    if len(q) < 2:
+        return # Base case. No work to do for one element.
+
+    # Split q into two smaller queues
+    q1, q2 = split(q) # You write the split function
+    # Note that you should have emptied the original q
+
+    # recursively split these as well
+    mergesort(q1)
+    mergesort(q2)
+
+    # Now, merge these together back into q
+    merge(q1, q2, q)
+The Queue code uses a linked list and is as follows:
+import LinkedList
+
+class Queue:
+    """ A linked list based queue """
+    def __init__(self):
+        self.length = 0
+        self.linkedlist = LinkedList.LinkedList()
+
+    def enqueue(self, item):
+        self.linkedlist.addlast(item)
+        self.length += 1
+
+    def dequeue(self):
+        if self.linkedlist.isempty():
+            return None
+        else:
+            self.length -= 1
+            return self.linkedlist.remove()
+
+    # Examine the front of the queue without removing anything.
+    def first(self):
+        return self.linkedlist.peek()
+
+    def isempty(self):
+        return self.linkedlist.isempty()
+
+    def __len__(self):
+        return self.length
+In addition to the normal enqueue, dequeue and isempty operations, there is a first() method so that you can see the element at the front of the queue and a len method.
+Your code will be tested using code similar to the following
+from Queue import Queue
+import student
+
+def mergesort(q):
+    if len(q) < 2:
+        return
+
+    # Split q into two smaller queues
+    q1, q2 = student.split(q) # Actually, this time, the spilt function will be supplied by Charlie
+    # Note that the original queue should now be empty
+
+    # recursively sort these smaller queues
+    mergesort(q1)
+    mergesort(q2)
+
+    # Now, merge these together back into the original q
+    student.merge(q1, q2, q) # student supplies merge function.
+
+import random
+#
+#   Make a queue from a lst
+#
+def make_q(lst):
+    q = Queue()
+    for x in lst:
+        q.enqueue(x)
+    return q
+
+def issorted(q):
+    last = q.dequeue()
+    while not q.isempty():
+        if last > q.first():
+            return False # Two elements out of order
+        lst = q.dequeue()
+
+    return True # We got here and so all elemets must have been in order.
+
+def main():
+    lst = [10 * x for x in range(101)]
+    random.shuffle(lst)
+    q = make_q(lst)
+
+    mergesort(q) # This uses the student's merge function to sort q
+
+    if issorted(q):
+        print("Test passed")
+    else:
+        print("Your merge function didn't work.")
+
+if __name__ == "__main__":
+    main()
+In fact, we will supply our own split() function, so you need only supply the merge() function.
+Tests: 1  test run/ 1  test passed
+Grade: 100

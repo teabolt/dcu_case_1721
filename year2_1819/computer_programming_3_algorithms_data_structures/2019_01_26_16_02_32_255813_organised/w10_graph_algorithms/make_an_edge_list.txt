@@ -1,0 +1,18 @@
+Title: Make an Edge List
+Description: For example, if you had a graph of three nodes where A is connected to B, B is connected to A and C and C is connected B, then the edge list would be:
+[
+ ['B'],
+ ['A', 'C'],
+ ['B']
+]
+Notice that the edge list has one entry for each node (so three in all). The first entry is the connections from 'A' and there is only a single entry, namely 'B' as 'A' is only connected to 'B' . The next entry is for 'B' and since 'B' is connected to 'A' and 'C', this has those two entries. The final entry is for 'C' and 'C' is only connected to 'B' and so, C's list just contains a 'B'
+Submit a file which returns the edge list. In the previous example, you would submit the following file:
+def sol():
+    return [
+            ['B'],
+            ['A', 'C'],
+            ['B'],
+           ]
+You should return an edge list in the same format for your graph.
+Tests: 1  test run/ 1  test passed
+Grade: 100

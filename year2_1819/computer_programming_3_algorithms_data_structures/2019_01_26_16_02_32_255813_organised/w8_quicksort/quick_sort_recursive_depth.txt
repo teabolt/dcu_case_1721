@@ -1,0 +1,33 @@
+Title: Quick Sort Recursive Depth
+Description: This time we want to see how far the recursive function descends, i.e. what is the deepest level of recursion. The code is quite easy. We simply modify the qsort function to return the recursive height and note that the code corresponds exactly to the tree height method.
+def rec_qsort(lst, lo, hi):
+    if lo < hi:
+        pivot = partition(lst, lo, hi)
+        rec_qsort(lst, lo, pivot - 1)
+        rec_qsort(lst, pivot + 1, hi)
+
+def qsort(lst):
+    rec_qsort(lst, 0, len(lst) - 1)
+
+Remember that the base case will have to change. The code will look quite like the recursive tree height when you have it working. That is to be expected because it is doing a very similar thing.
+Your code will be tested by the following program:
+import sys
+from qsort import qsort
+
+def main():
+    # Read each test case
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    
+    orig = list(items)
+
+    recursive_depth = qsort(items)
+    if items != sorted(orig):
+        print("The list is not sorted.")
+    else:
+        print(recursive_depth)
+
+if __name__ == "__main__":
+    main()
+Tests: 12 tests run/12 tests passed
+Grade: 100

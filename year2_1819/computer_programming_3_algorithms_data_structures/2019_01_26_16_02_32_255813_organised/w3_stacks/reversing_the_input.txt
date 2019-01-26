@@ -1,0 +1,38 @@
+Title: Reversing the Input
+Description: Create a python function which will read the input a line at a time and print out the lines in reverse order. Your function will receive a stack as a parameter. Use this stack appropriately to reverse the input.
+Here is the Stack class:
+class Stack:
+#
+#  Stack ADT has three methods: is_empty, push and pop.
+#
+   def __init__(self):
+      self.stack = []
+      self.top = 0
+
+   def is_empty(self):
+      return self.top == 0
+
+   def push(self, item):
+      if self.top < len(self.stack):
+         self.stack[self.top] = item
+      else:
+         self.stack.append(item)
+
+      self.top += 1
+
+   def pop(self):
+      if self.is_empty():
+         return None
+      else:
+         self.top -= 1
+         return self.stack[self.top]
+
+Your function will be tested using the following program:
+from Stack import Stack
+from reverse_input import reverse_input
+
+stack = Stack()
+reverse_input(stack)
+
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,22 @@
+Title: Unique elements of a list
+Description: Write a function called unique_list which take one parameter, a list, and which returns a new list containing only the unique elements of the list. The order of the elements don't matter.
+You should use sets in your answer. Your function could be very short.
+Your function will be in a file called sets.py
+Your function will be tested by the following program:
+import sys
+from sets import unique_list
+
+def main():
+    # Read in a list of strings
+    lst = sys.stdin.readline().strip().split()
+
+    # call the student's function ...
+    answer = unique_list(lst)
+    print(type(answer)) # should be a list
+    answer.sort()
+    print(answer)
+
+if __name__ == "__main__":
+    main()
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

@@ -1,0 +1,14 @@
+Title: Even Odder
+Description: Write a python program which determines if a string has an even or odd number of characters. Should the string have an even number of characters, it prints the second half of the string. Otherwise it prints only the first and last letters of the string. The string will be passed to your program on the command line.
+The program might work as follows:
+$ python3 evenodd.py evener
+ner
+
+"even" has 4 characters therefore even, so print the second half of the string.
+OR
+$ python3 evenodd.py oddesty
+oy
+
+oddesty has an odd number of characters and so print the first and last characters: 'o' and 'y'.
+Tests: No tests available
+Grade: No grade available

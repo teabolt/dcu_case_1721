@@ -1,0 +1,38 @@
+Title: Word Lengths
+Description: Write a function called get_counts_dict() which will takes a list of words as a parameter and returns a map of a count of each word.
+Your function will be tested by the following program:
+import sys
+from word_length import get_counts_dict
+
+def main():
+    # read the list of words from stdin
+    line = sys.stdin.readline()
+    line = line.strip()
+    words = line.split()
+
+    # call the student's function
+    counts = 
+get_counts_dict(words)
+
+    print(type(counts))
+
+    lengths = counts.keys()
+    for length in sorted(lengths):
+        print(str(length) + ": " + str(counts[length]))
+
+if __name__ == "__main__":
+    main()
+
+Here is an example run of the program:
+$ python3 Main.py
+
+this sent ence cont ains only four lett errr words
+
+<class 'dict'>
+4: 9
+5: 1
+
+In this case, the "sentence" contained 9 four letter "words" and one five letter word (namely words). Use a map to map each word length onto a count.
+This is similar to a previous exercise, except that you return a map instead of a list.
+Tests: 5 tests run/ 5 tests passed
+Grade: 100

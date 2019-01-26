@@ -1,0 +1,43 @@
+Title: Insertion Sort Stats V2
+Description: The implementation of the sort is changed slightly. It is usually more efficient to remember the item being inserted and then keep moving elements back to make room for it before finally inserting. Since swapping two elements is equivalent to 3 moves, this is less work.
+This time, return a tuple with the number of compares and the number of moves.
+def insertion_sort(lst):
+    # No swap version
+    for todo in range(1, len(lst)):
+        tobeinserted = lst[todo]
+        i = todo
+        while i > 0 and tobeinserted < lst[i-1]:
+            lst[i] = lst[i-1] # Make space for the item
+            i -= 1
+        lst[i] = tobeinserted  # Found the place for this item, plonk it in
+
+
+Again, modify the code so that you count the number of times two elements are compared and the number of times an element is moved.
+The inner while loop has the following test: 
+lst[i] < lst[i-1]
+ which compares two elements. Within the inner loop, one element is moved. 
+You should return the number of comparisons and the number of moves as a tuple.
+Note that this function doesn't do as well if the array is sorted already because it always moves two elements in the loop even if that element doesn't have to change.
+Your code will be tested by the following program:
+import sys
+from insertion_sort import insertion_sort
+
+def main():
+    # Read each test case
+    line = sys.stdin.readline()
+    items = line.strip().split()
+    
+    orig = list(items)
+
+    result = insertion_sort(items)
+    if items != sorted(orig):
+        print("The list is not sorted.")
+    else:
+        print(result)
+
+if __name__ == "__main__":
+    main()
+
+Note that when there are 26 sorted letters, then no letters have to be swapped but the inner loop will execute 25 times and each time two moves will occur (note the two assignment statements in the outer loop) which explains the 50 moves.
+Tests: 8 tests run/ 8 tests passed
+Grade: 100
