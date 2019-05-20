@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<manual>
+    <topic name="author">Done by Tomas Baltrunas, student number 17350793, Computer Applications Year 2. For CA216 2019 shell assignment.</topic>
+    <topic name="preface">
+        myshell: "the place where I spend all my summers" OR "the grinch that stole my easter".
+
+        I have written this manual using minimal XML in order to parse and display the manual programmatically in the shell program, so don't be scared of all the tags and I hope it is still readable!
+    </topic>
+    <topic name="environment-operation">
+        The Shell Environment and Operation
+        <topic name="intro">
+            Introduction.
+
+            The "shell" has two purposes: first, to act as an interface to the Operating System (OS), and second, to run other programs that are not necessarily part of the OS.
+
+            It uses a "Command Line Interface" (CLI), which means that you will not be clicking on windows and graphical displays (as with a Graphical User Interface). Rather, you will be typing out textual commands in response to prompt text. Those who have basic Unix experience would have already used a CLI when launching the pre-installed "Terminal" application (such as gnome) on your Unix (for example, Linux or Mac OS X) OS. On Windows, you may have also used the "cmd.exe" CLI for utilities such as "ping" or running ".bat" files.
+
+            This shell, going by the motto "the hottest shell in the game", in particular, provides much of the expected features that you would find by using other OS shells.
+        </topic>
+        <topic name="installation">
+            Installation.
+
+            In order to use the shell, an installation of the Python programming language is required (see https://www.python.org/), which is available on most modern OS's. Be sure to install Python "version 3" (not the dated ancient garbage that is "version 2"). To check if you have Python, go to your OS's terminal and type "python3" on Unix or "py -3" on Windows (from here on whenever "(python)" is mentioned with, it refers to the syntax to launch python on your platform).
+
+            Next, by some magical means retrieve the source code for this shell. If you have this manual, you probably have the "source" already. You should extract the source under an appropriate directory, eg: 'user/home/the_best_shell_ever'. You should see files with the ".py" extension.
+        </topic>
+        <topic name="launch">
+            Launch.
+
+            In order to launch the shell, open your OS's shell, navigate to the directory where you extracted this shell's files, and type "(python) myshell.py".
+
+            If successful, you should see a greeting and a prompt with your current directory. Congratulations! You are running a shell inside a shell, how convenient!
+        </topic>
+        <topic name="operation">
+            Operation.
+
+            The introduction shows your user name, Operating System type and associated shell being used, and current time.
+            The "prompt" always shows the working directory that the shell is in.
+            Enter a command and press enter to execute it.
+            To exit the shell, press CTRL+D.
+
+            The "working directory" is what the shell "sees" or where is it looking in the file system when searching for files.
+
+            If the command entered can not be executed, an error is displayed.
+            Some commands may come under different names but do the same thing. Such commands are known as "alises" for other commands.
+
+            If supported by your OS, the shell will come in colours. Usual output is displayed in your normal terminal colour (usually white), while errors are reported using red.
+
+            The standard output and standard error streams are mixed.
+        </topic>
+        <topic name="execution-modes">
+            Execution Modes.
+
+            The shell may be ran in two "modes". Firstly, in the "interactive mode" that has been described so far, where the user types in commands in response to the prompt. This mode or "environment" may also come under the name of "REPL" - "read-eval-print loop". Read a command, evaluate it, print the results, go back to step one.
+
+            The interactive mode is excellent for exploration and quick queries or modifications.
+
+            The second way is the "batch mode". In "batch mode", a "batch file" is supplied as an argument when calling the shell program, eg: "(python) myshell.py mybatchfile". The "batch file" contains a list of commands, one per line, each of which are executed from top to bottom as if they were typed in by the user. When the end of the "batch file" is reached, the shell exits.
+
+            Use cases for batch mode include scripting of tasks, information logging, shell testing, and other repetitive activities that can be automated.
+        </topic>
+    </topic>
+    <topic name="internal-commands">
+        Internal Commands.
+
+        The shell implements a limited number of "internal" commands that interface with the Operating System, interact with other programs or processes, or control the shell environment.
+
+        Some commands take arguments or parameters that may be required or optional. All path arguments (strings that identify or locate an object in the file system), unless otherwise specified, can be in full / absolute (starting with root or "/" for Unix, or the drive for Windows, eg: "C:/") or relative  ("." indicates the current directory, ".." indicates the parent directory) syntax. The path should use the appropriate separator symbol (eg: "/", "\", "\\") (platform dependent).
+
+        The following descriptions use "[]" to indicate optional arguments or command parameters, and "()" to indicate required arguments. "|" indicates OR. "*" incicates 0 or more preceding entries.
+
+        Arguments should be separated by white space (space, tab, etc).
+        <topic name="command-help">
+            The "help" command lists all the available internal commands and manual topics.
+            Type "help (command)", where "(command)" is some defined command, to view the manual for that command.
+
+            You may also see the auto-generated help for the syntax of these commands by typing "(command) -h" (available for most commands).
+
+            In interactive mode, help for a specific command or topic is "more"-based or uses the Unix "man" command style. The manual text is displayed a block at a time. If a space is pressed, the next block is displayed, and so on. Pressing any other key exits the help screen. In batch mode, the entire manual is outputted without waiting for spacebar.
+
+            If help is not available or queried for an invalid command or topic, a "no help available" message is displayed.
+        </topic>
+        <topic name="command-cd">
+            "cd [directory]"
+            Changes the current working directory. 
+
+            If the "directory" argument is supplied as a path to a valid directory, the working directory is changed to that directory. The appropriate environment variables ('pwd) and the prompt are changed to match the new working directory.
+
+            If the supplied directory is invalid (invalid name, or a file), an error message is displayed and nothing happens.
+
+            If the "directory" argument is not supplied, the contents of the current working directory are printed in simple format (reference the "dir" command).
+        </topic>
+        <topic name="command-clr">
+            "clr [-n|--number number] [-c|--commands] [-r|--restart]"
+            Clears the screen. 
+
+            With no arguments, the height of the terminal (platform and window dependent) is expected to be cleared (newline characters are printed). This is useful when there is output from previous commands cluttering the screen and one wishes to have an empty screen before executing the next command.     
+
+            Optional arguments follow "clr" and include '-n' or '--number', '-c' or '--commands', and '-r' or '--restart'.
+            The "number" argument explicitly dictates how many spaces should be cleared. This is useful if the default amount of clearance does not suffice.
+
+            The "commands" argument does not clear the screen, but rather clears the command history (reference "histclear" command in the "extras" section). This is merely for convenience.
+
+            The "restart" argument clears the screen and restarts the shell (reference the "restart" command in the "extras" section). Again for convenience only.
+
+            If called with incorrect arguments, nothing will be cleared and a help message will be displayed.
+        </topic>
+        <topic name="command-dir">
+            "dir [directory] [-a|-d|-l|--alldetails] [-c|--columnize] [-n|--notall] [-s|--sort]"
+            List the contents of a directory.
+
+            If the "directory" argument is provided as a valid path to a directory, the contents for the directory as the argument are displayed in a sequential fashion. The contents are a list of names for files and other directories.
+            
+            If the path does not indicate a valid directory, an error is reported.
+
+            If the "directory" argument is omitted, the directory is assumed to be the current working directory.
+
+            If the "alldetails" optional argument is present, with each entry the command shows the entry's name, size (bytes), owner's user ID or user name where available, a permissions string (directory/file, owner, group, and world permissions for read, write, and execute), the last access time and the last modification time (in local date and time format). The entry is colourised (platform dependent) based on whether it is a directory or a file.
+
+            The "columnize" argument attempts to list the entries in suitable columns.
+
+            The "notall" argument hides entries with certain names, such as those that begin with a dot (".") and an underscore ("_"). This is useful for ignoring so called hidden files on certain Operating Systems (Windows and Unix, files beginning with "."), and internal files such as Python __pycache__ and modules that should be private.
+
+            The "sort" argument lists the entries sorted in ascending order by name.
+        </topic>
+        <topic name="command-environ">
+            "environ"
+            List environment variables.
+
+            This command does not take arguments. It lists as pairs of key and value, the environment strings for the Operating System and current shell environment. Examples of variables include language, user, native shell path, home directory path, and much more.
+        </topic>
+        <topic name="command-echo">
+            "echo [comment*]"
+            Display text.
+
+            Outputs all the comment objects to screen, separated by single spaces, with a newline at the end. If no comment argument is present, a single newline is displayed.
+        </topic>
+        <topic name="command-pause">
+            "pause"
+            Pause execution until ENTER.
+
+            The command takes no arguments. It pauses the execution of the shell (parent process) and all background processes started by it (subprocesses) until ENTER is pressed.
+        </topic>
+        <topic name="command-quit">
+            "quit"
+            Exit the shell.
+
+            Stop the execution loop and finish the Python process, with appropriate termination actions.
+
+            A utility command "q", is also provided for quickly exiting. This is an alias for "quit". The user is prompted to enter "y" or nothing before the shell quits.
+        </topic>
+    </topic>
+    <topic name="external-commands">
+        External Commands.
+
+        Besides running the internal commands, the shell also supports "external commands" for other applications. The shell blocks until the program executes. The shell creates a subprocess for the program.
+
+        The programs can be passed arguments as usual, for example "(progname) arg1 arg2 ... argn".
+
+        Common programs callable from the command line are user-installed programs such as "python", "git" or pre-installed utilities such as "ssh" and "grep" (on POSIX).
+    </topic>
+    <topic name="io-redirection">
+        Input-Output Redirection.
+
+        Usually, input comes from the keyboard (standard input) and output goes to the terminal window (standard output). However, the input and output streams can be changed.
+
+        Special symbols are used to change the streams. After each symbol a file path must be provided indicating to what the stream will change to. The symbol and the argument must be whitespace-separated.
+
+        Both internal commands and external program calls support IO redirection.
+        <topic name="input-redirection">
+            Input Redirection.
+
+            The &lt; (left angle bracket or less-than symbol) symbol is used for input.
+
+            This is useful for automating what the user enters on the command line.
+        </topic>
+        <topic name="output-redirection">
+            Output Redirection.
+
+            The &gt; (right angle bracket or greater-than symbol) and &gt;&gt; (double) is used for output. Both create a new file if it does not exist. Single "truncates" the file first, deleting all that was before on it and starting fresh. Double "appends" to the file, leaving what was written before and starting to write after it.
+
+            A use case for redirected output is feeding the output to another command as an input file. In many modern shells (not this one) this can be achieved in one step via the "pipe" special operator ("|").
+        </topic>
+    </topic>
+    <topic name="background-execution">
+        Background Execution.
+
+        The shell does not block.
+
+        This is useful for running long tasks while you still want to use the same instance of the shell, or for background system services such as monitoring or logging.
+    </topic>
+    <topic name="extras">
+        Extras
+        
+        <topic name="command-restart">
+            "restart"
+            Restarts the shell instance.
+
+            Replaces the current process with a new process of the relaunched shell.
+
+            Useful for seeing developed changes.
+
+            (Has issues running on Windows.)
+        </topic>
+        <topic name="command-histclear">
+            "histclear"
+            Clears command history.
+
+            Truncates the command history file.
+
+            (Only on POSIX.)
+        </topic>
+        <topic name="known-issues">
+            Known Issues.
+
+            What do you mean? There are no issues with this project - NOT.
+
+            1. Background processes execute even when the shell is 'restarted'.
+            2. Restart doesn't seem to work on Windows / NT.
+            3. Prompt on Windows alternates from using the ')' symbol to '>' (cmd.exe default). Up arrow does not seem to work.
+            4. I'm sure there's more ...
+        </topic>
+    </topic>
+</manual>

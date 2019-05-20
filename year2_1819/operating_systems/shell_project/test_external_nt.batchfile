@@ -1,0 +1,1 @@
+py -3 bg_prog.py > bg_out.txt &

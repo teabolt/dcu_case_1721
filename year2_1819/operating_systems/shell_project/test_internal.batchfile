@@ -1,0 +1,10 @@
+test
+dir
+cd ..
+dir
+dir ca216-shell
+echo "hello there"
+clr
+environ
+shell
+help pause

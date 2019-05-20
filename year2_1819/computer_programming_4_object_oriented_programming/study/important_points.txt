@@ -1,0 +1,72 @@
+- terms
+- imports
+- length
+- how to iterate through data structures
+- index a string as string characters
+- regex for string split
+- format
+
+
+
+- generic syntax - class, method
+- general syntax - extends, 
+- multiple inheritance not supported vs multiple interfaces supported
+- inheritance vs interface
+- abstract class vs interface
+- integer vs decimal division
+- post and pre increment/decrement differences
+- string concat operator, apply to other type (left to right), integer leading 0's
+- access string characters as strings (same as iteration through string)
+- boolean operators (!, &&, ||), literals (true, false)
+- unreachable / no return code with if statements / loops
+- loose type conversions: double to int
+- variable might not be initialised - variable defined in an if statement but used outside it
+- syntax for initialising empty array of length
+- pattern for accessing elements of an array in reverse
+- char vs String
+- method / constructor overloading
+- inheritance method overriding
+- abstract class and method syntax
+- final
+- s.contains()
+- pass by reference vs pass by value, reference vs object
+- using same name for another variable
+- when to use this. in a constructor
+- throw an exception
+- coercion
+- wrapper classes for primitives
+- interface as a type for a reference, concrete implementation object as a value
+- inteface instantiation (abstract)
+- requirements for implementing an interface
+- close a scanner object - pattern: in = null, finally close
+- write to a file with PrintWriter (takes filename), and out.println()
+- when to use generics with multiple type variables, i.e. pair
+- set methods ie contains
+- give example of an improperly encapsulated thing that IS hidding its data
+- for immutability, can have getters, just no setters, immutable even if wraps and makes immutable a mutable type, i.e. list
+- tightly coupled 
+- 3 sections of UML: cls name, attrs, methods
+ = (1 block = 1 class)
+ = (arrow with transparent arrowhead = inheritance)
+- refactoring purpose, improve design
+
+- refactorings for book example: (Customer, Movie, Rental starting classses)
+ = movie does not deal with price codes
+ = extract getTotal method from statement method 
+ = move getCharge from Customer to Rental (encapsulation) (but keep the method to use it)
+ = extract getFrequentRenterPoints method from statement, move method to Rental class
+ = extract methods for getTotalCharge, getTotalFrequentRenterPoints from statement method of Customer class
+ = move getCharge from Rental to Movie, pass daysRented parameter
+ = move getFrequentRenterPoints from Rental to Movie, pass daysRented parameter
+ = add three Price subclasses, Childrens, NewRelease, Regular, add getCharge (where overrides are needed)
+ = replace switch with polymorphism 
+
+- refactoring notes
+ = when refactoring, don't add new features
+ = refactorings (logical mechanical transformations): extract method, variable names, replace temp with query, encapsulate field
+ = why small steps = easy to fix errors (no long bug fixing session)
+ = switch on your data, not others, & replace with polymorphism
+ = why not start over: shippable, consistent schedule
+ = since public API is hard to change, keep things as internal as possible
+
+ - super keyword
