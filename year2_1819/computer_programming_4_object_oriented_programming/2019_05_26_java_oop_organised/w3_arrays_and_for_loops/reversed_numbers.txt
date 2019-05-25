@@ -1,0 +1,13 @@
+Title: Reversed Numbers
+Description: Example usage:
+$ java Reverse
+How many numbers: 
+4
+
+Enter 4 numbers: 
+10 20 25 5
+
+The numbers reversed are: 5 25 20 10
+Note that you do need an array to solve this problem.
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

@@ -1,0 +1,34 @@
+Title: Greetings 2
+Description: Here is a Cat class:
+public class Cat implements Strange
+{
+    private String name;
+    
+    public Cat(String n)
+    {
+        name = n;
+    }
+    
+    public String toString()
+    {
+        return "cat: " + name;
+    }
+}
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Strange cat = new Cat("Charlie");
+        
+        System.out.println("1 " + cat);
+    }
+}
+
+Implement the Strange interface such that the code will compile and run. The interface doesn't have to do anything.
+The Main.java and Cat.java files are supplied.
+Your program will be compiled using the following command:
+javac Main.java
+and run using
+java Main
+Tests: 1  test run/ 1  test passed
+Grade: 100

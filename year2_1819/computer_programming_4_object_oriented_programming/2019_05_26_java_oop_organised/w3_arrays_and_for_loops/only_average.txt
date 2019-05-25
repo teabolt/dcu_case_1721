@@ -1,0 +1,13 @@
+Title: Only Average
+Description: Example usage:
+$ java OnlyAverage
+How many numbers: 
+4
+
+Enter 4 numbers: 
+10 20 25 5
+
+The average is 15.0
+Notes
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

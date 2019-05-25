@@ -1,0 +1,16 @@
+Title: Bigger is Better
+Description: Write a program which reads in two numbers and prints out the largest. You may assume that the input will consist of two whole numbers which will not be equal.
+Example usage:
+$ java Bigger
+Enter two numbers: 
+6 10
+
+10 is the biggest.
+or
+$ java Bigger
+Enter two numbers: 
+9 3
+
+9 is the biggest.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

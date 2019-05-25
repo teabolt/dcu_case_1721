@@ -1,0 +1,28 @@
+Title: Split the String
+Description: Example
+java SplitWord
+Enter a phrase: 
+Hello
+
+He
+el
+ll
+lo
+Example eile
+java SplitWord
+Enter a phrase: 
+hiwdiehidiehi
+
+hi
+iw
+wd
+di
+eh
+hi
+di
+ie
+eh
+hi
+
+Tests: 8 tests run/ 8 tests passed
+Grade: 100

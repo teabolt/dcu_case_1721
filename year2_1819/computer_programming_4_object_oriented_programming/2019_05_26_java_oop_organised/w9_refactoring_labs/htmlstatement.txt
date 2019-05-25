@@ -1,0 +1,50 @@
+Title: htmlStatement()
+Description: Now that the statement method has been properly refactored, we can get down to adding new functionality. Let's now create a html statement. This method should be called htmlStatement()
+
+Create a htmlStatement() that corresponds to the refactored statement() method from the Customer class. :
+Your class will be tested by the following program. It should produce the output shown below.
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main
+{
+   public static void main(String [] args)
+   {
+       Movie [] movies = { new Movie("James Bond does Java", Movie.NEW_RELEASE),
+                         new Movie("Mickey Mouse", Movie.CHILDRENS),
+                         new Movie("The Pointer Sisters", Movie.REGULAR),
+                         new Movie("The Dointer Sisters", Movie.NEW_RELEASE),
+                };
+       Rental [] rentalsArray = { new Rental(movies[0], 3),
+                                    new Rental(movies[1], 10),
+                                    new Rental(movies[2], 2),
+                                    new Rental(movies[3], 1),
+                };
+       
+       List<Rental> rentals = new ArrayList<Rental>(Arrays.asList(rentalsArray));
+       
+       Customer donald = new Customer("Donald", rentals);
+       
+       System.out.println(donald.getName());
+       System.out.println(donald.getRentals());
+       System.out.println(donald); // test the toString() method.
+       
+       System.out.println("\nYour statement:");
+       System.out.print(donald.statement());  // NB "\n" in the statement() function so not in println!
+   }
+}
+and it should produce the following html:
+<h1>Statement for Donald</h1>
+<ol>
+  <li>James Bond does Java  18.0</li>
+  <li>Mickey Mouse  24.0</li>
+  <li>The Pointer Sisters  4.0</li>
+  <li>The Dointer Sisters  6.0</li>
+</ol>
+<p>Amount owed is 52.0</p>
+<p>You earned 5 frequent renter points.</p>
+
+
+Tests: 1  test run/ 1  test passed
+Grade: 100

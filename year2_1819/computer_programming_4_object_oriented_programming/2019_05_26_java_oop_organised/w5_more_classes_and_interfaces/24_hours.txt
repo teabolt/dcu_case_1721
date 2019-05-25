@@ -1,0 +1,31 @@
+Title: 24 hours
+Description: public class Time
+{
+   // Private variables
+   // Constructor (with a String parameter)
+   // isLater(Time otherTime) // boolean method to compare two times
+   // String toString() // return a String representation of the time (hh:mm)
+}
+Your class will be tested in a method similar to the following
+import java.util.Scanner;
+
+public class Main
+{
+   public static void main(String [] args)
+   {
+      Scanner in = new Scanner(System.in);
+      String line1 = in.nextLine();
+      String line2 = in.nextLine();
+
+      Time time1 = new Time(line);
+      Time time2 = new Time(line);
+
+      if(time1.isLater(time2))
+         System.out.println(time1 + " is later than " + time2);
+      else
+         System.out.println(time1 + " is not later than " + time2);
+   }
+}
+
+Tests: 7 tests run/ 7 tests passed
+Grade: 100

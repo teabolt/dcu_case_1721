@@ -1,0 +1,11 @@
+Title: Last of the name
+Description: Write a program which prompts a user to enter their name and and tells the user the last letter in their name.
+Example usage:
+$ java LastLetter
+What is your name: 
+Jonathan
+
+The last letter in your name is n.
+This is a little tricky. You need to use the length() method along with the substring method. In addition, remember that the index of the last letter is one less than the length.
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

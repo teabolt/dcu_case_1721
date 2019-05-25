@@ -1,0 +1,8 @@
+Title: default Constructor
+Description: Date beginning = new Date();
+System.out.println(beginning);
+
+This code should print
+1/1/2000
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,14 @@
+Title: FindMatchingLetters
+Description: Example
+java FindMatchingLetters
+Enter two lines:
+
+these
+those
+
+There are 4 corresponding characters.
+
+The corresponding characters are 't', 'h', 's and 'e'
+Note that there is no space after the colon on the first line.
+Tests: 5 tests run/ 5 tests passed
+Grade: 100

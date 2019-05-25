@@ -1,0 +1,10 @@
+Title: InitialLess
+Description: Write a program which prompts a user to enter their name and and removes their initial and just prints the rest of their name
+Example usage:
+$ java initialLess
+Tell me your name: 
+Jonathan
+
+Initialless, your name is onathan.
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

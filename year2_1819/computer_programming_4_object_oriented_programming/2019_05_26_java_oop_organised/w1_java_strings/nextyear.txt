@@ -1,0 +1,13 @@
+Title: NextYear
+Description: Write a program which prompts a user to enter their name their age (a whole number) and tells them how old they will be next year.
+Example usage:
+$ java NextYear
+What is your name: 
+Jonathan
+
+What age are you: 
+16
+
+Hello Jonathan, next year you will be 17.
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

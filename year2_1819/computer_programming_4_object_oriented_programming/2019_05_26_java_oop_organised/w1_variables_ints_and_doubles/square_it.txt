@@ -1,0 +1,16 @@
+Title: Square it
+Description: Example usage:
+$ java SquareIt
+Enter a number: 
+4
+
+4 squared is 16
+Here is another example
+$ java TwoTimes
+Enter a number: 
+2
+
+2 squared is 4
+This program is very similar to the last. However you also need to print the number that the user enters.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

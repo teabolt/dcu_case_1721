@@ -1,0 +1,9 @@
+Title: Sorting a List
+Description: Write a program using lists which will keep on reading in numbers until a -1 is encountered and then sort the numbers and print out the numbers in sorted order. Use the List's sort method.
+E.g.
+java ListSort
+Enter numbers: 45 8 20 7 16 -1
+Sorted: 7 8 16 20 45
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

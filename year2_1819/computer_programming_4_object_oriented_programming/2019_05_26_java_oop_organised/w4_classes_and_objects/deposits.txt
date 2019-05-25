@@ -1,0 +1,31 @@
+Title: Deposits
+Description: Add a deposit method to your BankAccount class. It will represent a deposit to your account and so the balance should be increased appropriately. The method will return nothing and so should have a return type of void.
+Your BankAccount class will be tested by the following program:
+public class TestBankAccount
+{
+   public static void main(String [] args)
+   {
+      BankAccount currentAccount = new BankAccount(10000.00);
+
+      System.out.println("The balance is " + currentAccount.balance);
+
+      currentAccount.deposit(100.00);
+
+      System.out.println("The balance is " + currentAccount.balance);
+   }
+}
+The program will be compiled using 
+javac TestBankAccount.java
+ and run using 
+java TestBankAccount
+ The output should be:
+$ java TestBankAccount 
+The balance is 10000.0
+The balance is 10100.0
+
+Hints:
+Probably the best hint is to check the 
+notes on methods
+.
+Tests: 1  test run/ 1  test passed
+Grade: 100

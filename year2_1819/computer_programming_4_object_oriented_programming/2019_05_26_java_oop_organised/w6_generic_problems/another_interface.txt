@@ -1,0 +1,41 @@
+Title: Another Interface
+Description: Create an interface called Order which has one method called greater than. Your Interface will be defined in a file called Order.java and will be used by the following Thing class.
+Note that this is a fairly trivial exercise and should not require more than a few minutes work.
+
+
+ppublic class Thing implements Order
+{
+   int value;
+   public Thing(int a)
+   {
+      value = a;
+   }
+
+   public boolean greaterThan(Order other)
+   {
+      // Convert the other to a thing so I can compare values
+      return value > ((Thing) other).value;
+   }
+
+   public String toString()
+   {
+      return "" + value;
+   }
+}
+The program will be tested by another class which compares two Orders (which will actually be Things) but the program will fail to compile if Order doesn't define the interface properly. That class is Main.java:
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Order a = new Thing(9);
+        Order b = new Thing(10);
+        Order c = new Thing(10);
+        
+        System.out.println(a + " greaterThan(" + b + ") is " + a.greaterThan(b));
+        System.out.println(b + " greaterThan(" + a + ") is " + b.greaterThan(a));
+        System.out.println(b + " greaterThan(" + c + ") is " + b.greaterThan(c));
+        System.out.println(c + " greaterThan(" + b + ") is " + c.greaterThan(b));
+    }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

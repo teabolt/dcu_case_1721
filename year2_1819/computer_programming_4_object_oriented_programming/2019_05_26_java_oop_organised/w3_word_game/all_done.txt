@@ -1,0 +1,87 @@
+Title: All Done?
+Description: Write a method called allDone which takes as parameters a word and a string representing a sequence of guesses and returns true if all the letters of the word have been guessed, that is are contained in the sequence of guesses. The method should return false if not all letters have been guessed. It is recommended that you make use of the containsLetter method from the previous question.
+The method should be a static method of a Word class and could be used as shown in the following program (see section in bold):
+
+
+import java.util.Scanner;
+
+public class TestAllDone
+{
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+        
+        // Ask the user for a word and a letter
+        System.out.print("Enter a word and a letter: ");
+        String word = in.next();
+        String guessed = in.next();
+        
+        if(
+Word.allDone(word, guessed)
+)
+            System.out.println("You got all the letters!");
+        else
+            System.out.println("Keep guessing!");
+    }
+}
+And the program could be executed as follows:
+
+$ java TestAllDone
+Enter a word and some guesses: 
+computer putmocre
+
+You've got all the letters!
+
+or
+$ java TestAllDone
+Enter a word and some guesses: 
+dog jkuo
+
+Keep guessing!
+Note that your method will actually be tested using the program below:
+// Program to test the allDone method.
+import java.util.Scanner;
+
+public class Main
+{
+    // generate the alphabet
+    static String getAlphabet()
+    {
+        String alphabet = "";
+        for(int i = 0; i < 26; i++)
+            alphabet += (char) ('a' + i);
+            
+        return alphabet;
+    }
+    
+    static void test(String word, String guesses)
+    {
+        System.out.println("allDone(\"" + word + "\", \"" + guesses + "\") is " + Word.allDone(word, guesses));
+    }
+    
+    public static void main(String []args)
+    {
+        Scanner input = new Scanner(System.in);
+        String alphabet = getAlphabet();
+        System.out.println("Enter a word:");
+        String word = input.next();
+        
+        // 1. Try the complete alphabet
+        test(word, alphabet);
+        // 2. Try an empty string
+        test(word, "");
+        
+        // 3. Try leaving out one letter each time (almost right)
+        for(int miss = 0; miss < word.length(); miss++)
+        {
+            String guesses = "";
+            for(int i = alphabet.length() - 1; i >= 0; i--)
+                if(alphabet.charAt(i) != word.charAt(miss))
+                    guesses += alphabet.charAt(i);
+                    
+            test(word, guesses);
+        }
+    }
+}
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

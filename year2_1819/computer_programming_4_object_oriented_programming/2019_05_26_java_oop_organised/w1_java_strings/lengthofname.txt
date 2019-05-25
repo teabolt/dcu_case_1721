@@ -1,0 +1,11 @@
+Title: LengthOfName
+Description: Write a program which prompts a user to enter their name and tells them how many letters are in their name.
+Example usage:
+$ java LengthOfName
+Tell me your name: 
+Jonathan
+
+Hello Jonathan, your name has 8 letters.
+You can use the length() method of string to discover its length (which will be the same as the number of letters in the name assuming that the name contains only letters).
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

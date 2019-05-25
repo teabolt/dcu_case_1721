@@ -1,0 +1,42 @@
+Title: Play it again Sam
+Description: Write a rudimentary Hangman game. In this game, your program will present a word to the user who will guess a letter at a time. Your program will keep them informed of their progress by showing them which letters of the word are guessed.
+The game might go something like this, with the user's guesses shown in bold.
+$java Hangman
+The word is
+___
+Guess a letter:
+
+o
+
+_o_
+Guess a letter:
+
+g
+
+_og
+Guess a letter:
+
+e
+
+_og
+Guess a letter:
+
+d
+
+Well Done, the word was dog.
+
+Note that when the user entered 'e', which doesn't appear in the word, he was just asked to guess again.
+You should write your program in a Hangman class. You will be supplied with a Word class which contains the methods allDone() and showLetters() which are implementations of your earlier methods. There will also be a getWord() method which returns a word that the user is to guess.
+
+using the allDone() method and the showLetters() methods that you wrote earlier. In addition, you will be supplied with a getWord() method which will return the word to be guessed.
+Hints:
+
+
+        int wordSeed = in.nextInt();
+
+        String word = Word.getWord(wordSeed);
+
+in.next().charAt(o)
+sentence += let
+Tests: 7 tests run/ 7 tests passed
+Grade: 100

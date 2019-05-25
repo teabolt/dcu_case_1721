@@ -1,0 +1,4 @@
+Title: Sentiment Analysis: Removing the averages
+Description: 
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

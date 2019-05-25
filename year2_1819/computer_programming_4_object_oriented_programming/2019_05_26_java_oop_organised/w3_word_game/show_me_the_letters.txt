@@ -1,0 +1,109 @@
+Title: Show me the letters
+Description: This time, you should write a showLetters method, which instead of taking one character, takes a string of characters representing a sequence of guesses and returns a new string with any guessed letters in their correct position and unguessed letters shown as underscores. 
+For example, the method call:
+Word.showLetters("computing", "gpo");
+would display
+_o_p____g
+That is, any letters guessed are shown in their correct location and an underscore represents letters that are not guessed.
+
+So, write a method called showLetters which takes as parameters two strings, 
+word
+ and 
+guesses
+ and returns a new string containing underscores representing every letter in 
+word
+ unless that letter is in 
+guesses
+.
+The method should be a static method of a Word class and could be used as shown in the following program (see section in bold):
+
+
+import java.util.Scanner;
+
+public class TestShowLetters
+{
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+        
+        // Ask the user for a word and some guesses
+        System.out.print("Enter a word and some guesses: ");
+        String word = in.next();
+        String guesses = in.next();
+        
+        String show = 
+Word.showLetters(word, guesses)
+;
+        System.out.println(show);
+    }
+}
+And the program would be executed as follows:
+
+$ java TestShowLetters
+Enter a word and some guesses: 
+computing gpo
+
+_o_p____g
+Note : Your method will actually be tested with the program below:
+import java.util.Scanner;
+
+public class Main
+{
+    // generate the alphabet
+    static String getAlphabet()
+    {
+        String alphabet = "";
+        for(int i = 0; i < 26; i++)
+            alphabet += (char) ('a' + i);
+            
+        return alphabet;
+    }
+    
+    static boolean contains(String word, char let)
+    {
+        for(int i = 0; i < word.length(); i++)
+            if(word.charAt(i) == let)
+                return true;
+        return false;
+    }
+    
+    public static void main(String []args)
+    {
+        Scanner input = new Scanner(System.in);
+        String alphabet = getAlphabet();
+        System.out.println("Enter a word:");
+        String word = input.next();
+        String guesses = "";    // Start with no guesses
+
+        // 1. try every second letter in the alphabet
+        for(int i = 0; i < alphabet.length(); i += 2)
+            if(contains(word, alphabet.charAt(i)))
+            {
+                guesses += alphabet.charAt(i); // Try this letter
+                System.out.println(Word.showLetters(word, guesses));
+            }
+            
+        // 2. Try the same thing backwards
+        guesses = ""; // reset guesses
+        for(int i = alphabet.length() - 1; i >= 0; i -= 2)
+            if(contains(word, alphabet.charAt(i)))
+            {
+                guesses += alphabet.charAt(i); // Try this letter
+                System.out.println(Word.showLetters(word, guesses));
+            }
+
+        // 3. try no guesses (i.e. empty string)
+        System.out.println(Word.showLetters(word, ""));
+
+        // 4. all letters 
+        for(int i = 0; i < alphabet.length(); i++)
+            if(contains(word, alphabet.charAt(i)))
+                guesses += alphabet.charAt(i); // Try this letter
+
+        System.out.println(Word.showLetters(word, guesses));
+    }
+}
+
+This code reads in a word and then tests your method in four different ways
+Tests: 7 tests run/ 7 tests passed
+Grade: 100

@@ -1,0 +1,19 @@
+Title: Generic Pairs
+Description: Create a Pair class which will hold a pair of objects specified generically in such a way that the following main method will work
+public class TestPair
+{
+   public static void main(String[] args)
+   {		
+       Pair<String,Integer> phoneNumber = new Pair<>("Bill's number", 1324);	
+       System.out.println(phoneNumber);
+       Pair<Double,Double> point = new Pair<>(3.14, 2.32);
+       System.out.println(point);
+   }
+}
+The Pair class will have a constructor and a toString method. The toString method should call the toString methods of the objects comprising the pair with a space between them.
+Once the Pair class has been correctly written, the code above will produce the output below:
+Bill's number 1324
+3.14 2.32
+
+Tests: 1  test run/ 1  test passed
+Grade: 100

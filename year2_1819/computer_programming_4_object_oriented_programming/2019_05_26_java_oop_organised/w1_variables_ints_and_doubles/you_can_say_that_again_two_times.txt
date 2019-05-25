@@ -1,0 +1,17 @@
+Title: You can say that again two times
+Description: Example usage:
+$ java TwoTimes
+Enter a number: 
+4
+
+Times two is: 8
+Here is another example
+$ java TwoTimes
+Enter a number: 
+1
+
+Times two is: 2
+Your program should create an integer variable. You should create a Scanner class and use the nextInt() method of the Scanner class to get the number from the user.
+Then use the System.out.println() method to print the result.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

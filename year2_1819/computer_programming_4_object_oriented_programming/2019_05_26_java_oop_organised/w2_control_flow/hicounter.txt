@@ -1,0 +1,30 @@
+Title: HiCounter
+Description: Example
+java HiCounter
+Enter a phrase: 
+howdiehidieho
+
+1
+
+Note that howdiehidieho contains a single "hi" in the 
+middle
+, so only 1 "hi" was counted.
+Example eile
+java HiCounter
+Enter a phrase: 
+hiwdiehidiehi
+
+3
+
+Hint: There are a few ways to do this. Imagine that you have to solve this problem yourself. Do it manually. Then try and find out how you do it. Note that you may need to compare strings. If you want to see is a string x equal to a string y, then you cannot say:
+   if(x == y) // Doesn't work with strings
+
+Instead, you need
+   if(x.equals(y)) // The correct way
+
+or, if you prefer
+   if(y.equals(x)) // same difference
+
+Think about it and it will all come together. You may need the substring method!
+Tests: 9 tests run/ 9 tests passed
+Grade: 100

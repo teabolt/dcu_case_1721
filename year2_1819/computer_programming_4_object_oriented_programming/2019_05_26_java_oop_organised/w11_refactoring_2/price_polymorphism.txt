@@ -1,0 +1,34 @@
+Title: Price Polymorphism
+Description: Create the abstract class, Price and the three subclasses, ChildrensPrice, NewReleasePrice and RegularPrice defined in four files. These should work in the same way as the classes in the book specified on page 39.
+Your class should work with the following program
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Price cp = new ChildrensPrice();
+        Price nrp = new NewReleasePrice();
+        Price reg = new RegularPrice();
+        
+        boolean ok = true;
+        
+        if(cp.getPriceCode() != Price.CHILDRENS)
+        {
+            System.out.println("Children's price does not have the correct price code.");
+            ok = false;
+        }
+        if(nrp.getPriceCode() != Price.NEW_RELEASE)
+        {
+            System.out.println("New Release price does not have the correct price code.");
+            ok = false;
+        }
+        if(reg.getPriceCode() != Price.REGULAR)
+        {
+            System.out.println("The regular price does not have the correct price code.");
+            ok = false;
+        }
+        if(ok)
+            System.out.println("All good.");
+    }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

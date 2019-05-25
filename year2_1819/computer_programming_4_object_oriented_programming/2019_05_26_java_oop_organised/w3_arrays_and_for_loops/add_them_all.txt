@@ -1,0 +1,9 @@
+Title: Add them all
+Description: Write a static method which takes as a parameter an integer array and which returns the sum of all the elements in the array. Put the method in a Test class
+Your method would be called as follows
+   int [] num = {2, 3, 5, 7, 11, 13, 17};
+   // Call the method to sum the array
+   Test.getSum(num);
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

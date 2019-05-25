@@ -1,0 +1,49 @@
+Title: The statement method: getTotal()
+Description: Modify the statement() of the Customer class by creating a getTotal() method. In the book, this is a private method, but you should make it public so that it can be tested.
+Your class will be tested by the following program. Note also that in the book the method is called amountFor().
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main
+{
+   public static void main(String [] args)
+   {
+       Movie [] movies = { new Movie("James Bond does Java", Movie.NEW_RELEASE), new Movie("Mickey Mouse", Movie.CHILDRENS), new Movie("The Pointer Sisters", Movie.REGULAR)};
+       Rental [] rentalsArray = { new Rental(movies[0], 1), new Rental(movies[1], 10), new Rental(movies[2], 2)};
+       
+       List<Rental> rentals = new ArrayList<Rental>(Arrays.asList(rentalsArray));
+       
+       Customer donald = new Customer("Donald", rentals);
+       
+       System.out.println(donald.getName());
+       System.out.println(donald.getRentals());
+       System.out.println(donald); // test the toString() method.
+       
+       System.out.println("\nYour statement:");
+       System.out.print(donald.statement());  // NB "\n" in the statement() function so not in println!
+       
+       DummyTester bernie = new DummyTester("Bernie", rentals);
+       
+       System.out.println("\nBernie's statement:");
+       System.out.print(bernie.statement());  // NB "\n" in the statement() function so not in println!
+   }
+}
+
+// A class just to test that the statement method uses the getTotal() method.
+
+class DummyTester extends Customer
+{
+    public DummyTester(String name, List<Rental> rentals)
+    {
+        super(name, rentals);
+    }
+    
+    // Note that we can only do this if getTotal exists in the parent class (Customer)
+    public double getTotal(Rental rental)
+    {
+        return super.getTotal(rental) * 2;  // Just double the charge!
+    }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

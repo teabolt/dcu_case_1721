@@ -1,0 +1,12 @@
+Title: Sentiment Analysis 2
+Description: This time, for each review, read the score of the review and then apply that score to the word. Then you will be able to score each word. The score of a word will be the average score of all the reviews that the word appears in. For example, if the word is horrible and appears in two reviews, one with a score of 0 and the other with a score of 1, then "horrible" gets a score of 0.5
+Your program should run as follows:
+$ java Senti2 fabulous reviews.txt
+The word "fabulous" occurs 10 times.
+The average score of the reviews containing fabulous is 2.85
+
+Use your favourite search engine to find out how to print to two decimal places in Java.
+Your job is to get the score for a particular word. So, say the word is "horrible". You could guess that a review that contains the word "horrible" might not get a high score. But, you want to check it. So, find all the reviews that contain the word "horrible". There might be three reviews. Let's say that those reviews have scores of 1, 1 and 2 respectively, then the average score would be 1.33. That is, The average score for all reviews containing the word horrible would be 1.33. That score would be assigned to "horrible".
+In this way, a computer program can work out that certain words would be quite negative and other words would be quite positive. Such a computer program could then read a review and provide an estimate of what score would go with the review.
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

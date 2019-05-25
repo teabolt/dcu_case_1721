@@ -1,0 +1,27 @@
+Title: Don't forget the pigs
+Description: public class Main
+{
+    public static Animal [] makeSomeNoise()
+    {
+        Animal [] animals = {new Cat("Angel"), new Pig("Babe"), new Dog("Buster"), new Pig("Sty"), new Dog("Fido"), new Cat("Lassie")};
+        return animals;
+    }
+
+    public static void main(String [] args)
+    {
+        Animal [] animals = makeSomeNoise();
+        for(Animal animal : animals)
+            System.out.println(animal.greeting());
+    }
+}
+
+The program's output should be:
+Meow, je m'appelle Angel
+Oink, je m'appelle Babe
+Woof, je m'appelle Buster
+Oink, je m'appelle Sty
+Woof, je m'appelle Fido
+Meow, je m'appelle Lassie
+Note that the Animal's greeting method has been modified by a pseudo intellectual who thinks French is a cool.
+Tests: 1  test run/ 1  test passed
+Grade: 100

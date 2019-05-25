@@ -1,0 +1,51 @@
+Title: Average mark of passing students
+Description: Write a method which finds the average mark of all students who have passed. Your should not consider the marks of any student who has failed.
+Your program will be tested with code similar to the following:
+public class GroupStudents
+{
+   public static void main(String [] args)
+   {
+      Student [] group = {
+               new Student("John", 50),
+               new Student("Abby", 40),
+               new Student("Dylan", 20),
+            };
+
+      double passingAverage = Test.getPassingAverage(group);
+      System.out.println("The average mark of all students who passed is " + passingAverage);
+   }
+}
+A Student is defined as:
+public class Student
+{
+   private String name;
+   private int mark;
+
+   public Student(String n, int m)
+   {
+      name = n;
+      mark = m;
+   }
+
+   public String getName()
+   {
+      return name;
+   }
+
+   public int getMark()
+   {
+      return mark;
+   }
+}
+Create a Test class with one static method which takes an array of students and returns the average mark of all students who have passed.
+The program will be compiled using 
+javac GroupStudents.java
+ and run using 
+java GroupStudents
+ The output should be:
+$ java GroupStudents
+The average mark of all students who passed is 45.0
+
+Here, only two students have passed with marks of 50 and 40. The average of those two marks is 45.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

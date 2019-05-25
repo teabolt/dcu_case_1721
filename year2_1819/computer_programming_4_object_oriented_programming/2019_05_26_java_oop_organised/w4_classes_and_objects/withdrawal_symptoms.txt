@@ -1,0 +1,31 @@
+Title: Withdrawal Symptoms
+Description: Add a withdraw method to your BankAccount class. It will represent a withdrawal from your account and so the balance should be reduced appropriately. The method will return nothing and so should have a return type of void.
+Your BankAccount class will be tested by the following program:
+public class TestBankAccount
+{
+   public static void main(String [] args)
+   {
+      BankAccount currentAccount = new BankAccount(10000.00);
+
+      System.out.println("The balance is " + currentAccount.balance);
+
+      currentAccount.withdraw(100.00);
+
+      System.out.println("The balance is " + currentAccount.balance);
+   }
+}
+The program will be compiled using 
+javac TestBankAccount.java
+ and run using 
+java TestBankAccount
+ The output should be:
+$ java TestBankAccount 
+The balance is 10000.0
+The balance is 9900.0
+
+Hints:
+Probably the best hint is to check the 
+notes on methods
+.
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,50 @@
+Title: Incomparable Dates
+Description: Look up the Comparable interface in Java and then enhance the following Date class so that it implements the Comparable interface.
+public class Date implements Comparable<Date>
+{
+   private int day, month, year;
+
+   public Date(int day, int month, int year)
+   {
+      this.day = day;
+      this.month = month;
+      this.year = year;
+   }
+
+   public String toString()
+   {
+      return day + "/" + month + "/" + year;
+   }
+}
+To do this correctly, your class should implement Comparable<Date> and then should have a public int compareTo(Date other) method. Your code will be tested by the following main program:
+import java.util.Arrays;
+
+public class Main
+{
+   public static void main(String [] args)
+   {
+      Date [] dates = {
+         new Date(1, 1, 3),
+         new Date(1, 1, 2),
+         new Date(3, 2, 1),
+         new Date(29, 9, 1),
+         new Date(30, 12, 1),
+         new Date(1, 1, 10),
+         new Date(1, 10, 1),
+         new Date(10, 1, 1),
+         new Date(2, 1, 10),
+         new Date(29, 9, 1),
+         new Date(30, 9, 1),
+         new Date(1, 2, 10),
+         new Date(1, 1, 1),
+         };
+
+      Arrays.sort(dates);
+
+      System.out.println(Arrays.toString(dates));
+   }
+}
+Note that to compare two dates, one technique is to first compare the years. If the Date's year is less than the other's year, then return -1, if greater, return +1, otherwise you need to check the months and so on.
+Note also, without generics, you would have to cast the parameter back to a date, but generics allow you to keep it as a Date which is supercool. At least, it's supercool if you are a nerd.
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,56 @@
+Title: Best Student
+Description: Write a method which finds the best student from an array of students.
+Your program will be tested with code similar to the following:
+public class GroupStudents
+{
+   public static void main(String [] args)
+   {
+      Student [] group = {
+               new Student("John", 50),
+               new Student("Abby", 40),
+               new Student("Dylan", 20),
+               new Student("Carl", 70),
+               new Student("Maeve", 70),
+               new Student("Chris", 46),
+               new Student("James", 55),
+               new Student("Anne", 63),
+            };
+
+      Student best = Test.getBestStudent(group);
+      System.out.println("The best student was " + best.getName() + " with a mark of " + best.getMark());
+   }
+}
+A Student is defined as:
+public class Student
+{
+   private String name;
+   private int mark;
+
+   public Student(String n, int m)
+   {
+      name = n;
+      mark = m;
+   }
+
+   public String getName()
+   {
+      return name;
+   }
+
+   public int getMark()
+   {
+      return mark;
+   }
+}
+Add a method to the Test class called getBestStudent(). It will have one parameter, an array of Students. It will return the student with the highest mark. If more than one student has that mark, then it will return the first student in the array with that mark.
+The program will be compiled using 
+javac GroupStudents.java
+ and run using 
+java GroupStudents
+ The output should be:
+$ java GroupStudents
+The best student was Carl with a mark of 70
+
+Note that although two students have a mark of 70, only the first is selected.
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

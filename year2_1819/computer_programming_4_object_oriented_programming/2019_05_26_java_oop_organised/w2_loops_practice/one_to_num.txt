@@ -1,0 +1,9 @@
+Title: One to Num
+Description: Write a program which will read in a positive integer, num, from the user and then print the numbers from 1 up to n. Use a while loop appropriately.
+Here is what the program would do when run.
+$ java OneToNum
+Enter a number: 7
+1 2 3 4 5 6 7 
+$ 
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

@@ -1,0 +1,17 @@
+Title: Classes that can't be created (abstract)
+Description: Create an abstract class Animal which has one abstract method, 
+greeting()
+, which takes no parameters and returns a String.
+When your program is being tested, it will be monitored by another program and the output may be confusing. It is better not to focus on the output, but on the specification above. You should create a very short simple Animal class that follows the above rules and you will get full marks.
+Your class could be used as the base class for the following class:
+class Pig extends Animal
+{
+    // since Animal has an abstract method greeting(), Pig needs to implement greeting.
+    public String greeting()
+    {
+        return "Oink";
+    }
+}
+
+Tests: 1  test run/ 1  test passed
+Grade: 100

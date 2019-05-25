@@ -1,0 +1,11 @@
+Title: First Three
+Description: Write a program which prompts a user to enter their name and and produces a nickname formed from the their first three letters of their name. You may assume that there are at least three letters in the name.
+Example usage:
+$ java FirstThree
+Tell me your name: 
+Jonathan
+
+Your nickname is Jon.
+You can use the substring() method of string to get the nickname. You need to think about the parameters you choose.
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

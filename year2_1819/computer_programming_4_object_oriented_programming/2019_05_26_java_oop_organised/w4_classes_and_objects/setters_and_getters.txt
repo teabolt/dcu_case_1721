@@ -1,0 +1,31 @@
+Title: Setters and getters
+Description: Add a setter and a getter to your BankAccount class. These methods should set and retrive the balance value appropriately.
+Your BankAccount class will be tested by the following program:
+public class TestBankAccount
+{
+   public static void main(String [] args)
+   {
+      BankAccount account = new BankAccount(); // This uses the 
+default constructor
+.
+
+      account.setBalance(650.00);
+      System.out.println(account.getBalance());
+      account.withdraw(25);
+
+      System.out.println(account.getBalance());
+   }
+}
+The program will be compiled using 
+javac TestBankAccount.java
+ and run using 
+java TestBankAccount
+ The output should be:
+$java TestBankAccount 
+650.0
+625.0
+
+Hints:
+Probably the best hint is to check the notes on the toString method. Also, this method needs to be public.
+Tests: 1  test run/ 1  test passed
+Grade: 100

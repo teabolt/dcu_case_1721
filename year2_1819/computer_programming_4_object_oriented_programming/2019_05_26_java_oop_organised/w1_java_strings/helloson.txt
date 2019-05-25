@@ -1,0 +1,10 @@
+Title: HelloSon
+Description: Write a program which prompts a user to enter their name and then prints a personalised greeting.
+Example usage:
+$ java HelloSon
+Tell me your name: 
+Jonathan
+
+Hello Jonathan
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

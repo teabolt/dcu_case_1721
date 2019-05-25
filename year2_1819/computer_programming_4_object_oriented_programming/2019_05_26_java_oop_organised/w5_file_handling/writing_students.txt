@@ -1,0 +1,23 @@
+Title: Writing Students
+Description: In this exercise, you read in a set of students from a file. Then you increase each student's mark by 1 and write out the results out to another file. The format of the file will be the same as in the previous exercise. The name of the input file will be the first argument and the name of the output file will be the second argument.
+For example, if the input file was:
+2
+John 50
+Abby 40
+
+Your program will create the following file:
+2
+John 51
+Abby 41
+
+Note that the marks have been increased by 1
+The program will be compiled using 
+javac WriteStudents.java
+ and run using 
+java WriteStudents
+ The output should be:
+$ java GroupStudents students.in students.out
+
+The program doesn't produce any output to the screen. Instead it creates an output file. In this case, the output file is called students.out (note the second parameter on the command line).
+Tests: 1  test run/ 1  test passed
+Grade: 100

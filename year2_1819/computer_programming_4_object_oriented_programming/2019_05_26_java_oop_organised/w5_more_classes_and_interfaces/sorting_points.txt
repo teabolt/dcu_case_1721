@@ -1,0 +1,57 @@
+Title: Sorting Points
+Description: The following Main class uses a standard selection sort algorithm to sort an array of Order items. The main method reads in an array of Point objects and, assuming that it correctly implements the Order interface, it will sort these items.
+You are to submit an appropriate Point class (it should be the same as for the previous exercise) which will cause the sort method to properly sort the points. Points should be compared based on their distance from the origin.
+import java.util.Scanner;
+
+public class Main
+{
+    public static Point getPoint(Scanner in)
+    {
+        double x = in.nextDouble(), y = in.nextDouble();
+        return new Point(x, y);
+    }
+    
+    private static void swap(Order [] items, int a, int b)
+    {
+        Order tmp;
+        tmp = items[a];
+        items[a] = items[b];
+        items[b] = tmp;
+    }
+    
+    // This method is going to sort a list of items. The only thing it knows about these items is that
+    // they implement the Order interface and therefore they have a lessThan method.
+    public static void sort(Order [] items)
+    {
+        // Use selection sort.
+        for(int i = 0; i < items.length - 1; i++)
+        {
+            // Find the smallest and put it in the current position
+            int min = i; // Assume it's the first
+            for(int j = i + 1; j < items.length; j++)
+                if(items[j].lessThan(items[min]))
+                    min = j; // something is lessThan our current min ... so update min
+                    
+            swap(items, i, min); // Put the smallest in the correct location
+        }
+    }
+    
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        Point [] points = new Point[n];
+        for(int i = 0; i < n; i++)
+            points[i] = getPoint(in);
+            
+        sort((Order []) points);
+        
+        // Print out the sorted points
+        System.out.println("The sorted points:");
+        for(int i = 0; i < n; i++)
+            System.out.println(points[i]);
+    }
+}
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

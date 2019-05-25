@@ -1,0 +1,16 @@
+Title: Three is better than two
+Description: Example usage:
+$ java Thrice
+Enter three numbers: 
+2 3 4
+
+The product is 24
+Here is another example
+$ java Thrice
+Enter three numbers: 
+2 0 1
+
+The product is 0
+Note that anything times 0 is zero.
+Tests: 5 tests run/ 5 tests passed
+Grade: 100

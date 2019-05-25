@@ -1,0 +1,9 @@
+Title: NumToTwenty
+Description: Write a program which will read in a positive integer, num, and then, using a while loop, print the numbers from num up to twenty
+Here is what the program would do when run.
+$ java NumToTwenty
+Enter a number: 7
+7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+$ 
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

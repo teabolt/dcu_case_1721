@@ -1,0 +1,8 @@
+Title: String Constructor
+Description: String input = "21 9 2015";
+System.out.println(new Date(input));
+
+This code should print
+21/9/2015
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

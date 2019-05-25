@@ -1,0 +1,26 @@
+Title: Now polymorph the getFrequentRenterPoints method
+Description: Create a getFrequentRenterPoints() method for the Price class and add getFrequentRenterPoints() methods to any subclasses which require it. Remember that the getFrequentRenterPoints() method will need to know the number of days.
+Your class should work with the following program
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Price cp = new ChildrensPrice();
+        Price nrp = new NewReleasePrice();
+        Price reg = new RegularPrice();
+        
+        boolean ok = true;
+        
+        for(int i = 1; i < 10; i++)
+            System.out.print(cp.getFrequentRenterPoints(i) + " ");
+        System.out.println();
+        for(int i = 1; i < 10; i++)
+            System.out.print(nrp.getFrequentRenterPoints(i) + " ");
+        System.out.println();
+        for(int i = 1; i < 10; i++)
+            System.out.print(reg.getFrequentRenterPoints(i) + " ");
+        System.out.println();
+    }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,57 @@
+Title: So, how many passed?
+Description: Write a method which counts how many students received a passing mark.
+Your program will be tested with code similar to the following:
+public class GroupStudents
+{
+   public static void main(String [] args)
+   {
+      Student [] group = {
+               new Student("John", 50),
+               new Student("Abby", 40),
+               new Student("Dylan", 20),
+               new Student("Carl", 70),
+               new Student("Maeve", 70),
+               new Student("Chris", 46),
+               new Student("James", 55),
+               new Student("Anne", 63),
+            };
+
+      int numPassed = Test.numberPasses(group);
+      System.out.println(numPassed + " students passed out of " + group.length);
+      System.out.println("That is an " + 100.0 * numPassed / group.length + "% pass rate.");
+   }
+}
+A Student is defined as:
+public class Student
+{
+   private String name;
+   private int mark;
+
+   public Student(String n, int m)
+   {
+      name = n;
+      mark = m;
+   }
+
+   public String getName()
+   {
+      return name;
+   }
+
+   public int getMark()
+   {
+      return mark;
+   }
+}
+Provide a method to the Test class called numberPasses(). It will have one parameter, an array of Students. It will return the number of students who have received a mark of 40 or higher.
+The program will be compiled using 
+javac GroupStudents.java
+ and run using 
+java GroupStudents
+ The output should be:
+$ java GroupStudents
+7 students passed out of 8
+That is an 87.5% pass rate.
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

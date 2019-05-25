@@ -1,0 +1,25 @@
+Title: Noisy Animals
+Description: import java.util.Scanner;
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Animal [] animals = Noisy.makeSomeNoise();
+        for(Animal animal : animals)
+            System.out.println(animal.greeting());
+    }
+}
+The Noisy class is
+public class Noisy
+{
+    public static Animal [] makeSomeNoise()
+    {
+        Animal [] animals = {new Cat("Angel"), new Cat("Cheesire"), new Dog("Buster"), new Dog("Fido"), new Cat("Lassie")};
+        return animals;
+    }
+}
+The other classes are as before. Run the code and see what it does.
+Now, modify the code so that when run, there is an extra line at the beginning:
+Woof, I am Devil
+Tests: 1  test run/ 1  test passed
+Grade: 100

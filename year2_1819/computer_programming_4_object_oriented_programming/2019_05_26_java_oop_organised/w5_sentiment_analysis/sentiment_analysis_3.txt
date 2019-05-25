@@ -1,0 +1,14 @@
+Title: Sentiment Analysis 3
+Description: Your program will read the names of two files from the command line. The first will be a series of words separated by spaces and the second will be a set of reviews, one on each line. Your program should calculate the score for each of the words in the first file.
+Your program should work as follows:
+$ java Senti3 words.txt reviews.txt
+The score of latest is 2.5.
+The score of face is 3.00.
+
+Assuming that the words file is:
+latest face
+2 This cool film is the latest stuff .
+3 His face is the latest in technology.
+
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

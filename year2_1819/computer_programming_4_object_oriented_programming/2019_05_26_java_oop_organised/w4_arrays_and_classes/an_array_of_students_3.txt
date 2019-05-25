@@ -1,0 +1,53 @@
+Title: An Array of Students (3)
+Description: Again, this exercise is a slight modification on the previous exercise. This time, you need to print out the 
+student marks
+ followed by the name in brackets.
+As before, the following code creates an array of students:
+public class GroupStudents
+{
+   public static void main(String [] args)
+   {
+      Student [] group = {
+               new Student("John", 50),
+               new Student("Abby", 40),
+               new Student("Dylan", 20),
+               new Student("Carl", 70),
+               new Student("Maeve", 70),
+               new Student("Chris", 46),
+               new Student("James", 55),
+               new Student("Anne", 63),
+            };
+
+      Test.print(group);
+   }
+}
+A Student is defined as:
+public class Student
+{
+   String name;
+   int mark;
+
+   public Student(String n, int m)
+   {
+      name = n;
+      mark = m;
+   }
+}
+You should create the method print in the Test class which will print out the marks of all the students. 
+The program will be compiled using 
+javac GroupStudents.java
+ and run using 
+java GroupStudents
+ The output should be:
+$ java GroupStudents 
+50 (John)
+40 (Abby)
+20 (Dylan)
+70 (Carl)
+70 (Maeve)
+46 (Chris)
+55 (James)
+63 (Anne)
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

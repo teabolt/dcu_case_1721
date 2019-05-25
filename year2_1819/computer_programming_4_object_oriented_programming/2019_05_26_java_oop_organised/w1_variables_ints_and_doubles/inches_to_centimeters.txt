@@ -1,0 +1,18 @@
+Title: Inches to Centimeters
+Description: Write a program which will convert inches to centimetres. The program should ask a user for an inch-eger and convert it to centimeters. You may assume that the user is very ancient and uses an outmoded unit of measurement.
+Note that 1 inch is 2.54 cm
+Example usage:
+$ java inch2cm
+Please enter a quantity in inches: 
+1
+
+1 inch is 2.54 cm
+
+or
+$ java inch2cm
+Please enter a quantity in inches: 
+2
+
+2 inch is 5.08 cm
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

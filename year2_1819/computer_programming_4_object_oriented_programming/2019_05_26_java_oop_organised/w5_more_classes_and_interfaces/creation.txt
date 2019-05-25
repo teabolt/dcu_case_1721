@@ -1,0 +1,18 @@
+Title: Creation
+Description: public class Date
+{
+   private int day;
+   private int month;
+   private int year;
+
+   public toString()
+   {
+      return day + "/" + month + "/" + year;
+   }
+}
+This class obviously needs a constructor. Create a constructor which takes three integer values and initialises the date appropriately. Once you have written the constructor, the following code should work:
+Date bigBomb = new Date(6, 8, 1945);
+System.out.println(bigBomb);
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

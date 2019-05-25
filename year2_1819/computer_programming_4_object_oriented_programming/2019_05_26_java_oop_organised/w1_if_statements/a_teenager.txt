@@ -1,0 +1,16 @@
+Title: A Teenager!
+Description: Write a program which determines whether an age belongs to a teenager. Write a program which determines whether an age is that of a teenager or not.
+Example usage:
+$ java IsTeenager
+Enter your age: 
+6
+
+you are not a teenager.
+or
+$ java IsTeenager
+Enter your age: 
+19
+
+you are a teenager.
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

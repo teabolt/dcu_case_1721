@@ -1,0 +1,21 @@
+Title: Animal Greetings
+Description: Hello, my name is 
+name
+where name will be the animal's name.
+Your class will be called by the following Main class
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+        
+        String name = in.nextLine();
+        
+        Animal ani = new Animal(name);
+        System.out.println(ani.greeting());
+    }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

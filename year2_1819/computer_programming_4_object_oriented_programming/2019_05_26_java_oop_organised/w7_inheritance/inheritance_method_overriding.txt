@@ -1,0 +1,30 @@
+Title: Inheritance (method overriding)
+Description: Using the three classes from the previous exercise, we add a method to the Parent class. However, we want the Child class to modify the behaviour of the Parent class. You should adapt the Child class so that it overrides the Parent's method appropriately. (See below.)
+Here is Main.java
+public class Main
+{
+	public static void main(String []args)
+	{
+		Parent parent = new Child();
+		System.out.println("parent.makeATwo() is " + parent.makeATwo());
+	}
+}
+
+Here is Parent.java (with one not very useful method)
+public class Parent
+{
+    public int makeATwo()
+    {
+        return 2;
+    }
+}
+
+Here is Child.java (a shell ... to be completed)
+public class Child
+{
+}
+
+Change only the Child class so that the program overrides the Parent's makeATwo method. Instead of returning 2, it should return a 3.
+This exercise is designed to show method overriding.
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,7 @@
+Title: Type Errors
+Description: Given the same Cat class, Polite interface and main method from the previous exercise, remove the implements statement from the Cat class to generate an error as follows:
+Main.java:5: error: incompatible types
+
+Note that this is a trivially easy exercise. If you take longer than 2 minutes at it, then you haven't read the description properly.
+Tests: 1  test run/ 1  test passed
+Grade: 100

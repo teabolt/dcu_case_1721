@@ -1,0 +1,32 @@
+Title: toString or not toString
+Description: Add a toString method to your BankAccount class. It should return a string representing the account. The string should be exactly
+The balance is 
+followed by the balance.
+Your BankAccount class will be tested by the following program:
+public class TestBankAccount
+{
+   public static void main(String [] args)
+   {
+      BankAccount account = new BankAccount(); // This uses the 
+default constructor
+.
+
+      System.out.println(account);
+      account.withdraw(25);
+
+      System.out.println(account);
+   }
+}
+The program will be compiled using 
+javac TestBankAccount.java
+ and run using 
+java TestBankAccount
+ The output should be:
+$java TestBankAccount 
+The balance is 100.0
+The balance is 75.0
+
+Hints:
+Probably the best hint is to check the notes on the toString method. Also, this method needs to be public.
+Tests: 1  test run/ 1  test passed
+Grade: 100

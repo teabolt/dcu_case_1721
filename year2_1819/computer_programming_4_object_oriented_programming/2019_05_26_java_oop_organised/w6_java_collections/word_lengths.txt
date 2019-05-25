@@ -1,0 +1,29 @@
+Title: Word Lengths
+Description: Write a program which will read in a series of words and then then print out the number of times a word of each length occurs. For example, if the program was run as follows:
+java WordLength
+
+this sent ence cont ains only four lett errr words
+
+4: 9
+5: 1
+
+In this case, the "sentence" contained 9 four letter "words" and one five letter word (namely words). Use a map to map each word length onto a number. Note that in practice, you could use an ArrayList for this because the keys are relatively small numbers, but we are doing maps, so use a map.
+Here is another more cultured example
+java WordLength
+
+If music be the food of love, play on
+Give me excess of it; that surfeiting
+The appetite may sicken, and so die
+
+2: 7
+3: 6
+4: 4
+5: 2
+6: 1
+7: 1
+8: 1
+10: 1
+
+Note that the input had seven words of length 2.
+Tests: 5 tests run/ 5 tests passed
+Grade: 100

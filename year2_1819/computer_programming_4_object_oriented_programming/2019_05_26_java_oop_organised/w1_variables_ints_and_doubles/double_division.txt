@@ -1,0 +1,11 @@
+Title: Double Division
+Description: Write a program which will read in two floating point values, a and b, and print out the result of a divided by b.
+Example usage:
+$ java DoubleDivision
+Please enter two floating point numbers: 
+1.5 0.5
+
+1.5 / 0.5 is 3.0
+Remember that division by a half is the same as multiplication by two.
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

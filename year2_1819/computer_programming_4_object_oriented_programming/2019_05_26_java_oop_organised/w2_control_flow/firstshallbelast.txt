@@ -1,0 +1,18 @@
+Title: FirstShallBeLast
+Description: Write a static method for a Test class called firstShallBeLast which takes a string, swaps the first and last characters and returns this string.
+Your method will be called by another Java class as follows:
+public class main
+{
+   public static void main(String [] args)
+   {
+      String s = "abcdef";
+      String newString = Test.firstShallBeLast(s);
+      System.out.println("Test.firstShallBeLast(" + s + ") is " + newString);
+   }
+}
+
+This program would print:
+Test.firstShallBeLast(abcdef) is fbcdea
+Note that the first character, 'a', has been swapped with the last, 'f'.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

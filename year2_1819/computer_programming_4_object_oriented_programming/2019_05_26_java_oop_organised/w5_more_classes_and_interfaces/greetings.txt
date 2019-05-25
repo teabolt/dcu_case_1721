@@ -1,0 +1,38 @@
+Title: Greetings
+Description: Here is a Cat class:
+public class Cat
+{
+    private String name;
+    
+    public Cat(String n)
+    {
+        name = n;
+    }
+    
+    public String toString()
+    {
+        return "cat: " + name;
+    }
+}
+and here is an interface:
+public interface Polite
+{
+    // The hello method prints something.
+    public void hello();
+}
+
+Modify the Cat class so that it implements the polite interface. Your class will be used in the following program:
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Polite cat = new Cat("Charlie");
+        
+        System.out.println("1 " + cat);
+        
+        cat.hello();
+    }
+}
+
+Tests: 1  test run/ 1  test passed
+Grade: 100

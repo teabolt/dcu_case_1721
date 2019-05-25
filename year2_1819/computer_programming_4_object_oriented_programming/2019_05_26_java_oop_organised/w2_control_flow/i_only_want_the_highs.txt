@@ -1,0 +1,19 @@
+Title: I only want the Highs
+Description: Example
+java OnlyHigh
+Enter a word: 
+shillyhilly
+
+hi
+hi
+Note that you may need to compare strings. If you want to see is a string x equal to a string y, then you cannot say:
+   if(x == y) // Doesn't work with strings
+
+Instead, you need
+   if(x.equals(y)) // The correct way
+
+or, if you prefer
+   if(y.equals(x)) // same difference
+
+Tests: 7 tests run/ 7 tests passed
+Grade: 100

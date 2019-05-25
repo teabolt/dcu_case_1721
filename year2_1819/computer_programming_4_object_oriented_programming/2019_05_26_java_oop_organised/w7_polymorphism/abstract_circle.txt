@@ -1,0 +1,97 @@
+Title: Abstract Circle
+Description: Create a Circle class which extends Shape. The Shape method is defined below:
+public abstract class Shape
+{
+   private String name; // will occur in all extensions
+
+   public Shape(String name)
+   {
+      this.name = name;
+   }
+
+   abstract double area(); // no body, note abstract
+
+   public String toString()
+   {
+      return name + " with area " + area();
+   }
+}
+
+Your Circle class will extend a Shape and calculate the area. It will then be used in conjunction with a Rectangle and Triangle class by the following main method
+public class Main
+{
+   public static Shape largest(Shape [] shapes)
+   {
+      if(shape,length == 0)
+         return null;
+      Shape largest = shapes[0]; // Assume it's the first
+      for(Shape shape : shapes)
+         if(shape.area() > largest.area()) // This one is larger ...
+            largest = shape;        // ... update the variable
+
+      return largest;
+   }
+
+   public static void main(String [] args)
+   {
+      Rectangle[] rectangles = {
+                        new Rectangle("Rectangle",2.0,3.0),
+                        new Rectangle("Square",4.0,4.0),
+                        };
+
+      Rectangle big = (Rectangle)largest(rectangles);
+      System.out.println(big); 
+
+      Shape[] shapes = {
+                           new Rectangle("Rectangle 1",2.0,3.0),
+                           new Rectangle("Rectangle 2",16.0,1.0),
+                           new Rectangle("Rectangle 3",7.0,2.0),
+                           new Rectangle("Rectangle 4",17.0,1.0),
+                           new Circle("Circle 1",1.0),
+                           new Circle("Circle 2",2.0),
+                           new Circle("Circle 3",3.0),
+                           new Circle("Circle 4",4.0),
+                           new Rectangle("Rectangle 5",5.0,3.0),
+                           new Triangle("Triangle 1",5.0,12.0,13.0), 
+                           new Rectangle("Square 1",4.0,4.0),
+                        };
+
+      System.out.println("The largest shape is: " + largest(shapes)); 
+   }
+}
+For your viewing pleasure, the Rectangle and Triangle classes are defined below:
+public class Rectangle extends Shape
+{
+   private double width, height; // name inherited
+
+   public Rectangle(String s, double w, double h)
+   {
+      super(s); // use Shape constructor; effect is name=s;
+      width = w;
+      height = h;
+   }
+
+   double area()
+   {
+      return width * height;
+   }
+}
+and
+public class Triangle extends Shape
+{
+   private double a, b, c; // lengths of sides
+
+   public Triangle(String s, double x, double y, double z)
+   {
+      super(s);
+      a = x; b = y; c = z;
+   }
+
+   double area()
+   {
+      double s = (a+b+c)/2.0;
+      return Math.sqrt(s*(s-a)*(s-b)*(s-c));
+   }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

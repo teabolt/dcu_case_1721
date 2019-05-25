@@ -1,0 +1,170 @@
+==========
+Title: W1: Intro
+Summary: There are some quite straightforward exercises this week. You need to create some short programs and they will be marked by the computer. Automagically.
+
+
+==========
+Title: W1: Variables: ints and doubles
+Summary: No summary available :-(
+
+
+==========
+Title: W1: Java Strings
+Summary: No summary available :-(
+
+
+==========
+Title: W1: if statements
+Summary: No summary available :-(
+
+
+==========
+Title: W2: Methods Lecture
+Summary: No summary available :-(
+
+
+==========
+Title: W2: Methods Practice
+Summary: Python has functions, Java has methods. They are much the same thing, except that methods have to belong to a class or an object. Methods that belong to a class are defined using the keyword static.
+
+
+==========
+Title: W2: Loops Lecture
+Summary: No summary available :-(
+
+
+==========
+Title: W2: Loops Practice
+Summary: Looping is what computers do! Again and again and again.
+
+
+==========
+Title: W2: Control Flow
+Summary: More on loops and if statements.
+
+
+==========
+Title: W3: Arrays Lecture
+Summary: No summary available :-(
+
+
+==========
+Title: W3: Arrays and for loops
+Summary: Storing lots of items using arrays. Arrays and for loops. The enhanced for loop.
+
+
+==========
+Title: W3: Arrays and Methods
+Summary: No summary available :-(
+
+
+==========
+Title: W3: Word Game
+Summary: Let's make a game.
+
+
+==========
+Title: W4: Classes and Objects Lecture
+Summary: No summary available :-(
+
+
+==========
+Title: W4: Classes and Objects
+Summary: Here are exercises for classes. It might seem like a lot, but they all involve the same BankAccount class. All the exercises could have been placed in one exercise but that would not be as educational.
+
+
+==========
+Title: W4: Arrays and Classes
+Summary: Combining Arrays and classes starts to give us very useful programming constructs. These exercises don't really introduce new ideas, just combine the concepts of classes and arrays.
+
+
+==========
+Title: W4: Command Line Arguments and Exceptions
+Summary: No summary available :-(
+
+
+==========
+Title: W5: Lecture
+Summary: Interfaces and Files
+
+
+==========
+Title: W5: Debugging and IDEs
+Summary: An IDE (Integrated Development Environment) is a tool to allow you to develop code.
+
+
+==========
+Title: W5: More Classes and Interfaces
+Summary: No summary available :-(
+
+
+==========
+Title: W5: File Handling
+Summary: No summary available :-(
+
+
+==========
+Title: W5: Sentiment Analysis
+Summary: Sentiment Analysis is big business right now.
+
+
+==========
+Title: W6:Lecture: Generics + Collections
+Summary: No summary available :-(
+
+
+==========
+Title: W6: Generic problems
+Summary: ALSO Packages, inner classes, special for loop.
+
+
+==========
+Title: W6: Java Collections
+Summary: No summary available :-(
+
+
+==========
+Title: W7: Lecture
+Summary: No summary available :-(
+
+
+==========
+Title: W7: Inheritance
+Summary: No summary available :-(
+
+
+==========
+Title: W7: OO Design
+Summary: No summary available :-(
+
+
+==========
+Title: W7: Polymorphism
+Summary: No summary available :-(
+
+
+==========
+Title: W9: Refactoring
+Summary: Improving the design of existing code.
+
+
+==========
+Title: W9: Refactoring Labs
+Summary: No summary available :-(
+
+
+==========
+Title: W10: OO concepts
+Summary: Some quizzes to review standard OO concepts.
+
+
+==========
+Title: W11: Refactoring 2
+Summary: No summary available :-(
+
+
+==========
+Title: W12: Revision/Exam Discussion
+Summary: No summary available :-(
+
+

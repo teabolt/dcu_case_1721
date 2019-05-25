@@ -1,0 +1,67 @@
+Title: Is it a letter?
+Description: Write a method called containsLetter which takes as parameters a word and a letter and returns true if the word contains the letter and false if it doesn't.
+The method should be a static method of a Word class and could be used as shown in the following program (see section in bold):
+
+
+import java.util.Scanner;
+
+public class TestContainsLetter
+{
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+        
+        // Ask the user for a word and a letter
+        System.out.print("Enter a word and a letter: ");
+        String word = in.next();
+        char letter = in.next().charAt(0);
+        
+        if(
+Word.containsLetter(word, letter)
+)
+            System.out.println(letter + " is in " + word);
+        else
+            System.out.println(letter + " is not in " + word);
+    }
+}
+And the program would be executed as follows:
+
+$ java TestContainsLetter
+Enter a word and a letter 
+computer b
+
+b is not in computing.
+
+or
+$ java TestContainsLetter
+Enter a word and a letter 
+dog d
+
+d is in dog.
+Note that your method will actually be tested using the program below:
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String []args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a word and a letter:");
+        String word = input.next();
+        String letters = input.next();
+        
+        String in = "";
+        String notIn = "";
+        for(int i = 0; i < letters.length(); i++)
+            if(Word.containsLetter(word, letters.charAt(i)))
+                in += letters.charAt(i);
+            else
+                notIn += letters.charAt(i); // add to list of letters 
+        
+        System.out.println(in + " are in " + word + ".");
+        System.out.println(notIn + " are not in " + word + ".");
+    }
+}
+
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

@@ -1,0 +1,23 @@
+Title: Reading from a file
+Description: Write a program which reads in a file name, then it opens the file and reads in a series of names into a String array. The program then prints all the names in reverse order.
+For example, if the file is called "names.txt" and contains the following names (the first line contains the number of names):
+6
+Abby
+Dylan
+Karl
+Chris
+Maeve
+Faye
+
+Then the program should run as follows:
+$ java ReadNames
+Enter the filename: 
+names.txt
+
+The names in reverse order are:
+Faye Maeve Chris Karl Dylan Abby
+
+Hint:
+Your program should get a filename from the user. This file will contain a list of names. Create an array of strings to hold each name. When you have read in all the names from the file into the array, then you can print them out in reverse.
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

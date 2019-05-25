@@ -1,0 +1,11 @@
+Title: Print out the command line arguments
+Description: Write a program which prints out its command line arguments, one argument per line.
+A sample run would be:
+$ java Args Hello 5 58-78-rs
+args[0] = Hello
+args[1] = 5
+args[2] = 58-78-rs
+
+In this case, there are three arguments: "Hello", "5" and "58-78-rs". Your program should print each argument as shown above. You should create a class called Args in a file called Args.java
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

@@ -1,0 +1,11 @@
+Title: First Initial
+Description: Write a program which prompts a user to enter their name and gives them their first initial.
+Example usage:
+$ java Initial
+Tell me your name: 
+Jonathan
+
+Jonathan starts with the letter J.
+You can use the substring() method of string to discover the first letter of the string. You need to think about the parameters you choose.
+Tests: 3 tests run/ 3 tests passed
+Grade: 100

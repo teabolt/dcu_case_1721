@@ -1,0 +1,34 @@
+Title: Student Marks
+Description: The method should create a map which maps Strings to Integers based on the Scanner input and then returns that map. Your method would be called by the following program:
+import java.util.Scanner;
+import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main
+{
+   public static void main(String [] args)
+   {
+      Map<String, Integer> students = 
+MakeMap.makeMap(new Scanner(System.in))
+;
+
+      List<String> names = new ArrayList<String>(students.keySet());
+      Collections.sort(names);
+      for(String name : names)
+         System.out.println(name + " has mark " + students.get(name));
+   }
+}
+
+To summarize, you write the MakeMap class with a static method makeMap(). You need to read the input using the Scanner object which you receive as a parameter. You need to create and return the map which maps student names to marks.
+Hint: when reading the input, the following while loop works:
+      while(in.hasNext())
+      {
+         // Read the input and add it to the map.
+      }
+
+Note that your program is passed the Scanner on the command line. You do not need to create a Scanner.
+There are a few ways to print out the results. One is to firstly get the set of map's keys and convert them to a list. Sort the list and print them out. Another way is to use the map's size and keep going, checking for null return values until you reach the size of the map. 
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

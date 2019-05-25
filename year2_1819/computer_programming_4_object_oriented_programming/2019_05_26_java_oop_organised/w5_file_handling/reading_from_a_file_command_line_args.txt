@@ -1,0 +1,22 @@
+Title: Reading from a file + command line args
+Description: Write a program which reads names from a file and prints them out in reverse order. Your program should get the filename to read from the command line.
+For example, if the file is called "names.txt" and contains the following names (the first line contains the number of names):
+6
+Abby
+Dylan
+Karl
+Chris
+Maeve
+Faye
+
+Then the program should run as follows:
+$ java ReadNames names.txt
+The names in reverse order are:
+Faye Maeve Chris Karl Dylan Abby
+
+If there are no command line arguments, the program should print a usage message as indicated below:
+$ java ReadNames
+Usage: java ReadNames <filename>
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

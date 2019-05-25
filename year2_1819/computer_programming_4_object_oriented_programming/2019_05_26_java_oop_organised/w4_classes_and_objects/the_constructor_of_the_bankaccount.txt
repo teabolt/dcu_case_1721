@@ -1,0 +1,28 @@
+Title: The Constructor of the BankAccount
+Description: Add a constructor to 
+the BankAccount class
+. It should take a single parameter of type double which will be used to initialise the balance of the account.
+
+The BankAccount class
+ will be tested by the following program:
+public class TestBankAccount
+{
+   public static void main(String [] args)
+   {
+      BankAccount currentAccount = new BankAccount(10000.00);
+
+      System.out.println("The balance is " + currentAccount.balance);
+   }
+}
+The program will be compiled using 
+javac TestBankAccount.java
+ and run using 
+java TestBankAccount
+ The output should be:
+$ java TestBankAccount 
+The balance is 10000.0
+
+Hints:
+Probably the best hint is to check the notes on constructors.
+Tests: 1  test run/ 1  test passed
+Grade: 100

@@ -1,0 +1,10 @@
+Title: Generating Exceptions
+Description: Create a program which generates an ArrayIndexOutOfBoundsException.
+A sample run of your program would look like:
+$ java ExceptionMaker
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
+	at ExceptionMaker.main(ExceptionMaker.java:5)
+
+Your message doesn't have to be the same, you just have to generate an exception.
+Tests: 1  test run/ 1  test passed
+Grade: 100

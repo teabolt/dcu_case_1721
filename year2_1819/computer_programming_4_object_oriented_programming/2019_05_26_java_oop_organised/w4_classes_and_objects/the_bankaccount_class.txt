@@ -1,0 +1,29 @@
+Title: The BankAccount class
+Description: Create a BankAccount class. You will need to create a file called BankAccount.java which contains your class. It should have one field called balance which will represent the current balance of the account. The balance should be represented by a double type. Your class need only contain this one field. It doesn't need any constructors or methods. Your class will be tested by the following program:
+public class TestBankAccount
+{
+   public static void main(String [] args)
+   {
+      BankAccount currentAccount = new BankAccount();
+
+      currentAccount.balance = 60.05;
+
+      System.out.println("The balance is " + currentAccount.balance);
+
+      currentAccount.balance = currentAccount.balance + 10;
+
+      System.out.println("The balance is " + currentAccount.balance);
+   }
+}
+The program will be compiled using 
+javac TestBankAccount.java
+ and run using 
+java TestBankAccount
+ The output should be:
+$ java TestBankAccount 
+The balance is 60.05
+The balance is 70.05
+
+Hints:
+Tests: 1  test run/ 1  test passed
+Grade: 100

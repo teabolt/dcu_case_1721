@@ -1,0 +1,31 @@
+Title: Cats and Dogs
+Description: public abstract class Animal
+{
+    public Animal(String n)
+    {
+        name = n;
+    }
+
+    abstract String hello();
+    
+    public String greeting()
+    {
+        return hello() + ", I am " + name;
+    }
+    // private
+    private String name;
+}
+Your classes will be used in the following Main class.
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Animal cat = new Cat("Angel");
+        Animal dog = new Dog("Fido");
+        System.out.println(cat.greeting());
+        System.out.println(dog.greeting());
+    }
+}
+Note that your Cat and Dog classes must not supply a greeting method. They should use the greeting method from the Animal class.
+Tests: 1  test run/ 1  test passed
+Grade: 100

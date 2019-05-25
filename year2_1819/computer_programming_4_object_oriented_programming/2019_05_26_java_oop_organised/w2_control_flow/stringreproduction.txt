@@ -1,0 +1,11 @@
+Title: StringReproduction
+Description: Example
+java StringReproduction
+Enter a number and a string: 
+5 Hello
+
+HelloHelloHelloHelloHello
+
+The new string is five copies of "Hello".
+Tests: 5 tests run/ 5 tests passed
+Grade: 100

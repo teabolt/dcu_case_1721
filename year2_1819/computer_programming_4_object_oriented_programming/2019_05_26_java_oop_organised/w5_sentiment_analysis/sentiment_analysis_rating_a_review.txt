@@ -1,0 +1,13 @@
+Title: Sentiment Analysis: Rating a review
+Description: Your program is now ready to read a movie review and make an educated guess as to its score. So, that is your task. Write a method called sentiment which takes as parameters an unrated review and the name of a file of movie reviews and return the rating of the review. You should make the method a static method of a class called Sentiment. Your method should return a double value which will be the rating of the review based on the file of reviews which your method will be given.
+Work out the score of each word in the unrated review and get the average of all the words in the review. If a word has no score (because it hasn't appeared in any of the existing reviews), then it shouldn't be counted.
+A simple way to test this is to create a file called reviews.txt which only contains one review, e.g.
+3 This movie was super good.
+
+Then call your function with the same review. It should get the same score.
+System.out.println(Sentiment.sentiment("This movie was super good.", "reviews.txt"));
+
+and so this code should print 3.0. Of course, your program should work for a file with an arbitrary number of lines.
+Notes:
+Tests: 8 tests run/ 8 tests passed
+Grade: 100

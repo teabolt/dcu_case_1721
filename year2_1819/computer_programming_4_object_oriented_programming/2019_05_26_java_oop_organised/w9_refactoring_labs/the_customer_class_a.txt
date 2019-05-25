@@ -1,0 +1,27 @@
+Title: The Customer Class (A)
+Description: Implement the Customer class from page 15 of the book. Actually, you will need to change the class to get it to work for the program below. In particular, the Vector will have to become a List or Rentals. Have a look at the code below and use the hints provided.
+In addition, read any compiler error messages and make sure that you understand them. Once you understand what the error messages are saying, you should be able modify the code so that everything works.
+Your class should have a constructor, a getName() method, a getRentals() method and a toString() method. The getRentals() method should return a List of Rental objects. You may need to look up generics.
+Your class will be tested by the following program.
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main
+{
+   public static void main(String [] args)
+   {
+       Movie [] movies = { new Movie("Mickey Mouse", Movie.CHILDRENS), new Movie("The Pointer Sisters", Movie.REGULAR)};
+       Rental [] rentalsArray = { new Rental(movies[0], 1), new Rental(movies[1], 10)};
+       
+       List<Rental> rentals = new ArrayList<Rental>(Arrays.asList(rentalsArray));
+       
+       Customer donald = new Customer("Donald", rentals);
+       
+       System.out.println(donald.getName());
+       System.out.println(donald.getRentals());
+       System.out.println(donald); // test the toString() method.
+   }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

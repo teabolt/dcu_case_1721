@@ -1,0 +1,31 @@
+Title: Square Method
+Description: import java.util.Scanner;
+
+public class SquareIt
+{
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+        
+        // Ask the user to enter a number
+        System.out.print("Enter a number: ");
+        
+        // Read in the number 
+        int num = in.nextInt();
+        
+        // call the square method of the Helper class to get num squared.
+        int result = 
+Numbers.square(num);
+
+        
+        System.out.println(num + " squared is " + result);
+    }
+}
+Note that you don't create any main method. Just the square method which will be called by another method.
+If you get an error, it could be because
+1. You didn't create a Numbers class.
+2. It didn't have a square method.
+3. The square method wasn't public static.
+4. The square method didn't have an int parameter and didn't return an int variable.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

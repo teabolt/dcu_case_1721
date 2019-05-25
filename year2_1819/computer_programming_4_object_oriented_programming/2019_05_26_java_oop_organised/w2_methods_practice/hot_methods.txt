@@ -1,0 +1,13 @@
+Title: Hot Methods
+Description: Convert.fahr2cels(32)
+You could assign this to a variable called temp with the following assignment statement:
+temp = Convert.fahr2cels(32);
+Example usage:
+$ java Temp
+Give me a Fahrenheit temperature: 
+32.0
+
+In Celsius that would be: 0.0
+Note, this is very short and simple. You do not need to write the Convert class - that is supplied. You just have to use it. 
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

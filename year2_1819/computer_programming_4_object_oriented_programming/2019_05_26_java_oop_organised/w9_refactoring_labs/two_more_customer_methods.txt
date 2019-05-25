@@ -1,0 +1,59 @@
+Title: Two more Customer methods
+Description: Two more methods can further improve the Customer class, namely getTotalCharge() and getFrequentRenterPoints(). Add these methods. The first returns the charge for all the rentals and the second returns the frequent renter points for all the rentals. Your methods should use the appropriate methods from the Rental class.
+Your class will be tested by the following program.
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main
+{
+   public static void main(String [] args)
+   {
+       Movie [] movies = { new Movie("James Bond does Java", Movie.NEW_RELEASE),
+                         new Movie("Mickey Mouse", Movie.CHILDRENS),
+                         new Movie("The Pointer Sisters", Movie.REGULAR),
+                         new Movie("The Dointer Sisters", Movie.NEW_RELEASE),
+                };
+       Rental [] rentalsArray = { new Rental(movies[0], 3),
+                                    new Rental(movies[1], 10),
+                                    new Rental(movies[2], 2),
+                                    new Rental(movies[3], 1),
+                };
+       
+       List<Rental> rentals = new ArrayList<Rental>(Arrays.asList(rentalsArray));
+       
+       Customer donald = new Customer("Donald", rentals);
+       
+       System.out.println(donald.getName());
+       System.out.println(donald.getRentals());
+       
+       System.out.println(donald.getTotalCharge());
+       System.out.println(donald.getTotalFrequentRenterPoints());
+       
+       DummyTester bernie = new DummyTester("Bernie", rentals);
+
+       System.out.println(bernie.getTotalCharge());
+       System.out.println(bernie.getTotalFrequentRenterPoints());
+   }
+}
+
+class DummyTester extends Customer
+{
+    public DummyTester(String name, List<Rental> rentals)
+    {
+        super(name, rentals);
+    }
+    
+    // Note that we can only do this if getTotalCharge exists in the parent class (Customer)
+    public double getTotalCharge()
+    {
+        return super.getTotalCharge(rental) * 2;  // Just double the charge!
+    }
+
+    public int getTotalFrequentRenterPoints()
+    {
+        return super.getTotalFrequentRenterPoints() * 2;  // Just double the points!
+    }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

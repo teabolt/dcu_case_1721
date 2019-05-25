@@ -1,0 +1,57 @@
+Title: Honours Students
+Description: This time, you should print only the students who have a mark of 55 or more.
+Your program will be tested with code similar to the following:
+public class GroupStudents
+{
+   public static void main(String [] args)
+   {
+      Student [] group = {
+               new Student("John", 50),
+               new Student("Abby", 40),
+               new Student("Dylan", 20),
+               new Student("Carl", 70),
+               new Student("Maeve", 70),
+               new Student("Chris", 46),
+               new Student("James", 55),
+               new Student("Anne", 63),
+            };
+
+      Test.printHonours(group);
+   }
+}
+A Student is defined as:
+public class Student
+{
+   private String name;
+   private int mark;
+
+   public Student(String n, int m)
+   {
+      name = n;
+      mark = m;
+   }
+
+   public String getName()
+   {
+      return name;
+   }
+
+   public int getMark()
+   {
+      return mark;
+   }
+}
+You should create the method print in the Test class which will print out the marks of all the students. 
+The program will be compiled using 
+javac GroupStudents.java
+ and run using 
+java GroupStudents
+ The output should be:
+$ java GroupStudents 
+70 (Carl)
+70 (Maeve)
+55 (James)
+63 (Anne)
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

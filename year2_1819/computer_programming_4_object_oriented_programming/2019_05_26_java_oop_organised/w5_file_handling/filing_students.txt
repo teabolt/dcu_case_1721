@@ -1,0 +1,63 @@
+Title: Filing Students
+Description: Previously you wrote a program which processed a group of students that were initialised in an array (see An Array of Students (1)). In this program, you should create the students from a file. The file will look like the following:
+8
+John 50
+Abby 40
+Dylan 20
+Carl 70
+Maeve 70
+Chris 44
+James 55
+Anne 63
+
+Your program should read in the number of students (first line), create the array of students, then for each line, read in the name and mark, and then create the student using the constructor and add it to the array. You should then call the static method Student.print() with the array that you have created.
+See the above mentioned exercise for reference.
+This will be your program outline:
+public class GroupStudents
+{
+   public static void main(String [] args)
+   {
+      Student [] group; // Your program should fill in this array from a file. The filename will be on the command line.
+
+      Strudent.print(group);
+   }
+}
+A Student is defined as:
+public class Student
+{
+   String name;
+   int mark;
+
+   public Student(String n, int m)
+   {
+      name = n;
+      mark = m;
+   }
+   public String toString()
+   {
+      return name + " " + mark;
+   }
+   public static void print(Student [] group)
+   {
+       for(int i = 0; i < group.length; i++)
+           System.out.println(group[i]);
+   }
+}
+The program will be compiled using 
+javac GroupStudents.java
+ and run using 
+java GroupStudents
+ The output should be:
+$ java GroupStudents studentsfile.txt
+John
+Abby
+Dylan
+Carl
+Maeve
+Chris
+James
+Anne
+
+Note that you should not print the array, you should call the Student.print method to print the array!
+Tests: 1  test run/ 1  test passed
+Grade: 100

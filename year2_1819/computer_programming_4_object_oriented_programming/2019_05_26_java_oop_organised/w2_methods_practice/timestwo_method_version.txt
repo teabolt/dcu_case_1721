@@ -1,0 +1,22 @@
+Title: TimesTwo: Method version
+Description: public class Helper
+{
+   public static int twoTimes(int num)
+   {
+      return num * 2;
+   }
+}
+Helper.twoTimes(16)
+You could assign this to an integer variable called x with the following assignment statement:
+x = Helper.twoTimes(16);
+Obviously your program would be simpler if you just multiplied by 2, but this is an exercise in using methods. You will get zero marks unless you use the method.
+Example usage:
+$ java TwoTimes
+Enter a number: 
+4
+
+Times two is: 8
+Hint: This requires a minor change to the original TwoTimes solution. Find where you calculated twice the number and replace that expression with the method call as indicated above.
+If you spend longer than 5 minutes at this, you are doing it wrong.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

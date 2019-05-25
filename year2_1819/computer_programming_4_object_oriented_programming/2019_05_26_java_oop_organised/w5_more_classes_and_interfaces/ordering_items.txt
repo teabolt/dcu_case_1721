@@ -1,0 +1,55 @@
+Title: Ordering Items
+Description: For many algorithms you need to be able to compare things. For example, if you want to sort a list of items, you need to have some way of telling whether one item is smaller than another. You can write a method to compare two items and you need your sorting algorithm to be able to know that such a method exists. This is where interfaces are most useful.
+Here is the Point class
+public class Point
+{
+    private double x, y;
+    
+    public Point(double newX, double newY)
+    {
+        x = newX;
+        y = newY;
+    }
+    
+    public String toString()
+    {
+        return "(" + x + ", " + y + ")";
+    }
+}
+Here is an Order interface
+public interface Order
+{
+    public boolean lessThan(Order other);
+}
+
+Modify the Point class so that it properly implements the Order interface. Two Points will be compared by first checking the x coordinate. Whichever Point has the smaller x coordinate, then that Point will be regarded as being smaller. If the two x coordinates are the same, then use the y coordinate as a decider.
+The Main.java and Order.java files are supplied.
+Your program will be compiled using the following command:
+javac Main.java
+and run using
+java Main
+and here is the Main.java file:
+import java.util.Scanner;
+
+public class Main
+{
+    public static Point getPoint(Scanner in)
+    {
+        double x = in.nextDouble(), y = in.nextDouble();
+        return new Point(x, y);
+    }
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+        Point p1 = getPoint(in);
+        Point p2 = getPoint(in);
+        
+        System.out.println("p1 = " + p1);
+        System.out.println("p2 = " + p2);
+        System.out.println("p1.lessThan(p2) = " + p1.lessThan(p2));
+    }
+}
+Your Point class will need to implement the Order Interface which means that you will have to provide a
+ lessThan method. The less than method will have to compare the current point with another (called other). You need to cast this to a Point so that you can extract the x and y values and compare them so that you can say whether it is less than or not.
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

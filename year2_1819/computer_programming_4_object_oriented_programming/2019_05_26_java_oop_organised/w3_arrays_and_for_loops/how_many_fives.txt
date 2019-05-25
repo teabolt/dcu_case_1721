@@ -1,0 +1,10 @@
+Title: How many fives?
+Description: Write a static method which takes as a parameter an integer array and which returns the number of the elements in the array which are exactly 5. Put the method in a Test class
+Your method would be called as follows
+   int [] num = {2, 3, 5, 7, 11, 13, 17, 5, 0, -5, 5};
+   // Call the method to count the fives
+   int result = Test.countFives(num);
+   // There are three fives in this array, so result will have a value of 3. (If the countFives method works)
+
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

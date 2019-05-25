@@ -1,0 +1,51 @@
+Title: Generic Max
+Description: Both items should be objects that implement the Order interface.
+Your program will tested using the following Main method:
+
+
+   public static void main(String [] args)
+   {
+      Thing n1 = new Thing(1);
+      Thing n2 = new Thing(2);
+      Thing n3 = new Thing(3);
+
+      System.out.println("Max of " + n1 + " and " + n2 + " is " + max(n1, n2));
+      System.out.println("Max of " + n2 + " and " + n1 + " is " + max(n2, n1));
+      System.out.println("Max of " + n3 + " and " + n1 + " is " + max(n3, n1));
+      System.out.println("Max of " + n1 + " and " + n3 + " is " + max(n1, n3));
+      System.out.println("Max of " + n3 + " and " + n2 + " is " + max(n3, n2));
+      System.out.println("Max of " + n2 + " and " + n3 + " is " + max(n2, n3));
+      System.out.println("Max of " + n1 + " and " + n2 + " is " + max(n1, n1));
+   }
+}
+The Thing class is defined as follows:
+public class Thing implements Order
+{
+   int value;
+   public Thing(int a)
+   {
+      value = a;
+   }
+
+   public boolean greaterThan(Order other)
+   {
+      // Convert the other to a thing so I can compare values
+      return value > ((Thing) other).value;
+   }
+
+   public String toString()
+   {
+      return "" + value;
+   }
+}
+The Order interface is defined as follows:
+public interface Order
+{
+	public boolean greaterThan(Order other);
+}
+Note that if your method is passed an object which does not implement the Order interface, then it should not compile (which it won't if you have used generics properly).
+Note 2: You will probably need to read the 
+notes on Generics for Python Programmers
+ to understand how to solve this.
+Tests: 1  test run/ 1  test passed
+Grade: 100

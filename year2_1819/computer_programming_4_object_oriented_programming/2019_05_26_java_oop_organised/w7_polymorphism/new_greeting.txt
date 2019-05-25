@@ -1,0 +1,33 @@
+Title: New Greeting
+Description: Hello
+, my name is 
+name
+
+
+Where Hello is species specific, that is a dog would say "woof" and a cat would say "Meow". Name has the usual meaning. You will only have to change the Animal class. Otherwise, the code will be the same as for the previous exercise.
+Your code will be checked by the following program:
+import java.util.Scanner;
+
+public class Main
+{
+    public static Animal [] makeSomeNoise()
+    {
+        Animal [] animals = {new Cat("Angel"), new Cat("Cheesire"), new Dog("Buster"), new Dog("Fido"), new Cat("Lassie")};
+        return animals;
+    }
+
+    public static void main(String [] args)
+    {
+        Animal [] animals = makeSomeNoise();
+        for(Animal animal : animals)
+            System.out.println(animal.greeting());
+    }
+}
+which, when run, should print:
+Meow, my name is Angel
+Meow, my name is Cheesire
+Woof, my name is Buster
+Woof, my name is Fido
+Meow, my name is Lassie
+Tests: 1  test run/ 1  test passed
+Grade: 100

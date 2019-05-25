@@ -1,0 +1,26 @@
+Title: Sentiment Analysis 1
+Description: Write a program which takes a word and a file name as the command line parameters and then finds out how many times the word appears in the file.
+Then the program should run as follows:
+$ java Senti1 happy reviews.txt
+The word "happy" occurs 24 times.
+
+In other words, your program will read the reviews file and print out how many reviews contain the word.
+Hint: The following code can be used to read lines of the reviews.txt file:
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class Movies
+{
+    public static void main(String [] a) throws FileNotFoundException
+    {
+        File movieReviewFile = new File("reviews.txt");
+        Scanner moveReviewScanner = new Scanner(movieReviewFile);
+        while(moveReviewScanner.hasNext())
+        {
+            // Now you can read in a line with Scanner's nextLine() method and you can
+            // read in an int with the nextInt() method.
+        }
+
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

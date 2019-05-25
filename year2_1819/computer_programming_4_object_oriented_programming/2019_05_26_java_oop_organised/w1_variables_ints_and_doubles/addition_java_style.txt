@@ -1,0 +1,15 @@
+Title: Addition Java Style
+Description: Example usage:
+$ java SumIt
+Enter two numbers: 
+4 6
+
+4 and 6 is 10
+Here is another example
+$ java SumIt
+Enter two numbers: 
+2 0
+
+2 and 0 is 2
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

@@ -1,0 +1,23 @@
+Title: LargestNumber
+Description: Write a static method for a Test class called largest which takes three integer parameters and returns the largest.
+Your method will be called by another Java class as follows:
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String [] args)
+    {
+        // Create a scanner object
+        Scanner in = new Scanner(System.in);
+        
+        // Read in the three numbers
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();
+
+        System.out.println("Test.largest(" + a + ", " + b + ", " + c + ") is " + Test.largest(a, b, c));
+    }
+}
+
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

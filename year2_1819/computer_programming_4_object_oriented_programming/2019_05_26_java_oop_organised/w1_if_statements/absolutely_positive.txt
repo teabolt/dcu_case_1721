@@ -1,0 +1,17 @@
+Title: Absolutely Positive
+Description: We need a positive number and sometimes people enter negative numbers. Write a program which reads in a number and if the number is negative, it makes it positive.
+Example usage:
+$ java Absolute
+Enter a number: 
+-5
+
+The absolute value is 5.
+or
+$ java Absolute
+Enter a number: 
+10
+
+The absolute value is 10.
+You will need an if statement to determine if the number is negative and should it be so, you unnegative it.
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

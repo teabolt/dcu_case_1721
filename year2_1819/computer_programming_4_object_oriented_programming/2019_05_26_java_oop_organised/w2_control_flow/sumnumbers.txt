@@ -1,0 +1,11 @@
+Title: SumNumbers
+Description: Create a class called SumNumbers which will read in a number and print out the sum of all numbers up to that number. For example, if the input is 5, then the program should print out the sum of the numbers from 1 to 5, which is 1+2+3+4+5, or 15.
+Here is an example of the program running:
+java SumNumber
+Enter a number: 
+4
+
+The sum of the number from 1 to 4 is 10
+
+Tests: 5 tests run/ 5 tests passed
+Grade: 100

@@ -1,0 +1,10 @@
+Title: Even Odder
+Description: Write a program using lists, i.e. the List API from the Java Collections class, which will keep on reading in numbers until a -1 is encountered and then print out all the odd numbers in the order that they occurred and then print out all the even numbers in the order that they occurred.
+E.g.
+java EvenOdd
+Enter numbers: 45 8 20 7 16 -1
+Odd:45 7
+Even: 8 20 16
+
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

@@ -1,0 +1,28 @@
+Title: Word Score Class
+Description: Create a class called WordScore. The class should have two attributes, a string called word and an integer called score. There should be a constructor which takes one String parameter which initialises the word.
+There should be one method called score() which takes string and returns an int. The string represents the review and is in the form of a score followed by a space and a sentence. The function should return the score if the word is contained in the sentence and should return -1 otherwise.
+Your class will be checked with the following code:
+import java.util.Scanner;
+
+public class TestWordScore
+{
+    public static void main(String [] args) throws FileNotException
+    {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Enter a word and a review.");
+        
+        String word = in.next();
+        String review = in.nextLine();
+        
+        WordScore wordScore = new WordScore(word);
+        
+        if(wordScore.score(review) == -1)
+            System.out.println(word + " does not appear in this review.");
+        else
+            System.out.println(word + " gets a score of " + wordScore.score(review) + ".");
+    }
+}
+
+Tests: 5 tests run/ 5 tests passed
+Grade: 100

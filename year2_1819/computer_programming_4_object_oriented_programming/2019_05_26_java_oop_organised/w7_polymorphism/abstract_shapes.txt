@@ -1,0 +1,22 @@
+Title: Abstract Shapes
+Description: Write a method which will take an array of Shape Objects and return the average area of the shapes. Your method should be a static method of the Average class and it should be called averageArea. It will have one parameter, an array of Shapes and it will return a double, the average area.
+The Shape class is shown below/
+public abstract class Shape
+{
+   private String name;
+
+   public Shape(String name)
+   {
+      this.name = name;
+   }
+
+   abstract double area();
+
+   public String toString()
+   {
+      return name + " with area " + area();
+   }
+}
+
+Tests: 1  test run/ 1  test passed
+Grade: 100

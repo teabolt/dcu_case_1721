@@ -1,0 +1,32 @@
+Title: Multiple Methods
+Description: import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+        
+        // Ask the user to enter a number
+        System.out.print("Enter two numbers: ");
+        
+        // Read in the number 
+        int a = in.nextInt();
+        int b = in.nextInt();
+        
+        // call the multiply method of the Product class.
+        int result = 
+Product.multiply(a, b);
+
+        
+        System.out.println(a + " times " + b + " is " + result);
+    }
+}
+Note that you don't create any main method. Just the multiply method which will be called by another method.
+If you get an error, it could be because
+1. You didn't create a Product class.
+2. The Product class didn't have a multiply method.
+3. The multiply method wasn't public static.
+4. The multiply method didn't have two int parameters and didn't return an int variable.
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

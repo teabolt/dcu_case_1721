@@ -1,0 +1,19 @@
+Title: Odd That
+Description: Read in a whole number and determine if it is odd or even. Note that the modulus operator gives us the remainder when we perform integer division, that is 15 % 4 will give us the remainder which is left after we divide 15 by 4 (which is 3).
+Now, use 
+the if statement
+ along with the modulus operator and determine a number is even or odd.
+Example usage:
+$ java EvenOdd
+Enter a number: 
+6
+
+6 is even.
+or
+$ java EvenOdd
+Enter a number: 
+9
+
+9 is odd.
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

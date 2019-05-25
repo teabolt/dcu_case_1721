@@ -1,0 +1,10 @@
+Title: How many even?
+Description: Write a static method which takes as a parameter an integer array and which returns the number of the elements in the array which are even. Put the method in a Test class
+Your method would be called as follows
+   int [] num = {2, 3, 5, 4, 11, 13, 10, 5, 10, -5, 5};
+   // Call the method to count the even numbers
+   int result = Test.countEven(num);
+   // There are four even numbers in this array, so result will have a value of 4. (If the method works)
+
+Tests: 6 tests run/ 6 tests passed
+Grade: 100

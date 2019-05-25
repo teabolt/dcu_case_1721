@@ -1,0 +1,30 @@
+Title: The statement method (A)
+Description: Add a the statement method to the Customer class. It should produce the same output as the method in the book (page 15 and 16). 
+However, you should not use the code that is in the book. That code was written in prehistoric times and, now, no one would use a Vector or an Enumeration. In fact, you should pretend that you don't even know what those classes are. Instead, use a List class and use the foreach method to go through each Rental. Also, be sure to use generics to create a List of type Rental.
+Note also that tabs cannot be properly marked, so replace all tabs with two spaces. And your String should be terminated by a newline.
+Your class will be tested by the following program.
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main
+{
+   public static void main(String [] args)
+   {
+       Movie [] movies = { new Movie("James Bond does Java", Movie.NEW_RELEASE), new Movie("Mickey Mouse", Movie.CHILDRENS), new Movie("The Pointer Sisters", Movie.REGULAR)};
+       Rental [] rentalsArray = { new Rental(movies[0], 1), new Rental(movies[1], 10), new Rental(movies[2], 2)};
+       
+       List<Rental> rentals = new ArrayList<Rental>(Arrays.asList(rentalsArray));
+       
+       Customer donald = new Customer("Donald", rentals);
+       
+       System.out.println(donald.getName());
+       System.out.println(donald.getRentals());
+       System.out.println(donald); // test the toString() method.
+       
+       System.out.println("\nYour statement:");
+       System.out.print(donald.statement());
+   }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

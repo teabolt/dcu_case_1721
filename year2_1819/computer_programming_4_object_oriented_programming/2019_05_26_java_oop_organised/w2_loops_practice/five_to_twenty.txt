@@ -1,0 +1,9 @@
+Title: Five To Twenty
+Description: Write a program which will print out the numbers 5 down to 20 inclusive. Use a while loop.
+Here is what the program would do when run.
+$ java FiveToTwenty
+5 6 7 8 9 11 12 13 14 15 16 17 18 19 20 
+$
+
+Tests: 1  test run/ 1  test passed
+Grade: 100

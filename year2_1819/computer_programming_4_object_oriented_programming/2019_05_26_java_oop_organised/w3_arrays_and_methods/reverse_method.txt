@@ -1,0 +1,38 @@
+Title: Reverse Method
+Description: Write a static method which has an array parameter and which reverses an integer array. Put the method in a Test class
+Your method would be called as follows
+   int [] num = {2, 3, 5, 7, 11, 13, 17};
+   // Call the method to reverse the array
+   Test.reverse(num);
+
+Your method should not print anything. It will be called by the following program:
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String [] args)
+    {
+        // Create a scanner object
+        Scanner in = new Scanner(System.in);
+        
+        System.out.print("How many numbers: ");
+        int len = in.nextInt();
+        
+        int [] num = new int[len];
+        System.out.print("Enter " + len + " numbers: ");
+        for(int i = 0; i < num.length; i++)
+            num[i] = in.nextInt();
+            
+        Test.reverse(num);
+
+        System.out.print("The numbers reversed are:");
+        for(int i = 0; i < num.length; i++)
+            System.out.print(" " + num[i]);
+            
+        System.out.println();
+    }
+}
+
+This program will read in the array and use your method to reverse the array. Then it will print out the result.
+Tests: 2 tests run/ 2 tests passed
+Grade: 100

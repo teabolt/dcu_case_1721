@@ -1,0 +1,30 @@
+Title: MIA Bank
+Description: The MIA Bank has a special offer for all new accounts. It sets the initial balance to 100.00. Add a default (no args) constructor for the MIA bank which initialises the balance to 100.00. You should leave the existing constructor in place. Your class should have two constructors.
+Your BankAccount class will be tested by the following program:
+public class TestBankAccount
+{
+   public static void main(String [] args)
+   {
+      BankAccount account1 = new BankAccount(); // This uses the 
+default constructor
+.
+      BankAccount account2 = new BankAccount(900); // This uses one argument constructor.
+
+      System.out.println("Account 1 has " + account1.balance);
+
+      System.out.println("Account 2 has " + account2.balance);
+   }
+}
+The program will be compiled using 
+javac TestBankAccount.java
+ and run using 
+java TestBankAccount
+ The output should be:
+$ java TestBankAccount 
+Account 1 has 100.0
+Account 2 has 900.0
+
+Hints:
+Probably the best hint is to check the notes on default constructors.
+Tests: 1  test run/ 1  test passed
+Grade: 100

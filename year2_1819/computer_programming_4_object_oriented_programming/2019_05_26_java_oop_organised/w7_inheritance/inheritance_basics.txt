@@ -1,0 +1,30 @@
+Title: Inheritance (Basics)
+Description: The following program consists of three Java source files and does nothing. It doesn't even compile. The files are Main.java, Parent.java and Child.java
+Here is Main.java
+public class Main
+{
+	public static void main(String []args)
+	{
+		Parent x = new Child();
+	}
+}
+
+Here is Parent.java (an empty class - not useful except for this exercise)
+public class Parent
+{
+}
+
+Here is Child.java (
+an empty class - not useful except for this exercise
+)
+public class Child
+{
+}
+
+Modify only the Child class so that the program compiles. Obviously, you have to make the 
+ type of Child 
+compatible with 
+the type of Parent
+. You should do this using inheritance.
+Tests: 1  test run/ 1  test passed
+Grade: 100

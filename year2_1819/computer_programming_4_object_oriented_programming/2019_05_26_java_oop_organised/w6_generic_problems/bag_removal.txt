@@ -1,0 +1,65 @@
+Title: Bag Removal
+Description: The Bag class below is used to hold a number of items of type T. Your task is to add a remove method to the Bag class.
+// The following suppress warnings annotation is necessary to allow toodle to compile your program.
+@SuppressWarnings("unchecked")
+public class Bag<T>
+{
+   // Create an array of type T of 100 items (This is quite clumsy in Java)
+   private T[] bag = (T[])(new Object[100]);
+   private int numElements = 0;
+   
+   public void add(T x)
+   { // put x in bag
+      bag[numElements] = x;
+      numElements++;
+   }
+   
+   public int count(T x)
+   {
+      int count = 0;
+      for (int i = 0; i < numElements; i++)
+         if (bag[i].equals(x)) // .equals because T a class 
+            count++;
+      return count;
+   }
+
+   public int length()
+   {
+      return numElements;
+   }
+}
+Your new improved Bag class will be tested with the following main program:
+public class TestBag
+{
+   public static void main(String[] args)
+   {      
+      Bag
+ bag = new Bag<String>();
+      bag.add("cat");
+      bag.add("dog");
+      bag.add("cat"); 
+
+      bag.remove("pig");
+      System.out.print("Lose the pig, ");
+      // Should have no effect 'cos this bag is pigless
+      System.out.println("L=" + bag.length() + ", C=" + bag.count("cat") + ", D=" + bag.count("dog"));
+
+      bag.remove("cat");
+      System.out.print("Lose the cat, ");
+      System.out.println("L=" + bag.length() + ", C=" + bag.count("cat") + ", D=" + bag.count("dog"));
+
+      bag.remove("cat");
+      System.out.print("Lose the cat, ");
+      System.out.println("L=" + bag.length() + ", C=" + bag.count("cat") + ", D=" + bag.count("dog"));
+
+      bag.remove("dog");
+      System.out.print("Lose the dog, ");
+      System.out.println("L=" + bag.length() + ", C=" + bag.count("cat") + ", D=" + bag.count("dog"));
+
+      bag.remove("dog");
+      System.out.print("Lose the dog, ");
+      System.out.println("L=" + bag.length() + ", C=" + bag.count("cat") + ", D=" + bag.count("dog"));
+   }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

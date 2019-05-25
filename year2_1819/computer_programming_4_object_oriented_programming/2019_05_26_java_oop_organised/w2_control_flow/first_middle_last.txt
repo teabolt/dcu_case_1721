@@ -1,0 +1,18 @@
+Title: First Middle Last
+Description: Write a program which reads in a word, and then prints the first letter of that word, then the 
+middle
+ letters of the word, and finally the last letter of the word.
+Example:
+jave FirstMiddleLast
+Enter a word: 
+Hello
+
+H
+ell
+o
+
+The first letter of the word, H, is printed, then the 
+middle
+ letters and finally the last letter, the 'o'. The word will have at least two letters.
+Tests: 4 tests run/ 4 tests passed
+Grade: 100

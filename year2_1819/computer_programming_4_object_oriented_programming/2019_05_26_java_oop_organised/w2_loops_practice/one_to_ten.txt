@@ -1,0 +1,25 @@
+Title: One to Ten
+Description: Write a program which will print out the numbers 1 to 10 inclusive using a while loop.
+Here is what the program would do when run.
+$ java OneToTen
+1 2 3 4 5 6 7 8 9 10
+
+Your program should follow the following template:
+public class OneToTen
+{
+    public static void main(String [] args)
+    {
+        // Use a loop to print out the numbers
+        // We will use i as the loop variable
+        int i = ???; // Starting value
+        while(???) // Keep looping as long as some condition is true
+        {
+            System.out.print(i + " ");
+            i++; // Modify i
+        }
+       
+        System.out.println(); // Finish with a new line.
+    }
+}
+Tests: 1  test run/ 1  test passed
+Grade: 100

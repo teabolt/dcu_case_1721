@@ -1,0 +1,67 @@
+Title: Are we the first?
+Description: Write a method called isFirstLetter which takes as parameters a word and a letter and returns true if the word starts with the letter and false if it doesn't.
+The method should be a static method of a Word class and could be used as shown in the following program (see section in bold):
+
+
+import java.util.Scanner;
+
+public class TestFirstLetter
+{
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+        
+        // Ask the user for a word and a letter
+        System.out.print("Enter a word and a letter: ");
+        String word = in.next();
+        char letter = in.next().charAt(0);
+        
+        if(
+Word.isFirstLetter(word, letter)
+)
+            System.out.println(letter + " is the first letter of " + word);
+        else
+            System.out.println(letter + " is not the first letter of " + word);
+    }
+}
+And the program would be executed as follows:
+
+$ java TestFirstLetter
+Enter a word and a letter 
+computer b
+
+b is not the first letter of the word computing.
+
+or
+$ java TestFirstLetter
+Enter a word and a letter 
+dog d
+
+d is the first letter of the word dog.
+Note that your method will actually be tested using the program below:
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String []args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a word and a letter:");
+        String word = in.next();
+        String letters = in.next();
+        
+        char first = 0;
+        String notFirst = "";
+        for(int i = 0; i < letters.length(); i++)
+            if(Word.isFirstLetter(word, letters.charAt(i)))
+                first = letters.charAt(i);
+            else
+                notFirst += letters.charAt(i); // add to list of letters 
+        
+        System.out.println(first + " is the first letter of " + word + ".");
+        System.out.println(notFirst + " are not the first letter of " + word + ".");
+    }
+}
+
+Tests: 3 tests run/ 3 tests passed
+Grade: 100
