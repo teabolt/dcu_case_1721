@@ -1,0 +1,7 @@
+Steps in the project:
+1. Obtain the X and Y vectors
+2. Solve matrix equation with Gaussian elimintation
+
+Careful with:
+- Rounding errors
+

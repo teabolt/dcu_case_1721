@@ -1,0 +1,21 @@
+Total duration of construction: 28 weeks
+
+Lan must begin at t=0
+Fou must begin at t=3
+Car must begin at t=11
+Mas must begin between t=11 and t=13
+Cov must begin at t=15
+Ele must begin at t=17
+Plu must begin at t=18
+Hea must begin between t=18 and t=25
+Fin must begin at t=19
+
+Lan 	(0) 	===
+Fou 	(0) 		========
+Car 	(0) 				====
+Mas 	(2) 				====
+Cov 	(0)	 					==
+Ele 	(0) 					  =
+Plu 	(0) 						=
+Hea 	(7) 						===
+Fin 	(0) 						 =========

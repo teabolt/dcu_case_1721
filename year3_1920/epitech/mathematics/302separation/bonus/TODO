@@ -1,0 +1,3 @@
+* Visualize the graph - use a library like JGraphT (OR make your own with Java Swing) to show all the nodes and edges between them
+* Visualize path between nodes - can use output from Dijkstra's algorithm to see the path from one node to another.
+* Use Facebook API to get actual relationships graph. Test theory of six degrees of separation.

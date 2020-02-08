@@ -1,0 +1,67 @@
+Algorithm notes
+---------------
+
+Technical terms:
+Absicassa - x coordinate in (x, y). Horizontal distance.
+Reed pipe - pipe instrument
+Curve interpolation - drawing a curve through a discrete set of points, to be able to pick any point between the set of original points
+Spline - an interpolation method (how to draw a curve), using a piecewise polynomial function
+Piecewise function - function with subfunctions over certain intervals (like if statements)
+Newton's method - (optimization) find roots of a differentiable function i.e. f'(x) derivative
+
+The problem:
+Having 5 known points (r0, r5, r10, r15, r20), interpolate to know n points.
+And display some intermediary vector.
+
+Visualization:
+
+y
+^
+|
+. -> x
+
+y=radius
+x=absicassa
+
+
+About splines:
+
+Spline interpolation - using spline functions as the interpolant. Preferred over polynomial interpolation due to error reasons.
+Spline - used to be elastic ruler that is bent to pass through a number of points, used for technical drawings.
+Cubic spline - type of spline with degree 3 terms
+
+Spline function = a piecewise polynomial function.
+maps interval [a,b] to R set.
+[a,b] is split into k ordered (in ascending order) disjoint (non-overlapping) subintervals.
+For each subinterval, define a polynomial function mapping the subinterval to R set.
+The Spline function is defined as piecewise with each polynomial on their subinterval, where the left is included but the left is excluded.
+
+Knots = the splitting points of the interval.
+The knot vector t = vector of the splitting points.
+Uniform spline = knots are equidistantly distributed.
+Spline degree = maximum degree of all the polynomials.
+Ck = differentiability class of a function. Means that the function has derivatives from 0 to k AND the derivatives are continuous/differentiable.
+Smooth = class C(inf) function - derivatives of all orders are continuous.
+Smoothness vector r = vector of differentiability classes (their orders) for all knots of the spline except for the endpoints.
+Loss of smoothness = when two polynomials connect next to each other, the loss of smoothness is at most (degree-smoothness vector entry at the point of meeting).
+
+Polynomials share derivative values at the point they connect, from derivative order 0 to order indicated by smoothness vector.
+
+Extended knot vector = knot vector with multiple knots repeated. Can characterize a spline together with the degree.
+Natural cubic spline = spline with degree 3, continuity C2, and S''(a)=S''(b)=0 (2nd derivatives are set to zero at the endpoints, meaning spline is straight outside the interval).
+
+
+Matrix for natural cubic spline of 5 knots:
+
+      b0    d0          b1      c1          d1          b2      c2          d2          b3      c3          d3              
+1   | x1-x0 (x1-x0)**3                                                                                                      | y1-y0
+2   |                   x2-x1   (x2-x1)**2  (x2-x1)**3                                                                      | y2-y1
+3   |                                                   x3-x2   (x3-x2)**2  (x3-x2)**3                                      | y3-y2
+4   |                                                                                   x4-x3   (x4-x3)**2  (x4-x3)**3      | y4-y3
+5   | 1     3*(x1-x0)**2 -1                                                                                                 |
+6   |                    1      2*(x2-x1)   3*(x2-x1)**2 -1                                                                 |
+7   |                                                    1       2*(x3-x2)  3*(x3-x2)**2 -1                                 |
+8   |       6*(x1-x0)           -2                                                                                          |
+9   |                           2           6*(x2-x1)           -2                                                          |
+10  |                                                           2           6*(x3-x2)           -2                          |
+11  |                                                                                           2           6*(x4-x3)       |
