@@ -1,0 +1,54 @@
+SFML: Main, System, Window, Graphics, Audio, Network
+
+1. Create a window
+2. Game loop
+3. Listen for events
+4. Do stuff with window
+
+How to draw:
+1. Clear/draw/display window (or texture)
+2. loadFromFile() a texture (2D entity image) and set its properties (smoothing, repetition)
+3. Create a sprite (texture on a rectangle) from a texture using sprite.setTexture()
+4. Draw the sprite to the window (can colourise, transform, move the sprite, etc)
+- avoid loading many textures. Instead use many sprites with few textures.
+5. Add shapes - circles, rectangles, etc. Can set textures on them.
+6. Draw some text - load font first, set parameters (use wide strings for internationalisation).
+7. Use vertex arrays to draw things: vertex - (x, y) point, combine many into arrays (primitives - define how to fill between vertices), put a texture on them, define with a SFML-like class.
+
+===
+Boost:Asio
+- synchronous and asynchronous IO
+
+synchronous example:
+program -> IO object -> io_context -> OS
+OS -> (result) io_context -> (translation) IO object -> (exception/value) program
+1. program calls IO object
+2. IO object calls io_context
+3. io_context calls OS
+4. OS returns result to io_context
+5. io_context translates errors and returns to IO object
+6. IO object raises (or sets) exception if fail
+
+asynchronous example:
+program -> IO object -> io_context -> OS
+async (non blocking) OS -> result queue
+sync (blocking) program -> io_context:run -> completion_handler
+1. program calls IO object with a completion handler
+2. IO object calls io_service
+3. IO object requests the OS for an asynchronous operation
+4. OS places result of completed operation on a queue
+5. Call to io_context.run() makes io_context retrieve results from the queue, 
+blocking until there's no unfinished async ops.
+6. io_context dequeues a result, translates error code, and calls completion handler
+- 
+
+UDP:
+- hostname resolution done with resolver (converted into an endpoint)
+    - ipv4 or ipv6
+- can send and receive from connected and unconnected (from/to) sockets
+
+Completion_handler
+boost::bind for extra callback arguments
+
+Synchronizing handlers in multithreading
+"strand" class

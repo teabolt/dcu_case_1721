@@ -1,0 +1,7 @@
+pbrain-gomoku-ai
+__pycache__
+build/
+dist/
+*.log
+*.spec
+log-*

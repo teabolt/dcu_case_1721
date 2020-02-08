@@ -1,0 +1,23 @@
+- hosts: all
+  roles:
+  - base
+
+- hosts: redis
+  roles:
+  - redis
+
+- hosts: postgres
+  roles:
+  - postgresql
+
+- hosts: poll
+  roles:
+  - poll
+
+- hosts: worker
+  roles:
+  - worker
+
+- hosts: result
+  roles:
+  - result

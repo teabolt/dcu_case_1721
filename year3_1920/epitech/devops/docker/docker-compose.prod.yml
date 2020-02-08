@@ -1,0 +1,13 @@
+# production config
+# we can use this file like this:
+# docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+# we only need to list the new changes
+
+version: "3"
+
+services:
+  poll:
+    restart: always
+
+  result:
+    restart: always

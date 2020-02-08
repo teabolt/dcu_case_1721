@@ -1,0 +1,33 @@
+- name: Install npm and nodeJS
+  apt:
+    name:
+    - nodejs
+    - npm
+    state: present
+
+- name: Upload and untar app.tar to the web machines
+  copy:
+    src: "{{ playbook_dir }}/result.tar"
+    dest: /root/app/
+
+- name: Untar app.tar
+  unarchive:
+    src: /root/app/result.tar
+    dest: /root/app/
+    remote_src: yes
+
+- name: Install packages based on package.json.
+  npm:
+    path: app/result/
+
+- name: Copy .service file
+  template:
+    src: "{{ role_path }}/files/result.service"
+    dest: /etc/systemd/system/
+  
+- name: Run app with the service
+  systemd:
+    name: result
+    enabled: yes
+    state: started
+    daemon_reload: yes

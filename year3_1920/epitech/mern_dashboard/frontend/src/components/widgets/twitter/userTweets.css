@@ -1,0 +1,22 @@
+.UserTweets {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 1vw;
+    padding: 0.5vw;
+    /* background-color: rgb(26, 75, 75); */
+}
+
+
+.UserTweets-search {
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid gray;
+    margin-bottom: 1vw;
+}
+
+.UserTweets-search:focus {
+    outline: none;
+    box-shadow: none;
+}

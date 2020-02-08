@@ -1,0 +1,12 @@
+[Unit]
+Description=Python poll app service
+
+[Service]
+Type=simple
+ExecStart=python3 /bin/app/poll/app.py
+Restart=on-failure
+Environment="REDIS_HOST={{ REDIS_HOST }}" 
+
+
+[Install]
+WantedBy=multi-user.target

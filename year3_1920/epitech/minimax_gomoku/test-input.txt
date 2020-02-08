@@ -1,0 +1,16 @@
+START 19
+INFO max_memory 73400320
+INFO timeout_match 180000
+INFO timeout_turn 5000
+INFO game_type 1
+INFO rule 1
+INFO time_left 179644
+INFO folder D:\DCU\erasmus\epitech\gomoku\.piskvork
+ABOUT
+BOARD
+12,3,2
+10,2,1
+DONE
+BEGIN
+TURN 9,6
+END

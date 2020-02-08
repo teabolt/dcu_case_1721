@@ -1,0 +1,27 @@
+---
+# - name: Install redis
+#   pip:
+#     name: redis
+
+
+- name: Install redis
+  apt:
+    name: redis-server
+    state: present
+
+- name: Configure redis
+  copy: 
+    src: "{{ role_path }}/files/redis.conf"
+    dest: /etc/redis/redis.conf
+
+- name: Ensure redis systemd service is enabled
+  service:
+    name: redis-server
+    enabled: yes
+
+# - name: Ensure redis service has newest config
+#   service:
+#     name: redis-server
+#     enabled: yes
+#     state: restarted
+#     daemon_reload: yes

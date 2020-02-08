@@ -1,0 +1,17 @@
+[Unit]
+Description=indexjs - Service test for Automation bootstrap
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=node /root/app/result/server.js
+Restart=on-failure
+Environment=PORT="{{ RESULT_PORT }}"
+Environment=POSTGRESQL_USER="{{ POSTGRESQL_USER }}"
+Environment=POSTGRESQL_PASSWORD="{{ POSTGRESQL_PASSWORD }}"
+Environment=POSTGRESQL_HOST="{{ POSTGRESQL_HOST }}"
+Environment=POSTGRESQL_PORT="{{ POSTGRESQL_PORT }}"
+Environment=POSTGRESQL_DB="{{ POSTGRESQL_DB }}"
+
+[Install]
+WantedBy=multi-user.target

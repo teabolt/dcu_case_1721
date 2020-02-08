@@ -1,0 +1,250 @@
+OK
+9,9
+7,9
+10,9
+11,9
+         2306934 function calls (2288834 primitive calls) in 3.470 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      3/1    0.000    0.000    3.470    3.470 {built-in method builtins.exec}
+        1    0.000    0.000    3.470    3.470 pbrain_gomoku_ai.py:3(<module>)
+        1    0.000    0.000    3.466    3.466 pbrain_gomoku_ai.py:189(main)
+        1    0.000    0.000    3.464    3.464 pbrain_gomoku_ai.py:51(start)
+        6    0.000    0.000    3.463    0.577 pbrain_gomoku_ai.py:59(exec)
+        3    0.000    0.000    3.462    1.154 pbrain_gomoku_ai.py:113(handle_turn)
+        4    0.000    0.000    3.461    0.865 brain_minimax.py:21(make_move)
+        3    0.000    0.000    3.460    1.153 brain_minimax.py:39(find_best_move)
+   1707/3    0.001    0.000    3.460    1.153 {built-in method builtins.max}
+       47    0.000    0.000    3.459    0.074 brain_minimax.py:42(<lambda>)
+  5775/47    0.015    0.000    3.458    0.074 brain_minimax.py:80(simulate_move)
+  5775/47    0.023    0.000    3.438    0.073 brain_minimax.py:46(minimax)
+ 5728/852    0.014    0.000    2.987    0.004 brain_minimax.py:66(<lambda>)
+    11557    0.018    0.000    2.897    0.000 board.py:83(update)
+    11557    0.049    0.000    2.880    0.000 board.py:189(_update_chains)
+    46228    0.281    0.000    2.831    0.000 board.py:206(_update_chains_handler)
+     5782    0.006    0.000    1.512    0.000 brain_minimax.py:15(update_state)
+     5775    0.005    0.000    1.396    0.000 brain_minimax.py:36(undo_state)
+    11557    0.025    0.000    0.995    0.000 board.py:330(_negative_diagonal_lines)
+    11557    0.024    0.000    0.970    0.000 board.py:316(_get_neg_diag_lines)
+    11557    0.944    0.000    0.944    0.000 board.py:328(<listcomp>)
+    11557    0.031    0.000    0.590    0.000 board.py:307(_positive_diagonal_lines)
+    11557    0.023    0.000    0.560    0.000 board.py:293(_get_pos_diag_lines)
+    11557    0.535    0.000    0.535    0.000 board.py:305(<listcomp>)
+    92456    0.146    0.000    0.387    0.000 board.py:215(<listcomp>)
+    46228    0.207    0.000    0.347    0.000 board.py:392(delete)
+     4876    0.005    0.000    0.290    0.000 brain_minimax.py:101(evaluation_function)
+     4876    0.009    0.000    0.285    0.000 board.py:145(evaluate)
+     9752    0.050    0.000    0.276    0.000 board.py:155(evaluate_player)
+    51571    0.071    0.000    0.242    0.000 board.py:415(__init__)
+     6677    0.006    0.000    0.202    0.000 brain_minimax.py:90(next_moves)
+     6677    0.036    0.000    0.197    0.000 board.py:123(next_moves_neighbour)
+     9752    0.055    0.000    0.173    0.000 board.py:157(<listcomp>)
+    92456    0.046    0.000    0.125    0.000 board.py:233(_get_line_matches)
+   159044    0.118    0.000    0.118    0.000 board.py:167(evaluate_chain)
+    51571    0.097    0.000    0.111    0.000 board.py:428(_get_open_endpoints)
+     3097    0.061    0.000    0.097    0.000 board.py:57(__iter__)
+    92456    0.079    0.000    0.079    0.000 {method 'finditer' of 're.Pattern' objects}
+    92456    0.069    0.000    0.077    0.000 board.py:386(add)
+   331480    0.063    0.000    0.063    0.000 board.py:409(<lambda>)
+    51571    0.046    0.000    0.060    0.000 board.py:425(_get_length)
+    92456    0.056    0.000    0.056    0.000 board.py:407(_find_by_number)
+   199304    0.042    0.000    0.042    0.000 board.py:79(get)
+   168796    0.035    0.000    0.035    0.000 board.py:374(iter_all)
+    19611    0.014    0.000    0.030    0.000 board.py:130(<lambda>)
+    51538    0.020    0.000    0.020    0.000 {method 'remove' of 'list' objects}
+    19611    0.011    0.000    0.020    0.000 board.py:131(<lambda>)
+     9752    0.008    0.000    0.018    0.000 board.py:163(average)
+    19611    0.010    0.000    0.016    0.000 board.py:65(__contains__)
+   103142    0.014    0.000    0.014    0.000 {method 'start' of 're.Match' objects}
+   103142    0.014    0.000    0.014    0.000 {method 'end' of 're.Match' objects}
+    11557    0.010    0.000    0.013    0.000 board.py:276(_row_lines)
+    19611    0.009    0.000    0.009    0.000 board.py:71(in_bounds)
+    52660    0.008    0.000    0.008    0.000 {method 'append' of 'list' objects}
+    21790    0.008    0.000    0.008    0.000 board.py:339(generate_matrix_neighbours)
+     9803    0.008    0.000    0.008    0.000 {built-in method builtins.min}
+     9756    0.006    0.000    0.007    0.000 {built-in method builtins.sum}
+33077/33057    0.006    0.000    0.007    0.000 {built-in method builtins.len}
+    11557    0.004    0.000    0.004    0.000 board.py:263(_negdiagonal_number)
+    11557    0.004    0.000    0.004    0.000 board.py:289(_column_lines)
+    12020    0.004    0.000    0.004    0.000 board.py:129(<lambda>)
+    11557    0.003    0.000    0.003    0.000 board.py:269(_get_row_lines)
+      2/1    0.000    0.000    0.003    0.003 <frozen importlib._bootstrap>:978(_find_and_load)
+      2/1    0.000    0.000    0.003    0.003 <frozen importlib._bootstrap>:948(_find_and_load_unlocked)
+    11557    0.003    0.000    0.003    0.000 board.py:259(_posdiagonal_number)
+     2179    0.003    0.000    0.003    0.000 {method 'update' of 'set' objects}
+      2/1    0.000    0.000    0.003    0.003 <frozen importlib._bootstrap>:663(_load_unlocked)
+      2/1    0.000    0.000    0.003    0.003 <frozen importlib._bootstrap_external>:722(exec_module)
+      2/1    0.000    0.000    0.002    0.002 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
+        1    0.000    0.000    0.002    0.002 brain_minimax.py:3(<module>)
+    11557    0.002    0.000    0.002    0.000 board.py:251(_horizontal_number)
+    11557    0.002    0.000    0.002    0.000 board.py:255(_vertical_number)
+        2    0.000    0.000    0.002    0.001 <frozen importlib._bootstrap_external>:793(get_code)
+       11    0.000    0.000    0.001    0.000 re.py:232(compile)
+       11    0.000    0.000    0.001    0.000 re.py:271(_compile)
+       11    0.000    0.000    0.001    0.000 sre_compile.py:759(compile)
+       32    0.001    0.000    0.001    0.000 {built-in method builtins.print}
+       50    0.000    0.000    0.001    0.000 brain_minimax.py:41(<genexpr>)
+        2    0.001    0.000    0.001    0.001 <frozen importlib._bootstrap_external>:914(get_data)
+       27    0.000    0.000    0.001    0.000 pbrain_gomoku_ai.py:89(log)
+        1    0.000    0.000    0.001    0.001 pbrain_gomoku_ai.py:48(stop)
+        1    0.001    0.001    0.001    0.001 {method 'close' of '_io.TextIOWrapper' objects}
+        4    0.000    0.000    0.001    0.000 board.py:53(__len__)
+       16    0.000    0.000    0.001    0.000 board.py:55(<genexpr>)
+       11    0.000    0.000    0.001    0.000 sre_parse.py:919(parse)
+        6    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:74(_path_stat)
+        6    0.001    0.000    0.001    0.000 {built-in method nt.stat}
+        2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:882(_find_spec)
+        2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:1272(find_spec)
+       11    0.000    0.000    0.001    0.000 sre_parse.py:417(_parse_sub)
+        2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:1240(_get_spec)
+        2    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:1356(find_spec)
+       11    0.000    0.000    0.001    0.000 sre_parse.py:475(_parse)
+       11    0.000    0.000    0.001    0.000 sre_compile.py:598(_code)
+        1    0.000    0.000    0.001    0.001 pbrain_gomoku_ai.py:33(__init__)
+        5    0.000    0.000    0.001    0.000 {built-in method builtins.__build_class__}
+        1    0.000    0.000    0.001    0.001 pbrain_gomoku_ai.py:92(handle_start)
+        1    0.000    0.000    0.000    0.000 pbrain_gomoku_ai.py:129(handle_begin)
+        1    0.000    0.000    0.000    0.000 board.py:3(<module>)
+        2    0.000    0.000    0.000    0.000 {built-in method io.open}
+        1    0.000    0.000    0.000    0.000 board.py:6(Board2dArr)
+        1    0.000    0.000    0.000    0.000 brain_minimax.py:8(__init__)
+        1    0.000    0.000    0.000    0.000 board.py:21(__init__)
+    20/11    0.000    0.000    0.000    0.000 sre_compile.py:71(_compile)
+        5    0.000    0.000    0.000    0.000 pbrain_gomoku_ai.py:75(write)
+    34/15    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 pbrain_gomoku_ai.py:82(read)
+        1    0.000    0.000    0.000    0.000 board.py:48(__str__)
+       20    0.000    0.000    0.000    0.000 board.py:50(<genexpr>)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:523(_compile_bytecode)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:93(_path_isfile)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:84(_path_is_mode_type)
+       11    0.000    0.000    0.000    0.000 sre_compile.py:536(_compile_info)
+        2    0.000    0.000    0.000    0.000 {built-in method marshal.loads}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:951(path_stats)
+        1    0.000    0.000    0.000    0.000 board.py:40(_generate_negative_diagonal)
+        1    0.000    0.000    0.000    0.000 board.py:32(_generate_positive_diagonal)
+       86    0.000    0.000    0.000    0.000 sre_parse.py:254(get)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:576(module_from_spec)
+    20/11    0.000    0.000    0.000    0.000 sre_parse.py:174(getwidth)
+        6    0.000    0.000    0.000    0.000 {method 'readline' of '_io.TextIOWrapper' objects}
+       64    0.000    0.000    0.000    0.000 cp1257.py:18(encode)
+      133    0.000    0.000    0.000    0.000 sre_parse.py:164(__getitem__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:504(_init_module_attrs)
+        2    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
+      102    0.000    0.000    0.000    0.000 sre_parse.py:233(__next)
+       11    0.000    0.000    0.000    0.000 enum.py:833(__and__)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:271(cache_from_source)
+        6    0.000    0.000    0.000    0.000 pbrain_gomoku_ai.py:25(find_match)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:403(cached)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:147(__enter__)
+       64    0.000    0.000    0.000    0.000 {built-in method _codecs.charmap_encode}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:369(_get_cached)
+        8    0.000    0.000    0.000    0.000 sre_compile.py:276(_optimize_charset)
+       22    0.000    0.000    0.000    0.000 enum.py:283(__call__)
+       10    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:56(_path_join)
+      214    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
+       70    0.000    0.000    0.000    0.000 sre_parse.py:172(append)
+       11    0.000    0.000    0.000    0.000 sre_parse.py:224(__init__)
+       21    0.000    0.000    0.000    0.000 {method 'match' of 're.Pattern' objects}
+       17    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+        9    0.000    0.000    0.000    0.000 sre_compile.py:423(_simple)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1351(_get_spec)
+        1    0.000    0.000    0.000    0.000 board.py:25(<listcomp>)
+       10    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:62(_path_split)
+       22    0.000    0.000    0.000    0.000 enum.py:525(__new__)
+        2    0.000    0.000    0.000    0.000 _bootlocale.py:11(getpreferredencoding)
+        1    0.000    0.000    0.000    0.000 board.py:38(<listcomp>)
+        1    0.000    0.000    0.000    0.000 board.py:46(<listcomp>)
+        1    0.000    0.000    0.000    0.000 board.py:26(<listcomp>)
+        8    0.000    0.000    0.000    0.000 sre_compile.py:249(_compile_charset)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:438(_classify_pyc)
+       10    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:58(<listcomp>)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:471(_validate_timestamp_pyc)
+       38    0.000    0.000    0.000    0.000 sre_parse.py:160(__len__)
+       11    0.000    0.000    0.000    0.000 sre_compile.py:461(_get_literal_prefix)
+       21    0.000    0.000    0.000    0.000 sre_parse.py:286(tell)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:318(__exit__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:574(spec_from_file_location)
+       11    0.000    0.000    0.000    0.000 sre_compile.py:492(_get_charset_prefix)
+       22    0.000    0.000    0.000    0.000 sre_compile.py:595(isstring)
+       26    0.000    0.000    0.000    0.000 sre_parse.py:249(match)
+       11    0.000    0.000    0.000    0.000 {built-in method _sre.compile}
+        4    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+       20    0.000    0.000    0.000    0.000 sre_parse.py:111(__init__)
+        2    0.000    0.000    0.000    0.000 {built-in method _locale._getdefaultlocale}
+       11    0.000    0.000    0.000    0.000 sre_parse.py:903(fix_flags)
+        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:51(_r_long)
+        3    0.000    0.000    0.000    0.000 cp1257.py:22(decode)
+       11    0.000    0.000    0.000    0.000 sre_parse.py:76(__init__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:151(__exit__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:719(find_spec)
+       22    0.000    0.000    0.000    0.000 sre_parse.py:81(groups)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:78(acquire)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1203(_path_importer_cache)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:103(release)
+       29    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
+       10    0.000    0.000    0.000    0.000 {method 'find' of 'bytearray' objects}
+        8    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+       46    0.000    0.000    0.000    0.000 {built-in method builtins.ord}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+       22    0.000    0.000    0.000    0.000 sre_compile.py:453(_get_iscased)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1009(_handle_fromlist)
+        7    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 board.py:366(__init__)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:176(cb)
+        7    0.000    0.000    0.000    0.000 sre_parse.py:343(_escape)
+        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:859(__exit__)
+        6    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+       24    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method nt.getcwd}
+        6    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:35(_new_module)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:792(find_spec)
+        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:855(__enter__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:401(_check_name_wrapper)
+        1    0.000    0.000    0.000    0.000 board.py:368(<listcomp>)
+        3    0.000    0.000    0.000    0.000 {built-in method _codecs.charmap_decode}
+        4    0.000    0.000    0.000    0.000 {method 'rsplit' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:369(__init__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:416(parent)
+        9    0.000    0.000    0.000    0.000 sre_parse.py:168(__setitem__)
+        1    0.000    0.000    0.000    0.000 pbrain_gomoku_ai.py:31(GomokuAiWrapper)
+       10    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 brain_minimax.py:6(BrainMinimax)
+        1    0.000    0.000    0.000    0.000 board.py:350(ChainsContainer)
+        8    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:321(<genexpr>)
+        1    0.000    0.000    0.000    0.000 board.py:34(<listcomp>)
+       11    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+       10    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:311(__enter__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:884(__init__)
+        2    0.000    0.000    0.000    0.000 codecs.py:186(__init__)
+        1    0.000    0.000    0.000    0.000 sre_parse.py:408(_uniq)
+        2    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:143(__init__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:36(_relax_case)
+        3    0.000    0.000    0.000    0.000 codecs.py:281(getstate)
+        1    0.000    0.000    0.000    0.000 board.py:42(<listcomp>)
+        6    0.000    0.000    0.000    0.000 {built-in method nt.fspath}
+       10    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+        1    0.000    0.000    0.000    0.000 {built-in method sys.exit}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:307(__init__)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:424(has_location)
+        1    0.000    0.000    0.000    0.000 brain_minimax.py:97(opening_move)
+        1    0.000    0.000    0.000    0.000 board.py:412(Chain)
+        4    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        2    0.000    0.000    0.000    0.000 {built-in method _imp.is_frozen}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:909(get_filename)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:719(create_module)
+        1    0.000    0.000    0.000    0.000 board.py:94(middle_move)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

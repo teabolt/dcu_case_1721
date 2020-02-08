@@ -1,0 +1,6 @@
+1. export - make something importable
+2. export default - export once, simple use (no curly braces to import).
+3. import - bring things (exports) from another module with {} or * or a default export.
+4. ternary operator - cond ? if true ; if false
+5. deconstructor expressions - inline assign object properties to variables and vice versa
+6. async/await - may block or not block in a function

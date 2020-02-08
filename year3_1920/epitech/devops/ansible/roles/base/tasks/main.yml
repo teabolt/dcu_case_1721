@@ -1,0 +1,29 @@
+- name: update OS
+  apt: 
+    update_cache: true
+
+- name: Install basic tools
+  apt:
+    name: 
+      - apt-transport-https
+      - ca-certificates
+      - emacs-nox
+      - git
+      - curl
+      - unzip
+      - zsh
+      - python3-pip
+      - python3-dev
+    state: present
+
+- name: Set timezone to Europe/Paris
+  timezone:
+    name: Europe/Paris
+
+- name: Set root shell to zsh
+  command:
+      argv:
+        - chsh
+        - -s
+        - /bin/zsh
+        - root 

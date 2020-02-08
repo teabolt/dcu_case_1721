@@ -1,0 +1,19 @@
+login session
+https://stackoverflow.com/questions/49819183/react-what-is-the-best-way-to-handle-login-and-authentication
+
+login backend
+*** https://medium.com/@brendt_bly/simple-mern-passport-app-tutorial-4aec2105e367
+    - https://github.com/b-bly/simple-mern-passport/
+https://andrejgajdos.com/authenticating-users-in-single-page-applications-using-node-passport-react-and-redux/
+https://www.freecodecamp.org/news/how-to-set-up-twitter-oauth-using-passport-js-and-reactjs-9ffa6f49ef0/
+
+passport js
+http://www.passportjs.org/packages/passport-local/
+- https://github.com/passport/express-4.x-local-example/
+http://www.passportjs.org/packages/passport-facebook/
+http://www.passportjs.org/packages/passport-google-oauth/
+
+mongoose + mongodb
+https://mongoosejs.com/docs/api/
+https://mongoosejs.com/docs/guide.html
+https://docs.mongodb.com/manual/

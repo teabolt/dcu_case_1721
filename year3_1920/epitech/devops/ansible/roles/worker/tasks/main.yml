@@ -1,0 +1,33 @@
+- name: Upload worker service
+  copy:
+    src: "{{ playbook_dir }}/worker.tar"
+    dest: /bin/app/
+
+- name: Extract java files
+  unarchive:
+    src: /bin/app/worker.tar
+    dest: /bin/app/
+    remote_src: yes
+
+- name: Install maven
+  apt:
+    name: maven
+
+- name: Install dependencies in pom.xml
+  shell: mvn dependency:resolve && mvn package
+  args:
+    chdir: /bin/app/worker
+
+- name: Template out systemd service unit configuration
+  template:
+    src: "{{ role_path }}/files/worker.service"
+    dest: /etc/systemd/system/
+
+- name: Enable systemd service
+  systemd:
+    name: worker
+    enabled: yes
+    state: started
+    daemon_reload: yes
+
+# - name: Build and run

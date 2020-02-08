@@ -1,0 +1,58 @@
+# connect to a pod
+kubectl exec -it PODID -- sh
+# OR
+kubectl exec -it PODID -- bash
+
+
+#
+# test if a pod web app runs using a local browser
+#
+
+# run in shell:
+kubectl port-forward PODID HOSTPORT:CONTAINERPORT
+# open in the browser: localhost:HOSTPORT
+
+
+#
+# add network debugging tools to your pod
+#
+
+# inside the pod:
+apt-get update
+apt-get install iputils-ping
+apt-get install curl
+
+
+# use wget instead of curl
+wget -qO- ADDRESS:PORT
+
+
+# make vote multiple times for poll app
+# open firefox and chrome (different browser = different vote)
+
+
+# get deployment pod id:
+kubectl get pods -l=app=postgres -o name
+# get pod container id
+kubectl describe $postgres_deployment_id | grep -oP "(?<=Container ID:).*"
+
+
+# psql
+# list tables:
+\dt
+# list all data in votes table:
+SELECT * FROM votes;
+
+
+# kill a single container inside a pod
+kubectl exec PODID -c CONTAINERNAME -- /sbin/killall5
+
+
+
+# ABOUT PERSISENTVOLUME AND PERSISTENTVOLUMECLAIM
+# 1. hostPath works on minikube (*single-node cluster), but not on GCP
+# 2. On GCP mounting works on "/home/data" path, but not on /mnt/data path (read-only filesystem error)
+
+
+# Access cadvisor web UI
+kubectl port-forward daemonset/cadvisor --namespace=cadvisor YOURPORT:8080

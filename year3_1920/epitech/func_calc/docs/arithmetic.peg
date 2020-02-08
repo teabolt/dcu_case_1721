@@ -1,0 +1,26 @@
+Description of a PEG for float arithmetic
+The following must be supported:
+order of precedence: +, -, *, /, ^ (from lowest to highest)
+order of precedence with brackets
+reading from left to right
+binary operators and unary minus
+nested expressions
+
+
+Terminal symbols list:
+[0-9], '.', '(', ')', '+', '-', '*', '/', '^', ' ', '\t', '\r', '\n'
+
+Non-terminal symbols and parsing rules:
+Expression <- MaybeSpacing (Sum / Difference / Negation / Product / Divsion / Power)+ MaybeSpacing EndOfLine
+Sum <- MaybeSpacing Number (MaybeSpacing '+' MaybeSpacing Number)*
+Difference <- MaybeSpacing Number (MaybeSpacing '-' MaybeSpacing Number)*
+Negation <- MaybeSpacing '-' MaybeSpacing Number
+Product <- MaybeSpacing Number (MaybeSpacing '*' MaybeSpacing Number)*
+Division <- MaybeSpacing Number (MaybeSpacing '/' MaybeSpacing Number)*
+Power <- MaybeSpacing Number (MaybeSpacing '^' MaybeSpacing Number)*
+
+MaybeSpacing <- Spacing?
+Number <- [0-9]+ ('.' [0-9]+)?
+Whitespace <- Spacing / EndOfLine
+Spacing <- (' ' / '\t')+
+EndOfLine <- '\r'? '\n'

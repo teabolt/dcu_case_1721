@@ -1,0 +1,6 @@
+build/
+.vscode/
+client/r-type_client
+server/r-type_server
+test.*
+testClient/test_client

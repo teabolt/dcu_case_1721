@@ -1,0 +1,30 @@
+@media all and (min-width: 480px) {
+    .AppSignUp {
+      padding: 5% 0;
+    }
+  
+    .AppSignUp form {
+      margin: 0 auto;
+      max-width: 20vw;
+    }
+  }
+
+
+.AppSignUp-error {
+  color: rgb(245, 80, 80);  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
+.AppSignUp-error button {
+  margin: 2%;
+  border: none;
+}
+
+
+.AppSignUp-error p {
+  margin: 2%;
+  flex-grow: 2;
+}

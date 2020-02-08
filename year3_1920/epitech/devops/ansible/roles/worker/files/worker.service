@@ -1,0 +1,17 @@
+[Unit]
+Description=Systemd configuration for java file
+
+[Service]
+ExecStart=/usr/bin/java \
+  -jar '/bin/app/worker/target/worker-jar-with-dependencies.jar'
+Restart=on-failure
+Environment="REDIS_HOST={{ REDIS_HOST }}"
+Environment=POSTGRESQL_USER="{{ POSTGRESQL_USER }}"
+Environment=POSTGRESQL_PASSWORD="{{ POSTGRESQL_PASSWORD }}"
+Environment=POSTGRESQL_HOST="{{ POSTGRESQL_HOST }}"
+Environment=POSTGRESQL_PORT="{{ POSTGRESQL_PORT }}"
+Environment=POSTGRESQL_DB="{{ POSTGRESQL_DB }}"
+# SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

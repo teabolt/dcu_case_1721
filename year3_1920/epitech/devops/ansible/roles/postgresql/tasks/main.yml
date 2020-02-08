@@ -1,0 +1,97 @@
+- name: Add postgres repo key
+  apt_key:
+    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+
+- name: Add postgres APT repo
+  apt_repository:
+    repo: deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main
+
+- name: Install postgres server packages
+  apt:
+    name:
+      - libpq-dev
+      - postgresql-12
+    state: present
+
+- name: Install postgres python adapter
+  pip:
+    executable: pip3
+    name: psycopg2
+
+
+- name: Allow access through pg_hba.conf file
+  blockinfile:
+    path: /etc/postgresql/12/main/pg_hba.conf
+    block: |
+      host all all {{ hostvars['result']['ansible_default_ipv4']['address'] }}/0 md5
+      host all all {{ hostvars['worker']['ansible_default_ipv4']['address'] }}/0 md5
+
+- name: Listen for all IP's
+  blockinfile:
+    path: /etc/postgresql/12/main/postgresql.conf
+    block: |
+      listen_addresses = '*'
+  notify:
+    - restart postgres
+
+- name: Ensure postgres daemon is running
+  systemd:
+    name: postgresql
+    enabled: yes
+    state: started
+
+
+- name: Copy SQL database schema
+  copy:
+    src: "{{ role_path }}/files/schema.sql"
+    dest: /tmp/schema.sql
+
+- name: Create database if needed
+  become_user: postgres
+  become: true
+  postgresql_db:
+    name: "{{ POSTGRESQL_DB }}"
+    state: present
+
+- name: Restore postgres database from schema
+  become_user: postgres
+  become: true
+  postgresql_db:
+    name: "{{ POSTGRESQL_DB }}"
+    state: restore
+    target: /tmp/schema.sql
+
+- name: Create a user and grant owner's permission on a db
+  become_user: postgres
+  become: true
+  postgresql_user:
+    name: "{{ POSTGRESQL_USER }}"
+    password: "{{ POSTGRESQL_PASSWORD }}"
+    role_attr_flags: LOGIN,CREATEROLE,CREATEDB,REPLICATION
+    db: "{{ POSTGRESQL_DB }}"
+    priv: ALL
+
+- name: Set user as owner of table
+  become_user: postgres
+  become: true
+  postgresql_owner:
+    new_owner: "{{ POSTGRESQL_USER }}"
+    obj_name: "votes"
+    obj_type: table
+    db: "{{ POSTGRESQL_DB }}"
+
+- name: Add schema to database and add owner to it
+  become_user: postgres
+  become: true
+  postgresql_schema:
+    name: "{{ POSTGRESQL_DB }}"
+    database: "{{ POSTGRESQL_DB }}"
+    owner: "{{ POSTGRESQL_USER }}"
+
+
+# - name: Template out the postgress client access files
+#   template:
+#     src: "{{ role_path }}/files/pg_hba.conf"
+#     dest: "/etc/postgresql/11/main/pg_hba.conf"
+#     # FIXME: is it version 11 or version 12?
+#     # FIXME: use blockinfile

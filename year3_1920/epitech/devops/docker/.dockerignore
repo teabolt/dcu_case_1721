@@ -1,0 +1,8 @@
+.git
+docker-compose.yml
+*/node_modules
+*/__pycache__
+worker/target
+worker/.settings
+worker/.classpath
+worker/.project

@@ -1,0 +1,33 @@
+- name: Install Python dependencies
+  apt:
+    name: [python3-pip, python3-dev]
+    state: present
+
+- name: Copy Python files archive
+  copy:
+    src: "{{ playbook_dir }}/poll.tar"
+    dest: /bin/app/
+
+- name: Extract Python files archive
+  unarchive:
+    src: /bin/app/poll.tar
+    dest: /bin/app/
+    remote_src: yes
+
+- name: Install Python app dependencies
+  pip:
+    executable: pip3
+    requirements: /bin/app/poll/requirements.txt
+    state: present
+
+- name: Template out systemd service unit configuration
+  template:
+    src: "{{ role_path }}/files/poll.service"
+    dest: /etc/systemd/system/
+
+- name: Enable systemd service
+  systemd:
+    name: poll
+    enabled: yes
+    state: started
+    daemon_reload: yes
