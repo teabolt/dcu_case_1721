@@ -1,0 +1,34 @@
+image: "golang:latest"
+
+stages:
+  - build
+  - test
+  # - deploy
+
+before_script:
+  - echo "Creating symlink between repo/code and GOPATH/src"
+  - cd $GOPATH/src  
+  - ln -s $CI_PROJECT_DIR/code/cloud cloud
+  - ls
+  - ls cloud
+  - cd $CI_PROJECT_DIR/code
+
+build:
+  stage: build
+  script:
+    - cd cloud
+    - make
+
+test:
+  stage: test
+  script:
+    - cd cloud
+    - make test
+
+# deploy:
+#   stage: deploy
+#   script:
+#     - make deploy
+
+# FIXME: build once, then pass the build to further stages of the pipeline
+# TODO: currently we only test the cloud code. Test the web-client also
